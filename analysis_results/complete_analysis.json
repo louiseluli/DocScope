@@ -1,0 +1,4750 @@
+{
+  "metadata": {
+    "timestamp": "2025-11-23T00:52:52.656711",
+    "total_documents": 22,
+    "total_chunks": 1303,
+    "categories": 8
+  },
+  "analyses": {
+    "framework_vs_artifact": {
+      "frameworks": {
+        "doc_count": 12,
+        "doc_ids": [
+          "gebru_2018_datasheets",
+          "bender_2018_data_statements",
+          "holland_2018_dataset_nutrition_label",
+          "arnold_2019_factsheets",
+          "mitchell_2019_model_cards",
+          "pushkarna_2022_data_cards",
+          "roman_2023_open_datasheets",
+          "raji_2020_about_ml",
+          "chmielinski_2024_clear",
+          "winecoff_bogen_2024_improving_governance",
+          "fmit_2024_foundation_model_transparency_index",
+          "pepe_2024_hf_models_doc_datasets"
+        ]
+      },
+      "artifacts": {
+        "doc_count": 10,
+        "doc_ids": [
+          "openai_gpt4o_system_card",
+          "openai_gpt5_system_card",
+          "openai_o1_system_card",
+          "openai_gpt4_turbo_api",
+          "openai_gpt35_turbo_api",
+          "openai_whisper_model_card",
+          "huggingface_whisper_large_v3",
+          "stability_sd3_medium_hf",
+          "qwen3_tech_report",
+          "llama3_tech_report"
+        ]
+      },
+      "category_comparison": {
+        "safety_risk": {
+          "category_name": "Safety & Risk Information",
+          "framework_mean": 0.009,
+          "artifact_mean": 0.001,
+          "gap": 0.008,
+          "framework_count": 12,
+          "artifact_count": 10,
+          "artifact_examples": {
+            "openai_gpt4o_system_card": {
+              "title": "gpt-4o System Card",
+              "score": 0.0,
+              "hit_count": 39,
+              "has_tables": true
+            },
+            "openai_gpt5_system_card": {
+              "title": "gpt-5 System Card",
+              "score": 0.0,
+              "hit_count": 58,
+              "has_tables": false
+            },
+            "openai_o1_system_card": {
+              "title": "o1 System Card (Dec 2024)",
+              "score": 0.0,
+              "hit_count": 46,
+              "has_tables": false
+            },
+            "openai_gpt4_turbo_api": {
+              "title": "GPT-4 Turbo API documentation",
+              "score": 0.0,
+              "hit_count": 0,
+              "has_tables": false
+            },
+            "openai_gpt35_turbo_api": {
+              "title": "GPT-3.5 Turbo API documentation",
+              "score": 0.0,
+              "hit_count": 0,
+              "has_tables": false
+            },
+            "openai_whisper_model_card": {
+              "title": "OpenAI Whisper model card",
+              "score": 0.0,
+              "hit_count": 0,
+              "has_tables": false
+            },
+            "huggingface_whisper_large_v3": {
+              "title": "Whisper Large v3 HF page",
+              "score": 0.0,
+              "hit_count": 1,
+              "has_tables": false
+            },
+            "stability_sd3_medium_hf": {
+              "title": "Stable Diffusion 3 Medium HF page",
+              "score": 0.006,
+              "hit_count": 5,
+              "has_tables": true
+            },
+            "qwen3_tech_report": {
+              "title": "Qwen3 Technical Report",
+              "score": 0.001,
+              "hit_count": 3,
+              "has_tables": false
+            },
+            "llama3_tech_report": {
+              "title": "Llama 3 Technical Report",
+              "score": 0.0,
+              "hit_count": 49,
+              "has_tables": false
+            }
+          }
+        },
+        "training_data": {
+          "category_name": "Training & Data",
+          "framework_mean": 0.025,
+          "artifact_mean": 0.01,
+          "gap": 0.016,
+          "framework_count": 12,
+          "artifact_count": 10,
+          "artifact_examples": {
+            "openai_gpt4o_system_card": {
+              "title": "gpt-4o System Card",
+              "score": 0.015,
+              "hit_count": 18,
+              "has_tables": true
+            },
+            "openai_gpt5_system_card": {
+              "title": "gpt-5 System Card",
+              "score": 0.0,
+              "hit_count": 14,
+              "has_tables": false
+            },
+            "openai_o1_system_card": {
+              "title": "o1 System Card (Dec 2024)",
+              "score": 0.0,
+              "hit_count": 22,
+              "has_tables": false
+            },
+            "openai_gpt4_turbo_api": {
+              "title": "GPT-4 Turbo API documentation",
+              "score": 0.0,
+              "hit_count": 0,
+              "has_tables": false
+            },
+            "openai_gpt35_turbo_api": {
+              "title": "GPT-3.5 Turbo API documentation",
+              "score": 0.0,
+              "hit_count": 0,
+              "has_tables": false
+            },
+            "openai_whisper_model_card": {
+              "title": "OpenAI Whisper model card",
+              "score": 0.022,
+              "hit_count": 1,
+              "has_tables": false
+            },
+            "huggingface_whisper_large_v3": {
+              "title": "Whisper Large v3 HF page",
+              "score": 0.031,
+              "hit_count": 18,
+              "has_tables": true
+            },
+            "stability_sd3_medium_hf": {
+              "title": "Stable Diffusion 3 Medium HF page",
+              "score": 0.017,
+              "hit_count": 12,
+              "has_tables": true
+            },
+            "qwen3_tech_report": {
+              "title": "Qwen3 Technical Report",
+              "score": 0.012,
+              "hit_count": 29,
+              "has_tables": false
+            },
+            "llama3_tech_report": {
+              "title": "Llama 3 Technical Report",
+              "score": 0.0,
+              "hit_count": 102,
+              "has_tables": false
+            }
+          }
+        },
+        "intended_use_limitations": {
+          "category_name": "Intended Use & Limitations",
+          "framework_mean": 0.011,
+          "artifact_mean": 0.001,
+          "gap": 0.01,
+          "framework_count": 12,
+          "artifact_count": 10,
+          "artifact_examples": {
+            "openai_gpt4o_system_card": {
+              "title": "gpt-4o System Card",
+              "score": 0.0,
+              "hit_count": 16,
+              "has_tables": true
+            },
+            "openai_gpt5_system_card": {
+              "title": "gpt-5 System Card",
+              "score": 0.0,
+              "hit_count": 12,
+              "has_tables": false
+            },
+            "openai_o1_system_card": {
+              "title": "o1 System Card (Dec 2024)",
+              "score": 0.0,
+              "hit_count": 10,
+              "has_tables": false
+            },
+            "openai_gpt4_turbo_api": {
+              "title": "GPT-4 Turbo API documentation",
+              "score": 0.0,
+              "hit_count": 0,
+              "has_tables": false
+            },
+            "openai_gpt35_turbo_api": {
+              "title": "GPT-3.5 Turbo API documentation",
+              "score": 0.0,
+              "hit_count": 0,
+              "has_tables": false
+            },
+            "openai_whisper_model_card": {
+              "title": "OpenAI Whisper model card",
+              "score": 0.0,
+              "hit_count": 0,
+              "has_tables": false
+            },
+            "huggingface_whisper_large_v3": {
+              "title": "Whisper Large v3 HF page",
+              "score": 0.0,
+              "hit_count": 4,
+              "has_tables": false
+            },
+            "stability_sd3_medium_hf": {
+              "title": "Stable Diffusion 3 Medium HF page",
+              "score": 0.013,
+              "hit_count": 4,
+              "has_tables": false
+            },
+            "qwen3_tech_report": {
+              "title": "Qwen3 Technical Report",
+              "score": 0.001,
+              "hit_count": 3,
+              "has_tables": false
+            },
+            "llama3_tech_report": {
+              "title": "Llama 3 Technical Report",
+              "score": 0.0,
+              "hit_count": 34,
+              "has_tables": false
+            }
+          }
+        },
+        "equity_bias": {
+          "category_name": "Equity & Bias",
+          "framework_mean": 0.027,
+          "artifact_mean": 0.005,
+          "gap": 0.022,
+          "framework_count": 12,
+          "artifact_count": 10,
+          "artifact_examples": {
+            "openai_gpt4o_system_card": {
+              "title": "gpt-4o System Card",
+              "score": 0.0,
+              "hit_count": 41,
+              "has_tables": true
+            },
+            "openai_gpt5_system_card": {
+              "title": "gpt-5 System Card",
+              "score": 0.0,
+              "hit_count": 63,
+              "has_tables": false
+            },
+            "openai_o1_system_card": {
+              "title": "o1 System Card (Dec 2024)",
+              "score": 0.0,
+              "hit_count": 55,
+              "has_tables": true
+            },
+            "openai_gpt4_turbo_api": {
+              "title": "GPT-4 Turbo API documentation",
+              "score": 0.006,
+              "hit_count": 5,
+              "has_tables": false
+            },
+            "openai_gpt35_turbo_api": {
+              "title": "GPT-3.5 Turbo API documentation",
+              "score": 0.008,
+              "hit_count": 5,
+              "has_tables": false
+            },
+            "openai_whisper_model_card": {
+              "title": "OpenAI Whisper model card",
+              "score": 0.0,
+              "hit_count": 0,
+              "has_tables": false
+            },
+            "huggingface_whisper_large_v3": {
+              "title": "Whisper Large v3 HF page",
+              "score": 0.022,
+              "hit_count": 22,
+              "has_tables": true
+            },
+            "stability_sd3_medium_hf": {
+              "title": "Stable Diffusion 3 Medium HF page",
+              "score": 0.017,
+              "hit_count": 22,
+              "has_tables": true
+            },
+            "qwen3_tech_report": {
+              "title": "Qwen3 Technical Report",
+              "score": 0.0,
+              "hit_count": 57,
+              "has_tables": true
+            },
+            "llama3_tech_report": {
+              "title": "Llama 3 Technical Report",
+              "score": 0.0,
+              "hit_count": 117,
+              "has_tables": false
+            }
+          }
+        },
+        "performance_capabilities": {
+          "category_name": "Performance & Capabilities",
+          "framework_mean": 0.017,
+          "artifact_mean": 0.002,
+          "gap": 0.015,
+          "framework_count": 12,
+          "artifact_count": 10,
+          "artifact_examples": {
+            "openai_gpt4o_system_card": {
+              "title": "gpt-4o System Card",
+              "score": 0.0,
+              "hit_count": 51,
+              "has_tables": true
+            },
+            "openai_gpt5_system_card": {
+              "title": "gpt-5 System Card",
+              "score": 0.0,
+              "hit_count": 66,
+              "has_tables": false
+            },
+            "openai_o1_system_card": {
+              "title": "o1 System Card (Dec 2024)",
+              "score": 0.0,
+              "hit_count": 60,
+              "has_tables": true
+            },
+            "openai_gpt4_turbo_api": {
+              "title": "GPT-4 Turbo API documentation",
+              "score": 0.007,
+              "hit_count": 5,
+              "has_tables": false
+            },
+            "openai_gpt35_turbo_api": {
+              "title": "GPT-3.5 Turbo API documentation",
+              "score": 0.007,
+              "hit_count": 4,
+              "has_tables": false
+            },
+            "openai_whisper_model_card": {
+              "title": "OpenAI Whisper model card",
+              "score": 0.0,
+              "hit_count": 0,
+              "has_tables": false
+            },
+            "huggingface_whisper_large_v3": {
+              "title": "Whisper Large v3 HF page",
+              "score": 0.0,
+              "hit_count": 22,
+              "has_tables": true
+            },
+            "stability_sd3_medium_hf": {
+              "title": "Stable Diffusion 3 Medium HF page",
+              "score": 0.007,
+              "hit_count": 10,
+              "has_tables": true
+            },
+            "qwen3_tech_report": {
+              "title": "Qwen3 Technical Report",
+              "score": 0.0,
+              "hit_count": 83,
+              "has_tables": true
+            },
+            "llama3_tech_report": {
+              "title": "Llama 3 Technical Report",
+              "score": 0.0,
+              "hit_count": 158,
+              "has_tables": true
+            }
+          }
+        },
+        "organizational_governance": {
+          "category_name": "Organizational & Governance",
+          "framework_mean": 0.019,
+          "artifact_mean": 0.003,
+          "gap": 0.017,
+          "framework_count": 12,
+          "artifact_count": 10,
+          "artifact_examples": {
+            "openai_gpt4o_system_card": {
+              "title": "gpt-4o System Card",
+              "score": 0.004,
+              "hit_count": 7,
+              "has_tables": true
+            },
+            "openai_gpt5_system_card": {
+              "title": "gpt-5 System Card",
+              "score": 0.006,
+              "hit_count": 19,
+              "has_tables": false
+            },
+            "openai_o1_system_card": {
+              "title": "o1 System Card (Dec 2024)",
+              "score": 0.006,
+              "hit_count": 14,
+              "has_tables": true
+            },
+            "openai_gpt4_turbo_api": {
+              "title": "GPT-4 Turbo API documentation",
+              "score": 0.0,
+              "hit_count": 0,
+              "has_tables": false
+            },
+            "openai_gpt35_turbo_api": {
+              "title": "GPT-3.5 Turbo API documentation",
+              "score": 0.0,
+              "hit_count": 0,
+              "has_tables": false
+            },
+            "openai_whisper_model_card": {
+              "title": "OpenAI Whisper model card",
+              "score": 0.0,
+              "hit_count": 0,
+              "has_tables": false
+            },
+            "huggingface_whisper_large_v3": {
+              "title": "Whisper Large v3 HF page",
+              "score": 0.003,
+              "hit_count": 4,
+              "has_tables": true
+            },
+            "stability_sd3_medium_hf": {
+              "title": "Stable Diffusion 3 Medium HF page",
+              "score": 0.002,
+              "hit_count": 3,
+              "has_tables": true
+            },
+            "qwen3_tech_report": {
+              "title": "Qwen3 Technical Report",
+              "score": 0.001,
+              "hit_count": 5,
+              "has_tables": false
+            },
+            "llama3_tech_report": {
+              "title": "Llama 3 Technical Report",
+              "score": 0.002,
+              "hit_count": 17,
+              "has_tables": false
+            }
+          }
+        },
+        "other": {
+          "category_name": "Other / Uncategorised",
+          "framework_mean": 0.013,
+          "artifact_mean": 0.003,
+          "gap": 0.01,
+          "framework_count": 12,
+          "artifact_count": 10,
+          "artifact_examples": {
+            "openai_gpt4o_system_card": {
+              "title": "gpt-4o System Card",
+              "score": 0.005,
+              "hit_count": 5,
+              "has_tables": false
+            },
+            "openai_gpt5_system_card": {
+              "title": "gpt-5 System Card",
+              "score": 0.004,
+              "hit_count": 6,
+              "has_tables": false
+            },
+            "openai_o1_system_card": {
+              "title": "o1 System Card (Dec 2024)",
+              "score": 0.005,
+              "hit_count": 6,
+              "has_tables": false
+            },
+            "openai_gpt4_turbo_api": {
+              "title": "GPT-4 Turbo API documentation",
+              "score": 0.004,
+              "hit_count": 1,
+              "has_tables": false
+            },
+            "openai_gpt35_turbo_api": {
+              "title": "GPT-3.5 Turbo API documentation",
+              "score": 0.0,
+              "hit_count": 0,
+              "has_tables": false
+            },
+            "openai_whisper_model_card": {
+              "title": "OpenAI Whisper model card",
+              "score": 0.0,
+              "hit_count": 0,
+              "has_tables": false
+            },
+            "huggingface_whisper_large_v3": {
+              "title": "Whisper Large v3 HF page",
+              "score": 0.009,
+              "hit_count": 4,
+              "has_tables": true
+            },
+            "stability_sd3_medium_hf": {
+              "title": "Stable Diffusion 3 Medium HF page",
+              "score": 0.0,
+              "hit_count": 0,
+              "has_tables": false
+            },
+            "qwen3_tech_report": {
+              "title": "Qwen3 Technical Report",
+              "score": 0.001,
+              "hit_count": 2,
+              "has_tables": false
+            },
+            "llama3_tech_report": {
+              "title": "Llama 3 Technical Report",
+              "score": 0.0,
+              "hit_count": 34,
+              "has_tables": false
+            }
+          }
+        },
+        "access_deployment": {
+          "category_name": "Access & Deployment",
+          "framework_mean": 0.015,
+          "artifact_mean": 0.006,
+          "gap": 0.009,
+          "framework_count": 12,
+          "artifact_count": 10,
+          "artifact_examples": {
+            "openai_gpt4o_system_card": {
+              "title": "gpt-4o System Card",
+              "score": 0.0,
+              "hit_count": 25,
+              "has_tables": true
+            },
+            "openai_gpt5_system_card": {
+              "title": "gpt-5 System Card",
+              "score": 0.0,
+              "hit_count": 52,
+              "has_tables": false
+            },
+            "openai_o1_system_card": {
+              "title": "o1 System Card (Dec 2024)",
+              "score": 0.0,
+              "hit_count": 52,
+              "has_tables": false
+            },
+            "openai_gpt4_turbo_api": {
+              "title": "GPT-4 Turbo API documentation",
+              "score": 0.0,
+              "hit_count": 4,
+              "has_tables": false
+            },
+            "openai_gpt35_turbo_api": {
+              "title": "GPT-3.5 Turbo API documentation",
+              "score": 0.0,
+              "hit_count": 3,
+              "has_tables": false
+            },
+            "openai_whisper_model_card": {
+              "title": "OpenAI Whisper model card",
+              "score": 0.043,
+              "hit_count": 1,
+              "has_tables": false
+            },
+            "huggingface_whisper_large_v3": {
+              "title": "Whisper Large v3 HF page",
+              "score": 0.0,
+              "hit_count": 13,
+              "has_tables": true
+            },
+            "stability_sd3_medium_hf": {
+              "title": "Stable Diffusion 3 Medium HF page",
+              "score": 0.015,
+              "hit_count": 14,
+              "has_tables": true
+            },
+            "qwen3_tech_report": {
+              "title": "Qwen3 Technical Report",
+              "score": 0.0,
+              "hit_count": 15,
+              "has_tables": true
+            },
+            "llama3_tech_report": {
+              "title": "Llama 3 Technical Report",
+              "score": 0.0,
+              "hit_count": 72,
+              "has_tables": true
+            }
+          }
+        }
+      }
+    },
+    "equity_analysis": {
+      "category": "Equity & Bias",
+      "total_docs_analyzed": 22,
+      "docs_with_equity_coverage": 12,
+      "docs_with_quantitative_equity": 9,
+      "coverage_by_doc": {
+        "gebru_2018_datasheets": {
+          "title": "Datasheets for Datasets",
+          "score": 0.038,
+          "has_quantitative": false,
+          "evidence_count": 22,
+          "matched_keywords": [
+            "age",
+            "bias",
+            "biases",
+            "debias",
+            "debiasing"
+          ]
+        },
+        "bender_2018_data_statements": {
+          "title": "Data Statements for Natural Language Processing",
+          "score": 0.0,
+          "has_quantitative": false,
+          "evidence_count": 27,
+          "matched_keywords": [
+            "accessible",
+            "age",
+            "bias",
+            "biased",
+            "biases"
+          ]
+        },
+        "holland_2018_dataset_nutrition_label": {
+          "title": "The Dataset Nutrition Label",
+          "score": 0.0,
+          "has_quantitative": true,
+          "evidence_count": 52,
+          "matched_keywords": [
+            "accessible",
+            "age",
+            "bias",
+            "biased",
+            "debias"
+          ]
+        },
+        "arnold_2019_factsheets": {
+          "title": "FactSheets: Increasing trust in AI services through supplier's declarations of conformity",
+          "score": 0.049,
+          "has_quantitative": false,
+          "evidence_count": 18,
+          "matched_keywords": [
+            "accessibility",
+            "age",
+            "bias",
+            "biases",
+            "demographic"
+          ]
+        },
+        "mitchell_2019_model_cards": {
+          "title": "Model Cards for Model Reporting",
+          "score": 0.062,
+          "has_quantitative": true,
+          "evidence_count": 25,
+          "matched_keywords": [
+            "age",
+            "bias",
+            "biases",
+            "demographic",
+            "disaggregated"
+          ]
+        },
+        "pushkarna_2022_data_cards": {
+          "title": "Data Cards: Purposeful and Transparent Dataset Documentation for Responsible AI",
+          "score": 0.025,
+          "has_quantitative": false,
+          "evidence_count": 31,
+          "matched_keywords": [
+            "accessible",
+            "age",
+            "bias",
+            "biases",
+            "demographic"
+          ]
+        },
+        "roman_2023_open_datasheets": {
+          "title": "Open Datasheets: Machine-Readable Documentation for Open Datasets and Responsible AI Assessments",
+          "score": 0.045,
+          "has_quantitative": false,
+          "evidence_count": 15,
+          "matched_keywords": [
+            "accessibility",
+            "accessible",
+            "age",
+            "bias",
+            "biased"
+          ]
+        },
+        "raji_2020_about_ml": {
+          "title": "ABOUT ML: Annotation and Benchmarking on Understanding and Transparency of Machine Learning Lifecycles",
+          "score": 0.032,
+          "has_quantitative": false,
+          "evidence_count": 10,
+          "matched_keywords": [
+            "accessible",
+            "age",
+            "bias",
+            "equitable",
+            "fair"
+          ]
+        },
+        "chmielinski_2024_clear": {
+          "title": "CLeAR Documentation Framework for AI Transparency",
+          "score": 0.0,
+          "has_quantitative": true,
+          "evidence_count": 40,
+          "matched_keywords": [
+            "LGBTQ",
+            "accessibility",
+            "accessible",
+            "age",
+            "bias"
+          ]
+        },
+        "winecoff_bogen_2024_improving_governance": {
+          "title": "Improving Governance Outcomes Through AI Documentation",
+          "score": 0.0,
+          "has_quantitative": false,
+          "evidence_count": 17,
+          "matched_keywords": [
+            "age",
+            "bias",
+            "biases",
+            "demographic",
+            "equitable"
+          ]
+        },
+        "fmit_2024_foundation_model_transparency_index": {
+          "title": "The Foundation Model Transparency Index",
+          "score": 0.026,
+          "has_quantitative": true,
+          "evidence_count": 134,
+          "matched_keywords": [
+            "accessible",
+            "age",
+            "bias",
+            "biased",
+            "biases"
+          ]
+        },
+        "pepe_2024_hf_models_doc_datasets": {
+          "title": "How do Hugging Face Models Document Datasets",
+          "score": 0.046,
+          "has_quantitative": false,
+          "evidence_count": 27,
+          "matched_keywords": [
+            "accent",
+            "accessible",
+            "age",
+            "bias",
+            "biased"
+          ]
+        },
+        "openai_gpt4o_system_card": {
+          "title": "gpt-4o System Card",
+          "score": 0.0,
+          "has_quantitative": true,
+          "evidence_count": 41,
+          "matched_keywords": [
+            "accent",
+            "age",
+            "bias",
+            "biased",
+            "dialect"
+          ]
+        },
+        "openai_gpt5_system_card": {
+          "title": "gpt-5 System Card",
+          "score": 0.0,
+          "has_quantitative": false,
+          "evidence_count": 63,
+          "matched_keywords": [
+            "accessible",
+            "age",
+            "bias",
+            "disabled",
+            "fair"
+          ]
+        },
+        "openai_o1_system_card": {
+          "title": "o1 System Card (Dec 2024)",
+          "score": 0.0,
+          "has_quantitative": true,
+          "evidence_count": 55,
+          "matched_keywords": [
+            "accessible",
+            "age",
+            "bias",
+            "demographic",
+            "disabled"
+          ]
+        },
+        "openai_gpt4_turbo_api": {
+          "title": "GPT-4 Turbo API documentation",
+          "score": 0.006,
+          "has_quantitative": false,
+          "evidence_count": 5,
+          "matched_keywords": [
+            "age",
+            "fair"
+          ]
+        },
+        "openai_gpt35_turbo_api": {
+          "title": "GPT-3.5 Turbo API documentation",
+          "score": 0.008,
+          "has_quantitative": false,
+          "evidence_count": 5,
+          "matched_keywords": [
+            "age",
+            "fair",
+            "language"
+          ]
+        },
+        "openai_whisper_model_card": {
+          "title": "OpenAI Whisper model card",
+          "score": 0.0,
+          "has_quantitative": false,
+          "evidence_count": 0,
+          "matched_keywords": []
+        },
+        "huggingface_whisper_large_v3": {
+          "title": "Whisper Large v3 HF page",
+          "score": 0.022,
+          "has_quantitative": true,
+          "evidence_count": 22,
+          "matched_keywords": [
+            "accent",
+            "accessibility",
+            "accessible",
+            "age",
+            "bias"
+          ]
+        },
+        "stability_sd3_medium_hf": {
+          "title": "Stable Diffusion 3 Medium HF page",
+          "score": 0.017,
+          "has_quantitative": true,
+          "evidence_count": 22,
+          "matched_keywords": [
+            "accessible",
+            "age",
+            "bias",
+            "biased",
+            "harm"
+          ]
+        },
+        "qwen3_tech_report": {
+          "title": "Qwen3 Technical Report",
+          "score": 0.0,
+          "has_quantitative": true,
+          "evidence_count": 57,
+          "matched_keywords": [
+            "accessibility",
+            "accessible",
+            "age",
+            "bias",
+            "dialect"
+          ]
+        },
+        "llama3_tech_report": {
+          "title": "Llama 3 Technical Report",
+          "score": 0.0,
+          "has_quantitative": false,
+          "evidence_count": 117,
+          "matched_keywords": [
+            "age",
+            "bias",
+            "biased",
+            "biases",
+            "disabled"
+          ]
+        }
+      },
+      "best_practices": [],
+      "critical_gaps": [
+        {
+          "doc_id": "openai_gpt4o_system_card",
+          "title": "gpt-4o System Card",
+          "score": 0.0,
+          "has_any_data": true
+        },
+        {
+          "doc_id": "openai_gpt5_system_card",
+          "title": "gpt-5 System Card",
+          "score": 0.0,
+          "has_any_data": true
+        },
+        {
+          "doc_id": "openai_o1_system_card",
+          "title": "o1 System Card (Dec 2024)",
+          "score": 0.0,
+          "has_any_data": true
+        },
+        {
+          "doc_id": "openai_gpt4_turbo_api",
+          "title": "GPT-4 Turbo API documentation",
+          "score": 0.006,
+          "has_any_data": true
+        },
+        {
+          "doc_id": "openai_gpt35_turbo_api",
+          "title": "GPT-3.5 Turbo API documentation",
+          "score": 0.008,
+          "has_any_data": true
+        },
+        {
+          "doc_id": "openai_whisper_model_card",
+          "title": "OpenAI Whisper model card",
+          "score": 0.0,
+          "has_any_data": false
+        },
+        {
+          "doc_id": "huggingface_whisper_large_v3",
+          "title": "Whisper Large v3 HF page",
+          "score": 0.022,
+          "has_any_data": true
+        },
+        {
+          "doc_id": "stability_sd3_medium_hf",
+          "title": "Stable Diffusion 3 Medium HF page",
+          "score": 0.017,
+          "has_any_data": true
+        },
+        {
+          "doc_id": "qwen3_tech_report",
+          "title": "Qwen3 Technical Report",
+          "score": 0.0,
+          "has_any_data": true
+        },
+        {
+          "doc_id": "llama3_tech_report",
+          "title": "Llama 3 Technical Report",
+          "score": 0.0,
+          "has_any_data": true
+        }
+      ]
+    },
+    "document_audits": {
+      "openai_gpt5_system_card": {
+        "document": {
+          "doc_id": "openai_gpt5_system_card",
+          "title": "gpt-5 System Card",
+          "year": 2025,
+          "doc_type": "artifact",
+          "total_chunks": 87,
+          "chunk_types": {
+            "text": 83,
+            "table": 4
+          }
+        },
+        "coverage": {
+          "overall_score": 0.001,
+          "categories_evaluated": 8
+        },
+        "gaps": {
+          "critical": [
+            {
+              "category": "Safety & Risk Information",
+              "score": 0.0,
+              "importance": 0.95,
+              "matched_keywords": [
+                "CBRN",
+                "abuse",
+                "adversarial",
+                "attack",
+                "biological",
+                "blocked",
+                "chemical",
+                "dangerous",
+                "deception",
+                "disinformation",
+                "exploit",
+                "hallucination",
+                "harassment",
+                "hate speech",
+                "hazard",
+                "jailbreak",
+                "misuse",
+                "red teaming",
+                "red-teaming",
+                "refusal",
+                "reject",
+                "risk",
+                "safety evaluation",
+                "security",
+                "self-harm",
+                "threat model",
+                "threat modeling",
+                "violence",
+                "vulnerability",
+                "weapons"
+              ],
+              "evidence_count": 58
+            },
+            {
+              "category": "Intended Use & Limitations",
+              "score": 0.0,
+              "importance": 0.9,
+              "matched_keywords": [
+                "assumptions",
+                "caution",
+                "children",
+                "constraints",
+                "high-stakes",
+                "intended use",
+                "limitation",
+                "limitations",
+                "minors",
+                "use case",
+                "use cases",
+                "warning"
+              ],
+              "evidence_count": 12
+            },
+            {
+              "category": "Training & Data",
+              "score": 0.0,
+              "importance": 0.9,
+              "matched_keywords": [
+                "corpora",
+                "curated",
+                "dataset",
+                "datasets",
+                "filter",
+                "filtered",
+                "filtering",
+                "languages",
+                "multilingual",
+                "reinforcement learning",
+                "training data"
+              ],
+              "evidence_count": 14
+            },
+            {
+              "category": "Organizational & Governance",
+              "score": 0.006167647883375387,
+              "importance": 0.9,
+              "matched_keywords": [
+                "escalation",
+                "external evaluation",
+                "governance",
+                "independent",
+                "oversight",
+                "rollout",
+                "third party",
+                "third-party",
+                "updates"
+              ],
+              "evidence_count": 19
+            },
+            {
+              "category": "Equity & Bias",
+              "score": 0.0,
+              "importance": 1.0,
+              "matched_keywords": [
+                "accessible",
+                "age",
+                "bias",
+                "disabled",
+                "fair",
+                "fairness",
+                "harm",
+                "harmful",
+                "harms",
+                "language",
+                "minority",
+                "mitigate",
+                "mitigation",
+                "race",
+                "vulnerable"
+              ],
+              "evidence_count": 63
+            }
+          ],
+          "high": [
+            {
+              "category": "Performance & Capabilities",
+              "score": 0.0,
+              "importance": 0.85,
+              "matched_keywords": [
+                "ARC",
+                "F1",
+                "MMLU",
+                "SOTA",
+                "accuracy",
+                "baseline",
+                "benchmark",
+                "benchmarks",
+                "capabilities",
+                "capability",
+                "coding",
+                "comparison",
+                "error rate",
+                "evaluated",
+                "evaluation",
+                "improvement",
+                "increase",
+                "multilingual",
+                "pass rate",
+                "performance",
+                "precision",
+                "question answering",
+                "reasoning",
+                "recall",
+                "results",
+                "score",
+                "scores",
+                "state-of-the-art",
+                "task-specific",
+                "throughput",
+                "translation"
+              ],
+              "evidence_count": 66
+            },
+            {
+              "category": "Access & Deployment",
+              "score": 0.0,
+              "importance": 0.8,
+              "matched_keywords": [
+                "API access",
+                "GPU",
+                "access",
+                "access control",
+                "api access",
+                "availability",
+                "available",
+                "compute",
+                "deployed",
+                "deployment",
+                "flagged",
+                "flags",
+                "hardware",
+                "infrastructure",
+                "logs",
+                "monitoring",
+                "private",
+                "public",
+                "rate-limit",
+                "restricted",
+                "review",
+                "tier"
+              ],
+              "evidence_count": 52
+            }
+          ]
+        },
+        "strengths": [],
+        "category_details": {
+          "safety_risk": {
+            "category_id": "safety_risk",
+            "name_en": "Safety & Risk Information",
+            "governance_axis": "safety",
+            "importance_weight": 0.95,
+            "coverage_score": 0.0,
+            "hit_count": 58,
+            "matched_keywords": [
+              "CBRN",
+              "abuse",
+              "adversarial",
+              "attack",
+              "biological",
+              "blocked",
+              "chemical",
+              "dangerous",
+              "deception",
+              "disinformation",
+              "exploit",
+              "hallucination",
+              "harassment",
+              "hate speech",
+              "hazard",
+              "jailbreak",
+              "misuse",
+              "red teaming",
+              "red-teaming",
+              "refusal",
+              "reject",
+              "risk",
+              "safety evaluation",
+              "security",
+              "self-harm",
+              "threat model",
+              "threat modeling",
+              "violence",
+              "vulnerability",
+              "weapons"
+            ],
+            "table_hits": 0,
+            "text_hits": 58,
+            "risk_flag": "high_gap",
+            "missing_questions_en": [
+              "What are the main dangerous capabilities of this system, and how are they measured?",
+              "What red-teaming or adversarial testing has been conducted, and with what results?",
+              "How are safety incidents recorded, investigated, and reported?",
+              "What is the refusal rate for different categories of harmful requests?",
+              "How does the system handle attempts to bypass safety measures?"
+            ],
+            "evidence_chunks": [
+              "openai_gpt5_system_card::text_0001",
+              "openai_gpt5_system_card::text_0002",
+              "openai_gpt5_system_card::text_0003",
+              "openai_gpt5_system_card::text_0004",
+              "openai_gpt5_system_card::text_0005",
+              "openai_gpt5_system_card::text_0006",
+              "openai_gpt5_system_card::text_0007",
+              "openai_gpt5_system_card::text_0008",
+              "openai_gpt5_system_card::text_0009",
+              "openai_gpt5_system_card::text_0010"
+            ]
+          },
+          "intended_use_limitations": {
+            "category_id": "intended_use_limitations",
+            "name_en": "Intended Use & Limitations",
+            "governance_axis": "scope",
+            "importance_weight": 0.9,
+            "coverage_score": 0.0,
+            "hit_count": 12,
+            "matched_keywords": [
+              "assumptions",
+              "caution",
+              "children",
+              "constraints",
+              "high-stakes",
+              "intended use",
+              "limitation",
+              "limitations",
+              "minors",
+              "use case",
+              "use cases",
+              "warning"
+            ],
+            "table_hits": 0,
+            "text_hits": 12,
+            "risk_flag": "high_gap",
+            "missing_questions_en": [
+              "What is this system explicitly designed for, and what uses are out-of-scope?",
+              "In which domains or decision contexts should this model never be used?",
+              "How does performance degrade outside the intended domain or beyond the context window?",
+              "What warnings or disclaimers are provided to users about limitations?",
+              "Are there specific populations or contexts where this system should not be deployed?"
+            ],
+            "evidence_chunks": [
+              "openai_gpt5_system_card::text_0005",
+              "openai_gpt5_system_card::text_0006",
+              "openai_gpt5_system_card::text_0007",
+              "openai_gpt5_system_card::text_0008",
+              "openai_gpt5_system_card::text_0026",
+              "openai_gpt5_system_card::text_0027",
+              "openai_gpt5_system_card::text_0031",
+              "openai_gpt5_system_card::text_0054",
+              "openai_gpt5_system_card::text_0055",
+              "openai_gpt5_system_card::text_0060"
+            ]
+          },
+          "training_data": {
+            "category_id": "training_data",
+            "name_en": "Training & Data",
+            "governance_axis": "data",
+            "importance_weight": 0.9,
+            "coverage_score": 0.0,
+            "hit_count": 14,
+            "matched_keywords": [
+              "corpora",
+              "curated",
+              "dataset",
+              "datasets",
+              "filter",
+              "filtered",
+              "filtering",
+              "languages",
+              "multilingual",
+              "reinforcement learning",
+              "training data"
+            ],
+            "table_hits": 0,
+            "text_hits": 14,
+            "risk_flag": "high_gap",
+            "missing_questions_en": [
+              "From which sources and time periods does the training data come?",
+              "How were data filtered, deduplicated, and moderated before training?",
+              "What proportion of the training data is synthetic, and for which purposes is it used?",
+              "What is the demographic and linguistic composition of the training data?",
+              "What licensing constraints exist on the training data?",
+              "How was human feedback or RLHF data collected and annotated?"
+            ],
+            "evidence_chunks": [
+              "openai_gpt5_system_card::text_0001",
+              "openai_gpt5_system_card::text_0006",
+              "openai_gpt5_system_card::text_0007",
+              "openai_gpt5_system_card::text_0018",
+              "openai_gpt5_system_card::text_0027",
+              "openai_gpt5_system_card::text_0031",
+              "openai_gpt5_system_card::text_0034",
+              "openai_gpt5_system_card::text_0035",
+              "openai_gpt5_system_card::text_0036",
+              "openai_gpt5_system_card::text_0039"
+            ]
+          },
+          "performance_capabilities": {
+            "category_id": "performance_capabilities",
+            "name_en": "Performance & Capabilities",
+            "governance_axis": "capabilities",
+            "importance_weight": 0.85,
+            "coverage_score": 0.0,
+            "hit_count": 66,
+            "matched_keywords": [
+              "ARC",
+              "F1",
+              "MMLU",
+              "SOTA",
+              "accuracy",
+              "baseline",
+              "benchmark",
+              "benchmarks",
+              "capabilities",
+              "capability",
+              "coding",
+              "comparison",
+              "error rate",
+              "evaluated",
+              "evaluation",
+              "improvement",
+              "increase",
+              "multilingual",
+              "pass rate",
+              "performance",
+              "precision",
+              "question answering",
+              "reasoning",
+              "recall",
+              "results",
+              "score",
+              "scores",
+              "state-of-the-art",
+              "task-specific",
+              "throughput",
+              "translation"
+            ],
+            "table_hits": 0,
+            "text_hits": 66,
+            "risk_flag": "medium_gap",
+            "missing_questions_en": [
+              "On which benchmarks has this system been evaluated, and how do the scores compare to baselines?",
+              "In which domains should the model be considered strong, and where should it not be trusted?",
+              "How do capabilities differ from previous versions or neighbouring models?",
+              "What are the known failure modes or task categories where performance is poor?",
+              "How does performance vary across different languages or cultural contexts?"
+            ],
+            "evidence_chunks": [
+              "openai_gpt5_system_card::text_0001",
+              "openai_gpt5_system_card::text_0002",
+              "openai_gpt5_system_card::text_0003",
+              "openai_gpt5_system_card::text_0005",
+              "openai_gpt5_system_card::text_0006",
+              "openai_gpt5_system_card::text_0007",
+              "openai_gpt5_system_card::text_0008",
+              "openai_gpt5_system_card::text_0009",
+              "openai_gpt5_system_card::text_0010",
+              "openai_gpt5_system_card::text_0011"
+            ]
+          },
+          "organizational_governance": {
+            "category_id": "organizational_governance",
+            "name_en": "Organizational & Governance",
+            "governance_axis": "governance",
+            "importance_weight": 0.9,
+            "coverage_score": 0.006167647883375387,
+            "hit_count": 19,
+            "matched_keywords": [
+              "escalation",
+              "external evaluation",
+              "governance",
+              "independent",
+              "oversight",
+              "rollout",
+              "third party",
+              "third-party",
+              "updates"
+            ],
+            "table_hits": 0,
+            "text_hits": 19,
+            "risk_flag": "high_gap",
+            "missing_questions_en": [
+              "Which governance structures and review processes oversee this system through its lifecycle?",
+              "Has the system undergone external audits or evaluations? By whom and with what access?",
+              "What are the update, rollback, and deprecation policies for this model?",
+              "How are decisions about model changes and deployments made?",
+              "What mechanisms exist for users to report issues or appeal decisions?"
+            ],
+            "evidence_chunks": [
+              "openai_gpt5_system_card::text_0002",
+              "openai_gpt5_system_card::text_0003",
+              "openai_gpt5_system_card::text_0004",
+              "openai_gpt5_system_card::text_0016",
+              "openai_gpt5_system_card::text_0030",
+              "openai_gpt5_system_card::text_0031",
+              "openai_gpt5_system_card::text_0032",
+              "openai_gpt5_system_card::text_0035",
+              "openai_gpt5_system_card::text_0036",
+              "openai_gpt5_system_card::text_0039"
+            ]
+          },
+          "access_deployment": {
+            "category_id": "access_deployment",
+            "name_en": "Access & Deployment",
+            "governance_axis": "deployment",
+            "importance_weight": 0.8,
+            "coverage_score": 0.0,
+            "hit_count": 52,
+            "matched_keywords": [
+              "API access",
+              "GPU",
+              "access",
+              "access control",
+              "api access",
+              "availability",
+              "available",
+              "compute",
+              "deployed",
+              "deployment",
+              "flagged",
+              "flags",
+              "hardware",
+              "infrastructure",
+              "logs",
+              "monitoring",
+              "private",
+              "public",
+              "rate-limit",
+              "restricted",
+              "review",
+              "tier"
+            ],
+            "table_hits": 0,
+            "text_hits": 52,
+            "risk_flag": "medium_gap",
+            "missing_questions_en": [
+              "Who is allowed to access this system, and under what conditions?",
+              "What rate limits, logging, or monitoring are in place to detect misuse?",
+              "What infrastructure is required to deploy this system safely in sensitive environments?",
+              "What verification or approval processes exist for accessing the system?",
+              "How long are usage logs retained, and who has access to them?"
+            ],
+            "evidence_chunks": [
+              "openai_gpt5_system_card::text_0001",
+              "openai_gpt5_system_card::text_0003",
+              "openai_gpt5_system_card::text_0005",
+              "openai_gpt5_system_card::text_0006",
+              "openai_gpt5_system_card::text_0007",
+              "openai_gpt5_system_card::text_0008",
+              "openai_gpt5_system_card::text_0009",
+              "openai_gpt5_system_card::text_0010",
+              "openai_gpt5_system_card::text_0012",
+              "openai_gpt5_system_card::text_0013"
+            ]
+          },
+          "equity_bias": {
+            "category_id": "equity_bias",
+            "name_en": "Equity & Bias",
+            "governance_axis": "equity",
+            "importance_weight": 1.0,
+            "coverage_score": 0.0,
+            "hit_count": 63,
+            "matched_keywords": [
+              "accessible",
+              "age",
+              "bias",
+              "disabled",
+              "fair",
+              "fairness",
+              "harm",
+              "harmful",
+              "harms",
+              "language",
+              "minority",
+              "mitigate",
+              "mitigation",
+              "race",
+              "vulnerable"
+            ],
+            "table_hits": 0,
+            "text_hits": 63,
+            "risk_flag": "high_gap",
+            "missing_questions_en": [
+              "How does the system perform across different demographic and intersectional groups?",
+              "Which fairness metrics or evaluations have been applied, and what were the results?",
+              "What harms or disparities have been identified for marginalized communities, and what mitigations exist?",
+              "Are performance metrics disaggregated by protected characteristics?",
+              "What representational or allocative harms have been documented?",
+              "How does the system handle dialect, accent, or non-standard language variations?"
+            ],
+            "evidence_chunks": [
+              "openai_gpt5_system_card::text_0001",
+              "openai_gpt5_system_card::text_0004",
+              "openai_gpt5_system_card::text_0005",
+              "openai_gpt5_system_card::text_0006",
+              "openai_gpt5_system_card::text_0007",
+              "openai_gpt5_system_card::text_0008",
+              "openai_gpt5_system_card::text_0009",
+              "openai_gpt5_system_card::text_0010",
+              "openai_gpt5_system_card::text_0011",
+              "openai_gpt5_system_card::text_0012"
+            ]
+          },
+          "other": {
+            "category_id": "other",
+            "name_en": "Other / Uncategorised",
+            "governance_axis": "misc",
+            "importance_weight": 0.2,
+            "coverage_score": 0.004056795131845842,
+            "hit_count": 6,
+            "matched_keywords": [
+              "mission",
+              "state of the art",
+              "story",
+              "values"
+            ],
+            "table_hits": 0,
+            "text_hits": 6,
+            "risk_flag": "ok",
+            "missing_questions_en": [
+              "Which parts of the documentation are primarily marketing rather than substantive transparency?",
+              "Where are there high-level commitments without concrete metrics or mechanisms?",
+              "What information is missing that would turn generic claims into accountable commitments?"
+            ],
+            "evidence_chunks": [
+              "openai_gpt5_system_card::text_0006",
+              "openai_gpt5_system_card::text_0026",
+              "openai_gpt5_system_card::text_0066",
+              "openai_gpt5_system_card::text_0072",
+              "openai_gpt5_system_card::text_0075",
+              "openai_gpt5_system_card::text_0076"
+            ]
+          }
+        },
+        "gap_analysis": {
+          "safety_risk": {
+            "category_id": "safety_risk",
+            "name": "Safety & Risk Information",
+            "severity": "medium",
+            "coverage_score": 0.0,
+            "importance": 0.95,
+            "gap_size": 0.3,
+            "table_evidence": 0,
+            "text_evidence": 58,
+            "missing_question_templates": [
+              "What are the main dangerous capabilities of this system, and how are they measured?",
+              "What red-teaming or adversarial testing has been conducted, and with what results?",
+              "How are safety incidents recorded, investigated, and reported?",
+              "What is the refusal rate for different categories of harmful requests?",
+              "How does the system handle attempts to bypass safety measures?"
+            ],
+            "recommendation": "Safety & Risk Information lacks structured safety benchmarks. Require standardized red-teaming results, refusal rate tables, and incident tracking with severity classifications."
+          },
+          "intended_use_limitations": {
+            "category_id": "intended_use_limitations",
+            "name": "Intended Use & Limitations",
+            "severity": "medium",
+            "coverage_score": 0.0,
+            "importance": 0.9,
+            "gap_size": 0.3,
+            "table_evidence": 0,
+            "text_evidence": 12,
+            "missing_question_templates": [
+              "What is this system explicitly designed for, and what uses are out-of-scope?",
+              "In which domains or decision contexts should this model never be used?",
+              "How does performance degrade outside the intended domain or beyond the context window?",
+              "What warnings or disclaimers are provided to users about limitations?",
+              "Are there specific populations or contexts where this system should not be deployed?"
+            ],
+            "recommendation": "Intended Use & Limitations needs better documentation. Key questions to address: What is this system explicitly designed for, and what uses are out-of-scope?"
+          },
+          "training_data": {
+            "category_id": "training_data",
+            "name": "Training & Data",
+            "severity": "medium",
+            "coverage_score": 0.0,
+            "importance": 0.9,
+            "gap_size": 0.3,
+            "table_evidence": 0,
+            "text_evidence": 14,
+            "missing_question_templates": [
+              "From which sources and time periods does the training data come?",
+              "How were data filtered, deduplicated, and moderated before training?",
+              "What proportion of the training data is synthetic, and for which purposes is it used?",
+              "What is the demographic and linguistic composition of the training data?",
+              "What licensing constraints exist on the training data?",
+              "How was human feedback or RLHF data collected and annotated?"
+            ],
+            "recommendation": "Training & Data documentation is incomplete. Require data provenance, filtering methodology, demographic composition, and licensing information."
+          },
+          "performance_capabilities": {
+            "category_id": "performance_capabilities",
+            "name": "Performance & Capabilities",
+            "severity": "medium",
+            "coverage_score": 0.0,
+            "importance": 0.85,
+            "gap_size": 0.3,
+            "table_evidence": 0,
+            "text_evidence": 66,
+            "missing_question_templates": [
+              "On which benchmarks has this system been evaluated, and how do the scores compare to baselines?",
+              "In which domains should the model be considered strong, and where should it not be trusted?",
+              "How do capabilities differ from previous versions or neighbouring models?",
+              "What are the known failure modes or task categories where performance is poor?",
+              "How does performance vary across different languages or cultural contexts?"
+            ],
+            "recommendation": "Performance & Capabilities needs better documentation. Key questions to address: On which benchmarks has this system been evaluated, and how do the scores compare to baselines?"
+          },
+          "organizational_governance": {
+            "category_id": "organizational_governance",
+            "name": "Organizational & Governance",
+            "severity": "medium",
+            "coverage_score": 0.006167647883375387,
+            "importance": 0.9,
+            "gap_size": 0.2938323521166246,
+            "table_evidence": 0,
+            "text_evidence": 19,
+            "missing_question_templates": [
+              "Which governance structures and review processes oversee this system through its lifecycle?",
+              "Has the system undergone external audits or evaluations? By whom and with what access?",
+              "What are the update, rollback, and deprecation policies for this model?",
+              "How are decisions about model changes and deployments made?",
+              "What mechanisms exist for users to report issues or appeal decisions?"
+            ],
+            "recommendation": "Organizational & Governance needs better documentation. Key questions to address: Which governance structures and review processes oversee this system through its lifecycle?"
+          },
+          "access_deployment": {
+            "category_id": "access_deployment",
+            "name": "Access & Deployment",
+            "severity": "medium",
+            "coverage_score": 0.0,
+            "importance": 0.8,
+            "gap_size": 0.3,
+            "table_evidence": 0,
+            "text_evidence": 52,
+            "missing_question_templates": [
+              "Who is allowed to access this system, and under what conditions?",
+              "What rate limits, logging, or monitoring are in place to detect misuse?",
+              "What infrastructure is required to deploy this system safely in sensitive environments?",
+              "What verification or approval processes exist for accessing the system?",
+              "How long are usage logs retained, and who has access to them?"
+            ],
+            "recommendation": "Access & Deployment needs better documentation. Key questions to address: Who is allowed to access this system, and under what conditions?"
+          },
+          "equity_bias": {
+            "category_id": "equity_bias",
+            "name": "Equity & Bias",
+            "severity": "high",
+            "coverage_score": 0.0,
+            "importance": 1.0,
+            "gap_size": 0.3,
+            "has_quantitative_data": false,
+            "missing_question_templates": [
+              "How does the system perform across different demographic and intersectional groups?",
+              "Which fairness metrics or evaluations have been applied, and what were the results?",
+              "What harms or disparities have been identified for marginalized communities, and what mitigations exist?",
+              "Are performance metrics disaggregated by protected characteristics?",
+              "What representational or allocative harms have been documented?",
+              "How does the system handle dialect, accent, or non-standard language variations?"
+            ],
+            "recommendation": "CRITICAL: Equity & Bias lacks quantitative fairness metrics. Require disaggregated performance data across demographic groups, standardized fairness metrics (e.g., equalized odds, demographic parity), and transparent reporting of disparate impact."
+          },
+          "other": {
+            "category_id": "other",
+            "name": "Other / Uncategorised",
+            "severity": "low",
+            "coverage_score": 0.004056795131845842,
+            "importance": 0.2,
+            "gap_size": 0.2959432048681542,
+            "table_evidence": 0,
+            "text_evidence": 6,
+            "missing_question_templates": [
+              "Which parts of the documentation are primarily marketing rather than substantive transparency?",
+              "Where are there high-level commitments without concrete metrics or mechanisms?",
+              "What information is missing that would turn generic claims into accountable commitments?"
+            ],
+            "recommendation": "Other / Uncategorised needs better documentation. Key questions to address: Which parts of the documentation are primarily marketing rather than substantive transparency?"
+          }
+        }
+      },
+      "llama3_tech_report": {
+        "document": {
+          "doc_id": "llama3_tech_report",
+          "title": "Llama 3 Technical Report",
+          "year": 2024,
+          "doc_type": "artifact",
+          "total_chunks": 215,
+          "chunk_types": {
+            "text": 198,
+            "table": 17
+          }
+        },
+        "coverage": {
+          "overall_score": 0.0,
+          "categories_evaluated": 8
+        },
+        "gaps": {
+          "critical": [
+            {
+              "category": "Safety & Risk Information",
+              "score": 0.0,
+              "importance": 0.95,
+              "matched_keywords": [
+                "CBRN",
+                "abuse",
+                "adversarial",
+                "attack",
+                "biological",
+                "blocked",
+                "chemical",
+                "cyberattack",
+                "exploit",
+                "hallucination",
+                "hazard",
+                "jailbreak",
+                "malware",
+                "misinformation",
+                "phishing",
+                "red teaming",
+                "refusal",
+                "reject",
+                "rejected",
+                "risk",
+                "safety benchmark",
+                "security",
+                "self-harm",
+                "suicide",
+                "toxic",
+                "toxicity",
+                "violence",
+                "vulnerability",
+                "weapons"
+              ],
+              "evidence_count": 49
+            },
+            {
+              "category": "Intended Use & Limitations",
+              "score": 0.0,
+              "importance": 0.9,
+              "matched_keywords": [
+                "avoid using",
+                "constraints",
+                "context window",
+                "disclaimer",
+                "limitation",
+                "limitations",
+                "long context",
+                "scope",
+                "use case",
+                "use cases",
+                "warning"
+              ],
+              "evidence_count": 34
+            },
+            {
+              "category": "Training & Data",
+              "score": 0.0,
+              "importance": 0.9,
+              "matched_keywords": [
+                "annotated",
+                "annotation",
+                "augmented",
+                "corpora",
+                "corpus",
+                "curated",
+                "curation",
+                "cutoff date",
+                "data collection",
+                "data composition",
+                "data mix",
+                "data source",
+                "data sources",
+                "dataset",
+                "datasets",
+                "deduplication",
+                "filter",
+                "filtered",
+                "filtering",
+                "generated data",
+                "human feedback",
+                "labeled",
+                "languages",
+                "license",
+                "licensed",
+                "multilingual",
+                "pre-training data",
+                "reinforcement learning",
+                "synthetic data",
+                "training data",
+                "web crawl",
+                "web data"
+              ],
+              "evidence_count": 102
+            },
+            {
+              "category": "Organizational & Governance",
+              "score": 0.0019285309132161094,
+              "importance": 0.9,
+              "matched_keywords": [
+                "board",
+                "development process",
+                "independent",
+                "responsible AI",
+                "responsible development",
+                "third-party",
+                "updates"
+              ],
+              "evidence_count": 17
+            },
+            {
+              "category": "Equity & Bias",
+              "score": 0.0,
+              "importance": 1.0,
+              "matched_keywords": [
+                "age",
+                "bias",
+                "biased",
+                "biases",
+                "disabled",
+                "fair",
+                "gender",
+                "harm",
+                "harmful",
+                "harms",
+                "language",
+                "mitigate",
+                "mitigation",
+                "race",
+                "representation",
+                "subgroup",
+                "subgroups",
+                "vulnerable"
+              ],
+              "evidence_count": 117
+            }
+          ],
+          "high": [
+            {
+              "category": "Performance & Capabilities",
+              "score": 0.0,
+              "importance": 0.85,
+              "matched_keywords": [
+                "ARC",
+                "F1",
+                "GSM8K",
+                "HellaSwag",
+                "HumanEval",
+                "MATH",
+                "MMLU",
+                "SOTA",
+                "accuracy",
+                "baseline",
+                "benchmark",
+                "benchmarks",
+                "capabilities",
+                "capability",
+                "code generation",
+                "coding",
+                "comparison",
+                "domain-specific",
+                "emergent",
+                "error rate",
+                "evaluated",
+                "evaluation",
+                "improvement",
+                "increase",
+                "latency",
+                "math",
+                "mathematics",
+                "multilingual",
+                "pass rate",
+                "performance",
+                "precision",
+                "programming",
+                "question answering",
+                "reasoning",
+                "recall",
+                "results",
+                "score",
+                "scores",
+                "state-of-the-art",
+                "summarization",
+                "throughput",
+                "translation"
+              ],
+              "evidence_count": 158
+            },
+            {
+              "category": "Access & Deployment",
+              "score": 0.0,
+              "importance": 0.8,
+              "matched_keywords": [
+                "GPU",
+                "access",
+                "available",
+                "commercial",
+                "compute",
+                "deployed",
+                "deployment",
+                "enterprise",
+                "flags",
+                "hardware",
+                "infrastructure",
+                "logging",
+                "logs",
+                "monitoring",
+                "public",
+                "restricted",
+                "review",
+                "tier",
+                "verification"
+              ],
+              "evidence_count": 72
+            }
+          ]
+        },
+        "strengths": [],
+        "category_details": {
+          "safety_risk": {
+            "category_id": "safety_risk",
+            "name_en": "Safety & Risk Information",
+            "governance_axis": "safety",
+            "importance_weight": 0.95,
+            "coverage_score": 0.0,
+            "hit_count": 49,
+            "matched_keywords": [
+              "CBRN",
+              "abuse",
+              "adversarial",
+              "attack",
+              "biological",
+              "blocked",
+              "chemical",
+              "cyberattack",
+              "exploit",
+              "hallucination",
+              "hazard",
+              "jailbreak",
+              "malware",
+              "misinformation",
+              "phishing",
+              "red teaming",
+              "refusal",
+              "reject",
+              "rejected",
+              "risk",
+              "safety benchmark",
+              "security",
+              "self-harm",
+              "suicide",
+              "toxic",
+              "toxicity",
+              "violence",
+              "vulnerability",
+              "weapons"
+            ],
+            "table_hits": 0,
+            "text_hits": 49,
+            "risk_flag": "high_gap",
+            "missing_questions_en": [
+              "What are the main dangerous capabilities of this system, and how are they measured?",
+              "What red-teaming or adversarial testing has been conducted, and with what results?",
+              "How are safety incidents recorded, investigated, and reported?",
+              "What is the refusal rate for different categories of harmful requests?",
+              "How does the system handle attempts to bypass safety measures?"
+            ],
+            "evidence_chunks": [
+              "llama3_tech_report::text_0002",
+              "llama3_tech_report::text_0018",
+              "llama3_tech_report::text_0023",
+              "llama3_tech_report::text_0024",
+              "llama3_tech_report::text_0025",
+              "llama3_tech_report::text_0026",
+              "llama3_tech_report::text_0031",
+              "llama3_tech_report::text_0039",
+              "llama3_tech_report::text_0040",
+              "llama3_tech_report::text_0041"
+            ]
+          },
+          "intended_use_limitations": {
+            "category_id": "intended_use_limitations",
+            "name_en": "Intended Use & Limitations",
+            "governance_axis": "scope",
+            "importance_weight": 0.9,
+            "coverage_score": 0.0,
+            "hit_count": 34,
+            "matched_keywords": [
+              "avoid using",
+              "constraints",
+              "context window",
+              "disclaimer",
+              "limitation",
+              "limitations",
+              "long context",
+              "scope",
+              "use case",
+              "use cases",
+              "warning"
+            ],
+            "table_hits": 0,
+            "text_hits": 34,
+            "risk_flag": "high_gap",
+            "missing_questions_en": [
+              "What is this system explicitly designed for, and what uses are out-of-scope?",
+              "In which domains or decision contexts should this model never be used?",
+              "How does performance degrade outside the intended domain or beyond the context window?",
+              "What warnings or disclaimers are provided to users about limitations?",
+              "Are there specific populations or contexts where this system should not be deployed?"
+            ],
+            "evidence_chunks": [
+              "llama3_tech_report::text_0000",
+              "llama3_tech_report::text_0001",
+              "llama3_tech_report::text_0005",
+              "llama3_tech_report::text_0007",
+              "llama3_tech_report::text_0016",
+              "llama3_tech_report::text_0022",
+              "llama3_tech_report::text_0023",
+              "llama3_tech_report::text_0025",
+              "llama3_tech_report::text_0026",
+              "llama3_tech_report::text_0031"
+            ]
+          },
+          "training_data": {
+            "category_id": "training_data",
+            "name_en": "Training & Data",
+            "governance_axis": "data",
+            "importance_weight": 0.9,
+            "coverage_score": 0.0,
+            "hit_count": 102,
+            "matched_keywords": [
+              "annotated",
+              "annotation",
+              "augmented",
+              "corpora",
+              "corpus",
+              "curated",
+              "curation",
+              "cutoff date",
+              "data collection",
+              "data composition",
+              "data mix",
+              "data source",
+              "data sources",
+              "dataset",
+              "datasets",
+              "deduplication",
+              "filter",
+              "filtered",
+              "filtering",
+              "generated data",
+              "human feedback",
+              "labeled",
+              "languages",
+              "license",
+              "licensed",
+              "multilingual",
+              "pre-training data",
+              "reinforcement learning",
+              "synthetic data",
+              "training data",
+              "web crawl",
+              "web data"
+            ],
+            "table_hits": 0,
+            "text_hits": 102,
+            "risk_flag": "high_gap",
+            "missing_questions_en": [
+              "From which sources and time periods does the training data come?",
+              "How were data filtered, deduplicated, and moderated before training?",
+              "What proportion of the training data is synthetic, and for which purposes is it used?",
+              "What is the demographic and linguistic composition of the training data?",
+              "What licensing constraints exist on the training data?",
+              "How was human feedback or RLHF data collected and annotated?"
+            ],
+            "evidence_chunks": [
+              "llama3_tech_report::text_0000",
+              "llama3_tech_report::text_0001",
+              "llama3_tech_report::text_0002",
+              "llama3_tech_report::text_0005",
+              "llama3_tech_report::text_0006",
+              "llama3_tech_report::text_0007",
+              "llama3_tech_report::text_0008",
+              "llama3_tech_report::text_0009",
+              "llama3_tech_report::text_0011",
+              "llama3_tech_report::text_0021"
+            ]
+          },
+          "performance_capabilities": {
+            "category_id": "performance_capabilities",
+            "name_en": "Performance & Capabilities",
+            "governance_axis": "capabilities",
+            "importance_weight": 0.85,
+            "coverage_score": 0.0,
+            "hit_count": 158,
+            "matched_keywords": [
+              "ARC",
+              "F1",
+              "GSM8K",
+              "HellaSwag",
+              "HumanEval",
+              "MATH",
+              "MMLU",
+              "SOTA",
+              "accuracy",
+              "baseline",
+              "benchmark",
+              "benchmarks",
+              "capabilities",
+              "capability",
+              "code generation",
+              "coding",
+              "comparison",
+              "domain-specific",
+              "emergent",
+              "error rate",
+              "evaluated",
+              "evaluation",
+              "improvement",
+              "increase",
+              "latency",
+              "math",
+              "mathematics",
+              "multilingual",
+              "pass rate",
+              "performance",
+              "precision",
+              "programming",
+              "question answering",
+              "reasoning",
+              "recall",
+              "results",
+              "score",
+              "scores",
+              "state-of-the-art",
+              "summarization",
+              "throughput",
+              "translation"
+            ],
+            "table_hits": 2,
+            "text_hits": 156,
+            "risk_flag": "medium_gap",
+            "missing_questions_en": [
+              "On which benchmarks has this system been evaluated, and how do the scores compare to baselines?",
+              "In which domains should the model be considered strong, and where should it not be trusted?",
+              "How do capabilities differ from previous versions or neighbouring models?",
+              "What are the known failure modes or task categories where performance is poor?",
+              "How does performance vary across different languages or cultural contexts?"
+            ],
+            "evidence_chunks": [
+              "llama3_tech_report::text_0000",
+              "llama3_tech_report::text_0001",
+              "llama3_tech_report::text_0002",
+              "llama3_tech_report::text_0004",
+              "llama3_tech_report::text_0005",
+              "llama3_tech_report::text_0006",
+              "llama3_tech_report::text_0007",
+              "llama3_tech_report::text_0008",
+              "llama3_tech_report::text_0009",
+              "llama3_tech_report::text_0011"
+            ]
+          },
+          "organizational_governance": {
+            "category_id": "organizational_governance",
+            "name_en": "Organizational & Governance",
+            "governance_axis": "governance",
+            "importance_weight": 0.9,
+            "coverage_score": 0.0019285309132161094,
+            "hit_count": 17,
+            "matched_keywords": [
+              "board",
+              "development process",
+              "independent",
+              "responsible AI",
+              "responsible development",
+              "third-party",
+              "updates"
+            ],
+            "table_hits": 0,
+            "text_hits": 17,
+            "risk_flag": "high_gap",
+            "missing_questions_en": [
+              "Which governance structures and review processes oversee this system through its lifecycle?",
+              "Has the system undergone external audits or evaluations? By whom and with what access?",
+              "What are the update, rollback, and deprecation policies for this model?",
+              "How are decisions about model changes and deployments made?",
+              "What mechanisms exist for users to report issues or appeal decisions?"
+            ],
+            "evidence_chunks": [
+              "llama3_tech_report::text_0001",
+              "llama3_tech_report::text_0002",
+              "llama3_tech_report::text_0007",
+              "llama3_tech_report::text_0020",
+              "llama3_tech_report::text_0021",
+              "llama3_tech_report::text_0059",
+              "llama3_tech_report::text_0083",
+              "llama3_tech_report::text_0110",
+              "llama3_tech_report::text_0119",
+              "llama3_tech_report::text_0135"
+            ]
+          },
+          "access_deployment": {
+            "category_id": "access_deployment",
+            "name_en": "Access & Deployment",
+            "governance_axis": "deployment",
+            "importance_weight": 0.8,
+            "coverage_score": 0.0,
+            "hit_count": 72,
+            "matched_keywords": [
+              "GPU",
+              "access",
+              "available",
+              "commercial",
+              "compute",
+              "deployed",
+              "deployment",
+              "enterprise",
+              "flags",
+              "hardware",
+              "infrastructure",
+              "logging",
+              "logs",
+              "monitoring",
+              "public",
+              "restricted",
+              "review",
+              "tier",
+              "verification"
+            ],
+            "table_hits": 1,
+            "text_hits": 71,
+            "risk_flag": "medium_gap",
+            "missing_questions_en": [
+              "Who is allowed to access this system, and under what conditions?",
+              "What rate limits, logging, or monitoring are in place to detect misuse?",
+              "What infrastructure is required to deploy this system safely in sensitive environments?",
+              "What verification or approval processes exist for accessing the system?",
+              "How long are usage logs retained, and who has access to them?"
+            ],
+            "evidence_chunks": [
+              "llama3_tech_report::text_0000",
+              "llama3_tech_report::text_0001",
+              "llama3_tech_report::text_0002",
+              "llama3_tech_report::text_0007",
+              "llama3_tech_report::text_0008",
+              "llama3_tech_report::text_0009",
+              "llama3_tech_report::text_0011",
+              "llama3_tech_report::text_0012",
+              "llama3_tech_report::text_0014",
+              "llama3_tech_report::text_0015"
+            ]
+          },
+          "equity_bias": {
+            "category_id": "equity_bias",
+            "name_en": "Equity & Bias",
+            "governance_axis": "equity",
+            "importance_weight": 1.0,
+            "coverage_score": 0.0,
+            "hit_count": 117,
+            "matched_keywords": [
+              "age",
+              "bias",
+              "biased",
+              "biases",
+              "disabled",
+              "fair",
+              "gender",
+              "harm",
+              "harmful",
+              "harms",
+              "language",
+              "mitigate",
+              "mitigation",
+              "race",
+              "representation",
+              "subgroup",
+              "subgroups",
+              "vulnerable"
+            ],
+            "table_hits": 0,
+            "text_hits": 117,
+            "risk_flag": "high_gap",
+            "missing_questions_en": [
+              "How does the system perform across different demographic and intersectional groups?",
+              "Which fairness metrics or evaluations have been applied, and what were the results?",
+              "What harms or disparities have been identified for marginalized communities, and what mitigations exist?",
+              "Are performance metrics disaggregated by protected characteristics?",
+              "What representational or allocative harms have been documented?",
+              "How does the system handle dialect, accent, or non-standard language variations?"
+            ],
+            "evidence_chunks": [
+              "llama3_tech_report::text_0000",
+              "llama3_tech_report::text_0001",
+              "llama3_tech_report::text_0002",
+              "llama3_tech_report::text_0005",
+              "llama3_tech_report::text_0006",
+              "llama3_tech_report::text_0007",
+              "llama3_tech_report::text_0008",
+              "llama3_tech_report::text_0009",
+              "llama3_tech_report::text_0014",
+              "llama3_tech_report::text_0016"
+            ]
+          },
+          "other": {
+            "category_id": "other",
+            "name_en": "Other / Uncategorised",
+            "governance_axis": "misc",
+            "importance_weight": 0.2,
+            "coverage_score": 0.0,
+            "hit_count": 34,
+            "matched_keywords": [
+              "best-in-class",
+              "brand",
+              "cutting-edge",
+              "story",
+              "values",
+              "vision"
+            ],
+            "table_hits": 0,
+            "text_hits": 34,
+            "risk_flag": "ok",
+            "missing_questions_en": [
+              "Which parts of the documentation are primarily marketing rather than substantive transparency?",
+              "Where are there high-level commitments without concrete metrics or mechanisms?",
+              "What information is missing that would turn generic claims into accountable commitments?"
+            ],
+            "evidence_chunks": [
+              "llama3_tech_report::text_0001",
+              "llama3_tech_report::text_0002",
+              "llama3_tech_report::text_0006",
+              "llama3_tech_report::text_0011",
+              "llama3_tech_report::text_0018",
+              "llama3_tech_report::text_0022",
+              "llama3_tech_report::text_0102",
+              "llama3_tech_report::text_0127",
+              "llama3_tech_report::text_0146",
+              "llama3_tech_report::text_0148"
+            ]
+          }
+        },
+        "gap_analysis": {
+          "safety_risk": {
+            "category_id": "safety_risk",
+            "name": "Safety & Risk Information",
+            "severity": "medium",
+            "coverage_score": 0.0,
+            "importance": 0.95,
+            "gap_size": 0.3,
+            "table_evidence": 0,
+            "text_evidence": 49,
+            "missing_question_templates": [
+              "What are the main dangerous capabilities of this system, and how are they measured?",
+              "What red-teaming or adversarial testing has been conducted, and with what results?",
+              "How are safety incidents recorded, investigated, and reported?",
+              "What is the refusal rate for different categories of harmful requests?",
+              "How does the system handle attempts to bypass safety measures?"
+            ],
+            "recommendation": "Safety & Risk Information lacks structured safety benchmarks. Require standardized red-teaming results, refusal rate tables, and incident tracking with severity classifications."
+          },
+          "intended_use_limitations": {
+            "category_id": "intended_use_limitations",
+            "name": "Intended Use & Limitations",
+            "severity": "medium",
+            "coverage_score": 0.0,
+            "importance": 0.9,
+            "gap_size": 0.3,
+            "table_evidence": 0,
+            "text_evidence": 34,
+            "missing_question_templates": [
+              "What is this system explicitly designed for, and what uses are out-of-scope?",
+              "In which domains or decision contexts should this model never be used?",
+              "How does performance degrade outside the intended domain or beyond the context window?",
+              "What warnings or disclaimers are provided to users about limitations?",
+              "Are there specific populations or contexts where this system should not be deployed?"
+            ],
+            "recommendation": "Intended Use & Limitations needs better documentation. Key questions to address: What is this system explicitly designed for, and what uses are out-of-scope?"
+          },
+          "training_data": {
+            "category_id": "training_data",
+            "name": "Training & Data",
+            "severity": "medium",
+            "coverage_score": 0.0,
+            "importance": 0.9,
+            "gap_size": 0.3,
+            "table_evidence": 0,
+            "text_evidence": 102,
+            "missing_question_templates": [
+              "From which sources and time periods does the training data come?",
+              "How were data filtered, deduplicated, and moderated before training?",
+              "What proportion of the training data is synthetic, and for which purposes is it used?",
+              "What is the demographic and linguistic composition of the training data?",
+              "What licensing constraints exist on the training data?",
+              "How was human feedback or RLHF data collected and annotated?"
+            ],
+            "recommendation": "Training & Data documentation is incomplete. Require data provenance, filtering methodology, demographic composition, and licensing information."
+          },
+          "performance_capabilities": {
+            "category_id": "performance_capabilities",
+            "name": "Performance & Capabilities",
+            "severity": "medium",
+            "coverage_score": 0.0,
+            "importance": 0.85,
+            "gap_size": 0.3,
+            "table_evidence": 2,
+            "text_evidence": 156,
+            "missing_question_templates": [
+              "On which benchmarks has this system been evaluated, and how do the scores compare to baselines?",
+              "In which domains should the model be considered strong, and where should it not be trusted?",
+              "How do capabilities differ from previous versions or neighbouring models?",
+              "What are the known failure modes or task categories where performance is poor?",
+              "How does performance vary across different languages or cultural contexts?"
+            ],
+            "recommendation": "Performance & Capabilities needs better documentation. Key questions to address: On which benchmarks has this system been evaluated, and how do the scores compare to baselines?"
+          },
+          "organizational_governance": {
+            "category_id": "organizational_governance",
+            "name": "Organizational & Governance",
+            "severity": "medium",
+            "coverage_score": 0.0019285309132161094,
+            "importance": 0.9,
+            "gap_size": 0.2980714690867839,
+            "table_evidence": 0,
+            "text_evidence": 17,
+            "missing_question_templates": [
+              "Which governance structures and review processes oversee this system through its lifecycle?",
+              "Has the system undergone external audits or evaluations? By whom and with what access?",
+              "What are the update, rollback, and deprecation policies for this model?",
+              "How are decisions about model changes and deployments made?",
+              "What mechanisms exist for users to report issues or appeal decisions?"
+            ],
+            "recommendation": "Organizational & Governance needs better documentation. Key questions to address: Which governance structures and review processes oversee this system through its lifecycle?"
+          },
+          "access_deployment": {
+            "category_id": "access_deployment",
+            "name": "Access & Deployment",
+            "severity": "medium",
+            "coverage_score": 0.0,
+            "importance": 0.8,
+            "gap_size": 0.3,
+            "table_evidence": 1,
+            "text_evidence": 71,
+            "missing_question_templates": [
+              "Who is allowed to access this system, and under what conditions?",
+              "What rate limits, logging, or monitoring are in place to detect misuse?",
+              "What infrastructure is required to deploy this system safely in sensitive environments?",
+              "What verification or approval processes exist for accessing the system?",
+              "How long are usage logs retained, and who has access to them?"
+            ],
+            "recommendation": "Access & Deployment needs better documentation. Key questions to address: Who is allowed to access this system, and under what conditions?"
+          },
+          "equity_bias": {
+            "category_id": "equity_bias",
+            "name": "Equity & Bias",
+            "severity": "high",
+            "coverage_score": 0.0,
+            "importance": 1.0,
+            "gap_size": 0.3,
+            "has_quantitative_data": false,
+            "missing_question_templates": [
+              "How does the system perform across different demographic and intersectional groups?",
+              "Which fairness metrics or evaluations have been applied, and what were the results?",
+              "What harms or disparities have been identified for marginalized communities, and what mitigations exist?",
+              "Are performance metrics disaggregated by protected characteristics?",
+              "What representational or allocative harms have been documented?",
+              "How does the system handle dialect, accent, or non-standard language variations?"
+            ],
+            "recommendation": "CRITICAL: Equity & Bias lacks quantitative fairness metrics. Require disaggregated performance data across demographic groups, standardized fairness metrics (e.g., equalized odds, demographic parity), and transparent reporting of disparate impact."
+          },
+          "other": {
+            "category_id": "other",
+            "name": "Other / Uncategorised",
+            "severity": "low",
+            "coverage_score": 0.0,
+            "importance": 0.2,
+            "gap_size": 0.3,
+            "table_evidence": 0,
+            "text_evidence": 34,
+            "missing_question_templates": [
+              "Which parts of the documentation are primarily marketing rather than substantive transparency?",
+              "Where are there high-level commitments without concrete metrics or mechanisms?",
+              "What information is missing that would turn generic claims into accountable commitments?"
+            ],
+            "recommendation": "Other / Uncategorised needs better documentation. Key questions to address: Which parts of the documentation are primarily marketing rather than substantive transparency?"
+          }
+        }
+      },
+      "qwen3_tech_report": {
+        "document": {
+          "doc_id": "qwen3_tech_report",
+          "title": "Qwen3 Technical Report",
+          "year": 2024,
+          "doc_type": "artifact",
+          "total_chunks": 136,
+          "chunk_types": {
+            "text": 135,
+            "table": 1
+          }
+        },
+        "coverage": {
+          "overall_score": 0.002,
+          "categories_evaluated": 8
+        },
+        "gaps": {
+          "critical": [
+            {
+              "category": "Safety & Risk Information",
+              "score": 0.0006535947712418301,
+              "importance": 0.95,
+              "matched_keywords": [
+                "exploit",
+                "hallucination",
+                "reject",
+                "risk"
+              ],
+              "evidence_count": 3
+            },
+            {
+              "category": "Intended Use & Limitations",
+              "score": 0.0006684491978609626,
+              "importance": 0.9,
+              "matched_keywords": [
+                "context window",
+                "inappropriate",
+                "scope"
+              ],
+              "evidence_count": 3
+            },
+            {
+              "category": "Training & Data",
+              "score": 0.012468030690537084,
+              "importance": 0.9,
+              "matched_keywords": [
+                "annotation",
+                "augmented",
+                "corpora",
+                "corpus",
+                "curated",
+                "dataset",
+                "datasets",
+                "filter",
+                "filtering",
+                "languages",
+                "multilingual",
+                "pretraining data",
+                "reinforcement learning",
+                "training data"
+              ],
+              "evidence_count": 29
+            },
+            {
+              "category": "Organizational & Governance",
+              "score": 0.0012553802008608323,
+              "importance": 0.9,
+              "matched_keywords": [
+                "board",
+                "decision-making",
+                "independent",
+                "rollout",
+                "updates"
+              ],
+              "evidence_count": 5
+            },
+            {
+              "category": "Equity & Bias",
+              "score": 0.0,
+              "importance": 1.0,
+              "matched_keywords": [
+                "accessibility",
+                "accessible",
+                "age",
+                "bias",
+                "dialect",
+                "disabled",
+                "fair",
+                "harm",
+                "harms",
+                "language",
+                "mitigate",
+                "representation"
+              ],
+              "evidence_count": 57
+            }
+          ],
+          "high": [
+            {
+              "category": "Performance & Capabilities",
+              "score": 0.0,
+              "importance": 0.85,
+              "matched_keywords": [
+                "ARC",
+                "F1",
+                "GSM8K",
+                "HumanEval",
+                "MATH",
+                "MMLU",
+                "SOTA",
+                "accuracy",
+                "baseline",
+                "benchmark",
+                "benchmarks",
+                "capabilities",
+                "capability",
+                "code generation",
+                "coding",
+                "comparison",
+                "creative writing",
+                "domain-specific",
+                "evaluated",
+                "evaluation",
+                "improvement",
+                "increase",
+                "latency",
+                "math",
+                "mathematics",
+                "multilingual",
+                "performance",
+                "precision",
+                "programming",
+                "reasoning",
+                "results",
+                "score",
+                "scores",
+                "state-of-the-art",
+                "translation"
+              ],
+              "evidence_count": 83
+            },
+            {
+              "category": "Access & Deployment",
+              "score": 0.0,
+              "importance": 0.8,
+              "matched_keywords": [
+                "GPU",
+                "access",
+                "compute",
+                "deployment",
+                "flags",
+                "logs",
+                "public",
+                "review",
+                "tier",
+                "tiers"
+              ],
+              "evidence_count": 15
+            }
+          ]
+        },
+        "strengths": [],
+        "category_details": {
+          "safety_risk": {
+            "category_id": "safety_risk",
+            "name_en": "Safety & Risk Information",
+            "governance_axis": "safety",
+            "importance_weight": 0.95,
+            "coverage_score": 0.0006535947712418301,
+            "hit_count": 3,
+            "matched_keywords": [
+              "exploit",
+              "hallucination",
+              "reject",
+              "risk"
+            ],
+            "table_hits": 0,
+            "text_hits": 3,
+            "risk_flag": "high_gap",
+            "missing_questions_en": [
+              "What are the main dangerous capabilities of this system, and how are they measured?",
+              "What red-teaming or adversarial testing has been conducted, and with what results?",
+              "How are safety incidents recorded, investigated, and reported?",
+              "What is the refusal rate for different categories of harmful requests?",
+              "How does the system handle attempts to bypass safety measures?"
+            ],
+            "evidence_chunks": [
+              "qwen3_tech_report::text_0034",
+              "qwen3_tech_report::text_0035",
+              "qwen3_tech_report::text_0036"
+            ]
+          },
+          "intended_use_limitations": {
+            "category_id": "intended_use_limitations",
+            "name_en": "Intended Use & Limitations",
+            "governance_axis": "scope",
+            "importance_weight": 0.9,
+            "coverage_score": 0.0006684491978609626,
+            "hit_count": 3,
+            "matched_keywords": [
+              "context window",
+              "inappropriate",
+              "scope"
+            ],
+            "table_hits": 0,
+            "text_hits": 3,
+            "risk_flag": "high_gap",
+            "missing_questions_en": [
+              "What is this system explicitly designed for, and what uses are out-of-scope?",
+              "In which domains or decision contexts should this model never be used?",
+              "How does performance degrade outside the intended domain or beyond the context window?",
+              "What warnings or disclaimers are provided to users about limitations?",
+              "Are there specific populations or contexts where this system should not be deployed?"
+            ],
+            "evidence_chunks": [
+              "qwen3_tech_report::text_0000",
+              "qwen3_tech_report::text_0034",
+              "qwen3_tech_report::text_0132"
+            ]
+          },
+          "training_data": {
+            "category_id": "training_data",
+            "name_en": "Training & Data",
+            "governance_axis": "data",
+            "importance_weight": 0.9,
+            "coverage_score": 0.012468030690537084,
+            "hit_count": 29,
+            "matched_keywords": [
+              "annotation",
+              "augmented",
+              "corpora",
+              "corpus",
+              "curated",
+              "dataset",
+              "datasets",
+              "filter",
+              "filtering",
+              "languages",
+              "multilingual",
+              "pretraining data",
+              "reinforcement learning",
+              "training data"
+            ],
+            "table_hits": 0,
+            "text_hits": 29,
+            "risk_flag": "high_gap",
+            "missing_questions_en": [
+              "From which sources and time periods does the training data come?",
+              "How were data filtered, deduplicated, and moderated before training?",
+              "What proportion of the training data is synthetic, and for which purposes is it used?",
+              "What is the demographic and linguistic composition of the training data?",
+              "What licensing constraints exist on the training data?",
+              "How was human feedback or RLHF data collected and annotated?"
+            ],
+            "evidence_chunks": [
+              "qwen3_tech_report::text_0001",
+              "qwen3_tech_report::text_0002",
+              "qwen3_tech_report::text_0003",
+              "qwen3_tech_report::text_0004",
+              "qwen3_tech_report::text_0005",
+              "qwen3_tech_report::text_0006",
+              "qwen3_tech_report::text_0034",
+              "qwen3_tech_report::text_0035",
+              "qwen3_tech_report::text_0036",
+              "qwen3_tech_report::text_0038"
+            ]
+          },
+          "performance_capabilities": {
+            "category_id": "performance_capabilities",
+            "name_en": "Performance & Capabilities",
+            "governance_axis": "capabilities",
+            "importance_weight": 0.85,
+            "coverage_score": 0.0,
+            "hit_count": 83,
+            "matched_keywords": [
+              "ARC",
+              "F1",
+              "GSM8K",
+              "HumanEval",
+              "MATH",
+              "MMLU",
+              "SOTA",
+              "accuracy",
+              "baseline",
+              "benchmark",
+              "benchmarks",
+              "capabilities",
+              "capability",
+              "code generation",
+              "coding",
+              "comparison",
+              "creative writing",
+              "domain-specific",
+              "evaluated",
+              "evaluation",
+              "improvement",
+              "increase",
+              "latency",
+              "math",
+              "mathematics",
+              "multilingual",
+              "performance",
+              "precision",
+              "programming",
+              "reasoning",
+              "results",
+              "score",
+              "scores",
+              "state-of-the-art",
+              "translation"
+            ],
+            "table_hits": 1,
+            "text_hits": 82,
+            "risk_flag": "medium_gap",
+            "missing_questions_en": [
+              "On which benchmarks has this system been evaluated, and how do the scores compare to baselines?",
+              "In which domains should the model be considered strong, and where should it not be trusted?",
+              "How do capabilities differ from previous versions or neighbouring models?",
+              "What are the known failure modes or task categories where performance is poor?",
+              "How does performance vary across different languages or cultural contexts?"
+            ],
+            "evidence_chunks": [
+              "qwen3_tech_report::text_0001",
+              "qwen3_tech_report::text_0002",
+              "qwen3_tech_report::text_0003",
+              "qwen3_tech_report::text_0004",
+              "qwen3_tech_report::text_0005",
+              "qwen3_tech_report::text_0006",
+              "qwen3_tech_report::text_0007",
+              "qwen3_tech_report::text_0008",
+              "qwen3_tech_report::text_0009",
+              "qwen3_tech_report::text_0010"
+            ]
+          },
+          "organizational_governance": {
+            "category_id": "organizational_governance",
+            "name_en": "Organizational & Governance",
+            "governance_axis": "governance",
+            "importance_weight": 0.9,
+            "coverage_score": 0.0012553802008608323,
+            "hit_count": 5,
+            "matched_keywords": [
+              "board",
+              "decision-making",
+              "independent",
+              "rollout",
+              "updates"
+            ],
+            "table_hits": 0,
+            "text_hits": 5,
+            "risk_flag": "high_gap",
+            "missing_questions_en": [
+              "Which governance structures and review processes oversee this system through its lifecycle?",
+              "Has the system undergone external audits or evaluations? By whom and with what access?",
+              "What are the update, rollback, and deprecation policies for this model?",
+              "How are decisions about model changes and deployments made?",
+              "What mechanisms exist for users to report issues or appeal decisions?"
+            ],
+            "evidence_chunks": [
+              "qwen3_tech_report::text_0034",
+              "qwen3_tech_report::text_0036",
+              "qwen3_tech_report::text_0038",
+              "qwen3_tech_report::text_0131",
+              "qwen3_tech_report::text_0134"
+            ]
+          },
+          "access_deployment": {
+            "category_id": "access_deployment",
+            "name_en": "Access & Deployment",
+            "governance_axis": "deployment",
+            "importance_weight": 0.8,
+            "coverage_score": 0.0,
+            "hit_count": 15,
+            "matched_keywords": [
+              "GPU",
+              "access",
+              "compute",
+              "deployment",
+              "flags",
+              "logs",
+              "public",
+              "review",
+              "tier",
+              "tiers"
+            ],
+            "table_hits": 1,
+            "text_hits": 14,
+            "risk_flag": "medium_gap",
+            "missing_questions_en": [
+              "Who is allowed to access this system, and under what conditions?",
+              "What rate limits, logging, or monitoring are in place to detect misuse?",
+              "What infrastructure is required to deploy this system safely in sensitive environments?",
+              "What verification or approval processes exist for accessing the system?",
+              "How long are usage logs retained, and who has access to them?"
+            ],
+            "evidence_chunks": [
+              "qwen3_tech_report::text_0001",
+              "qwen3_tech_report::text_0002",
+              "qwen3_tech_report::text_0003",
+              "qwen3_tech_report::text_0006",
+              "qwen3_tech_report::text_0031",
+              "qwen3_tech_report::text_0034",
+              "qwen3_tech_report::text_0035",
+              "qwen3_tech_report::text_0050",
+              "qwen3_tech_report::text_0097",
+              "qwen3_tech_report::text_0098"
+            ]
+          },
+          "equity_bias": {
+            "category_id": "equity_bias",
+            "name_en": "Equity & Bias",
+            "governance_axis": "equity",
+            "importance_weight": 1.0,
+            "coverage_score": 0.0,
+            "hit_count": 57,
+            "matched_keywords": [
+              "accessibility",
+              "accessible",
+              "age",
+              "bias",
+              "dialect",
+              "disabled",
+              "fair",
+              "harm",
+              "harms",
+              "language",
+              "mitigate",
+              "representation"
+            ],
+            "table_hits": 1,
+            "text_hits": 56,
+            "risk_flag": "high_gap",
+            "missing_questions_en": [
+              "How does the system perform across different demographic and intersectional groups?",
+              "Which fairness metrics or evaluations have been applied, and what were the results?",
+              "What harms or disparities have been identified for marginalized communities, and what mitigations exist?",
+              "Are performance metrics disaggregated by protected characteristics?",
+              "What representational or allocative harms have been documented?",
+              "How does the system handle dialect, accent, or non-standard language variations?"
+            ],
+            "evidence_chunks": [
+              "qwen3_tech_report::text_0001",
+              "qwen3_tech_report::text_0002",
+              "qwen3_tech_report::text_0003",
+              "qwen3_tech_report::text_0004",
+              "qwen3_tech_report::text_0005",
+              "qwen3_tech_report::text_0006",
+              "qwen3_tech_report::text_0031",
+              "qwen3_tech_report::text_0034",
+              "qwen3_tech_report::text_0035",
+              "qwen3_tech_report::text_0036"
+            ]
+          },
+          "other": {
+            "category_id": "other",
+            "name_en": "Other / Uncategorised",
+            "governance_axis": "misc",
+            "importance_weight": 0.2,
+            "coverage_score": 0.0008650519031141869,
+            "hit_count": 2,
+            "matched_keywords": [
+              "cutting-edge",
+              "vision"
+            ],
+            "table_hits": 0,
+            "text_hits": 2,
+            "risk_flag": "ok",
+            "missing_questions_en": [
+              "Which parts of the documentation are primarily marketing rather than substantive transparency?",
+              "Where are there high-level commitments without concrete metrics or mechanisms?",
+              "What information is missing that would turn generic claims into accountable commitments?"
+            ],
+            "evidence_chunks": [
+              "qwen3_tech_report::text_0002",
+              "qwen3_tech_report::text_0131"
+            ]
+          }
+        },
+        "gap_analysis": {
+          "safety_risk": {
+            "category_id": "safety_risk",
+            "name": "Safety & Risk Information",
+            "severity": "medium",
+            "coverage_score": 0.0006535947712418301,
+            "importance": 0.95,
+            "gap_size": 0.29934640522875816,
+            "table_evidence": 0,
+            "text_evidence": 3,
+            "missing_question_templates": [
+              "What are the main dangerous capabilities of this system, and how are they measured?",
+              "What red-teaming or adversarial testing has been conducted, and with what results?",
+              "How are safety incidents recorded, investigated, and reported?",
+              "What is the refusal rate for different categories of harmful requests?",
+              "How does the system handle attempts to bypass safety measures?"
+            ],
+            "recommendation": "Safety & Risk Information lacks structured safety benchmarks. Require standardized red-teaming results, refusal rate tables, and incident tracking with severity classifications."
+          },
+          "intended_use_limitations": {
+            "category_id": "intended_use_limitations",
+            "name": "Intended Use & Limitations",
+            "severity": "medium",
+            "coverage_score": 0.0006684491978609626,
+            "importance": 0.9,
+            "gap_size": 0.299331550802139,
+            "table_evidence": 0,
+            "text_evidence": 3,
+            "missing_question_templates": [
+              "What is this system explicitly designed for, and what uses are out-of-scope?",
+              "In which domains or decision contexts should this model never be used?",
+              "How does performance degrade outside the intended domain or beyond the context window?",
+              "What warnings or disclaimers are provided to users about limitations?",
+              "Are there specific populations or contexts where this system should not be deployed?"
+            ],
+            "recommendation": "Intended Use & Limitations needs better documentation. Key questions to address: What is this system explicitly designed for, and what uses are out-of-scope?"
+          },
+          "training_data": {
+            "category_id": "training_data",
+            "name": "Training & Data",
+            "severity": "medium",
+            "coverage_score": 0.012468030690537084,
+            "importance": 0.9,
+            "gap_size": 0.2875319693094629,
+            "table_evidence": 0,
+            "text_evidence": 29,
+            "missing_question_templates": [
+              "From which sources and time periods does the training data come?",
+              "How were data filtered, deduplicated, and moderated before training?",
+              "What proportion of the training data is synthetic, and for which purposes is it used?",
+              "What is the demographic and linguistic composition of the training data?",
+              "What licensing constraints exist on the training data?",
+              "How was human feedback or RLHF data collected and annotated?"
+            ],
+            "recommendation": "Training & Data documentation is incomplete. Require data provenance, filtering methodology, demographic composition, and licensing information."
+          },
+          "performance_capabilities": {
+            "category_id": "performance_capabilities",
+            "name": "Performance & Capabilities",
+            "severity": "medium",
+            "coverage_score": 0.0,
+            "importance": 0.85,
+            "gap_size": 0.3,
+            "table_evidence": 1,
+            "text_evidence": 82,
+            "missing_question_templates": [
+              "On which benchmarks has this system been evaluated, and how do the scores compare to baselines?",
+              "In which domains should the model be considered strong, and where should it not be trusted?",
+              "How do capabilities differ from previous versions or neighbouring models?",
+              "What are the known failure modes or task categories where performance is poor?",
+              "How does performance vary across different languages or cultural contexts?"
+            ],
+            "recommendation": "Performance & Capabilities needs better documentation. Key questions to address: On which benchmarks has this system been evaluated, and how do the scores compare to baselines?"
+          },
+          "organizational_governance": {
+            "category_id": "organizational_governance",
+            "name": "Organizational & Governance",
+            "severity": "medium",
+            "coverage_score": 0.0012553802008608323,
+            "importance": 0.9,
+            "gap_size": 0.29874461979913913,
+            "table_evidence": 0,
+            "text_evidence": 5,
+            "missing_question_templates": [
+              "Which governance structures and review processes oversee this system through its lifecycle?",
+              "Has the system undergone external audits or evaluations? By whom and with what access?",
+              "What are the update, rollback, and deprecation policies for this model?",
+              "How are decisions about model changes and deployments made?",
+              "What mechanisms exist for users to report issues or appeal decisions?"
+            ],
+            "recommendation": "Organizational & Governance needs better documentation. Key questions to address: Which governance structures and review processes oversee this system through its lifecycle?"
+          },
+          "access_deployment": {
+            "category_id": "access_deployment",
+            "name": "Access & Deployment",
+            "severity": "medium",
+            "coverage_score": 0.0,
+            "importance": 0.8,
+            "gap_size": 0.3,
+            "table_evidence": 1,
+            "text_evidence": 14,
+            "missing_question_templates": [
+              "Who is allowed to access this system, and under what conditions?",
+              "What rate limits, logging, or monitoring are in place to detect misuse?",
+              "What infrastructure is required to deploy this system safely in sensitive environments?",
+              "What verification or approval processes exist for accessing the system?",
+              "How long are usage logs retained, and who has access to them?"
+            ],
+            "recommendation": "Access & Deployment needs better documentation. Key questions to address: Who is allowed to access this system, and under what conditions?"
+          },
+          "equity_bias": {
+            "category_id": "equity_bias",
+            "name": "Equity & Bias",
+            "severity": "high",
+            "coverage_score": 0.0,
+            "importance": 1.0,
+            "gap_size": 0.3,
+            "has_quantitative_data": true,
+            "missing_question_templates": [
+              "How does the system perform across different demographic and intersectional groups?",
+              "Which fairness metrics or evaluations have been applied, and what were the results?",
+              "What harms or disparities have been identified for marginalized communities, and what mitigations exist?",
+              "Are performance metrics disaggregated by protected characteristics?",
+              "What representational or allocative harms have been documented?",
+              "How does the system handle dialect, accent, or non-standard language variations?"
+            ],
+            "recommendation": "Equity & Bias has some quantitative data but coverage is incomplete. Expand to include intersectional analysis and document mitigation strategies."
+          },
+          "other": {
+            "category_id": "other",
+            "name": "Other / Uncategorised",
+            "severity": "low",
+            "coverage_score": 0.0008650519031141869,
+            "importance": 0.2,
+            "gap_size": 0.2991349480968858,
+            "table_evidence": 0,
+            "text_evidence": 2,
+            "missing_question_templates": [
+              "Which parts of the documentation are primarily marketing rather than substantive transparency?",
+              "Where are there high-level commitments without concrete metrics or mechanisms?",
+              "What information is missing that would turn generic claims into accountable commitments?"
+            ],
+            "recommendation": "Other / Uncategorised needs better documentation. Key questions to address: Which parts of the documentation are primarily marketing rather than substantive transparency?"
+          }
+        }
+      },
+      "stability_sd3_medium_hf": {
+        "document": {
+          "doc_id": "stability_sd3_medium_hf",
+          "title": "Stable Diffusion 3 Medium HF page",
+          "year": 2024,
+          "doc_type": "artifact",
+          "total_chunks": 33,
+          "chunk_types": {
+            "text": 29,
+            "table": 4
+          }
+        },
+        "coverage": {
+          "overall_score": 0.01,
+          "categories_evaluated": 8
+        },
+        "gaps": {
+          "critical": [
+            {
+              "category": "Safety & Risk Information",
+              "score": 0.006262626262626262,
+              "importance": 0.95,
+              "matched_keywords": [
+                "abuse",
+                "exploit",
+                "misuse",
+                "risk",
+                "security",
+                "toxic",
+                "violence"
+              ],
+              "evidence_count": 5
+            },
+            {
+              "category": "Intended Use & Limitations",
+              "score": 0.012855831037649219,
+              "importance": 0.9,
+              "matched_keywords": [
+                "caution",
+                "intended use",
+                "limitation",
+                "limitations",
+                "out-of-scope",
+                "scope",
+                "use case",
+                "use cases"
+              ],
+              "evidence_count": 4
+            },
+            {
+              "category": "Training & Data",
+              "score": 0.017193675889328065,
+              "importance": 0.9,
+              "matched_keywords": [
+                "dataset",
+                "datasets",
+                "filter",
+                "filtered",
+                "license",
+                "licensing",
+                "synthetic data"
+              ],
+              "evidence_count": 12
+            },
+            {
+              "category": "Organizational & Governance",
+              "score": 0.0024390243902439024,
+              "importance": 0.9,
+              "matched_keywords": [
+                "responsible AI",
+                "updates"
+              ],
+              "evidence_count": 3
+            },
+            {
+              "category": "Equity & Bias",
+              "score": 0.016876456876456877,
+              "importance": 1.0,
+              "matched_keywords": [
+                "accessible",
+                "age",
+                "bias",
+                "biased",
+                "harm",
+                "harmful",
+                "harms",
+                "mitigate",
+                "mitigation",
+                "representation"
+              ],
+              "evidence_count": 22
+            }
+          ],
+          "high": [
+            {
+              "category": "Performance & Capabilities",
+              "score": 0.00717377860235003,
+              "importance": 0.85,
+              "matched_keywords": [
+                "ARC",
+                "evaluation",
+                "performance"
+              ],
+              "evidence_count": 10
+            },
+            {
+              "category": "Access & Deployment",
+              "score": 0.014506769825918761,
+              "importance": 0.8,
+              "matched_keywords": [
+                "acceptable use",
+                "access",
+                "available",
+                "commercial",
+                "deployment",
+                "enterprise",
+                "pricing",
+                "public"
+              ],
+              "evidence_count": 14
+            }
+          ]
+        },
+        "strengths": [],
+        "category_details": {
+          "safety_risk": {
+            "category_id": "safety_risk",
+            "name_en": "Safety & Risk Information",
+            "governance_axis": "safety",
+            "importance_weight": 0.95,
+            "coverage_score": 0.006262626262626262,
+            "hit_count": 5,
+            "matched_keywords": [
+              "abuse",
+              "exploit",
+              "misuse",
+              "risk",
+              "security",
+              "toxic",
+              "violence"
+            ],
+            "table_hits": 1,
+            "text_hits": 4,
+            "risk_flag": "high_gap",
+            "missing_questions_en": [
+              "What are the main dangerous capabilities of this system, and how are they measured?",
+              "What red-teaming or adversarial testing has been conducted, and with what results?",
+              "How are safety incidents recorded, investigated, and reported?",
+              "What is the refusal rate for different categories of harmful requests?",
+              "How does the system handle attempts to bypass safety measures?"
+            ],
+            "evidence_chunks": [
+              "stability_sd3_medium_hf::text_0024",
+              "stability_sd3_medium_hf::text_0025",
+              "stability_sd3_medium_hf::text_0026",
+              "stability_sd3_medium_hf::text_0028",
+              "stability_sd3_medium_hf::table_0003"
+            ]
+          },
+          "intended_use_limitations": {
+            "category_id": "intended_use_limitations",
+            "name_en": "Intended Use & Limitations",
+            "governance_axis": "scope",
+            "importance_weight": 0.9,
+            "coverage_score": 0.012855831037649219,
+            "hit_count": 4,
+            "matched_keywords": [
+              "caution",
+              "intended use",
+              "limitation",
+              "limitations",
+              "out-of-scope",
+              "scope",
+              "use case",
+              "use cases"
+            ],
+            "table_hits": 0,
+            "text_hits": 4,
+            "risk_flag": "high_gap",
+            "missing_questions_en": [
+              "What is this system explicitly designed for, and what uses are out-of-scope?",
+              "In which domains or decision contexts should this model never be used?",
+              "How does performance degrade outside the intended domain or beyond the context window?",
+              "What warnings or disclaimers are provided to users about limitations?",
+              "Are there specific populations or contexts where this system should not be deployed?"
+            ],
+            "evidence_chunks": [
+              "stability_sd3_medium_hf::text_0022",
+              "stability_sd3_medium_hf::text_0023",
+              "stability_sd3_medium_hf::text_0024",
+              "stability_sd3_medium_hf::text_0026"
+            ]
+          },
+          "training_data": {
+            "category_id": "training_data",
+            "name_en": "Training & Data",
+            "governance_axis": "data",
+            "importance_weight": 0.9,
+            "coverage_score": 0.017193675889328065,
+            "hit_count": 12,
+            "matched_keywords": [
+              "dataset",
+              "datasets",
+              "filter",
+              "filtered",
+              "license",
+              "licensing",
+              "synthetic data"
+            ],
+            "table_hits": 3,
+            "text_hits": 9,
+            "risk_flag": "high_gap",
+            "missing_questions_en": [
+              "From which sources and time periods does the training data come?",
+              "How were data filtered, deduplicated, and moderated before training?",
+              "What proportion of the training data is synthetic, and for which purposes is it used?",
+              "What is the demographic and linguistic composition of the training data?",
+              "What licensing constraints exist on the training data?",
+              "How was human feedback or RLHF data collected and annotated?"
+            ],
+            "evidence_chunks": [
+              "stability_sd3_medium_hf::text_0000",
+              "stability_sd3_medium_hf::text_0001",
+              "stability_sd3_medium_hf::text_0005",
+              "stability_sd3_medium_hf::text_0008",
+              "stability_sd3_medium_hf::text_0012",
+              "stability_sd3_medium_hf::text_0016",
+              "stability_sd3_medium_hf::text_0020",
+              "stability_sd3_medium_hf::text_0026",
+              "stability_sd3_medium_hf::text_0028",
+              "stability_sd3_medium_hf::table_0000"
+            ]
+          },
+          "performance_capabilities": {
+            "category_id": "performance_capabilities",
+            "name_en": "Performance & Capabilities",
+            "governance_axis": "capabilities",
+            "importance_weight": 0.85,
+            "coverage_score": 0.00717377860235003,
+            "hit_count": 10,
+            "matched_keywords": [
+              "ARC",
+              "evaluation",
+              "performance"
+            ],
+            "table_hits": 2,
+            "text_hits": 8,
+            "risk_flag": "medium_gap",
+            "missing_questions_en": [
+              "On which benchmarks has this system been evaluated, and how do the scores compare to baselines?",
+              "In which domains should the model be considered strong, and where should it not be trusted?",
+              "How do capabilities differ from previous versions or neighbouring models?",
+              "What are the known failure modes or task categories where performance is poor?",
+              "How does performance vary across different languages or cultural contexts?"
+            ],
+            "evidence_chunks": [
+              "stability_sd3_medium_hf::text_0000",
+              "stability_sd3_medium_hf::text_0005",
+              "stability_sd3_medium_hf::text_0008",
+              "stability_sd3_medium_hf::text_0012",
+              "stability_sd3_medium_hf::text_0014",
+              "stability_sd3_medium_hf::text_0020",
+              "stability_sd3_medium_hf::text_0022",
+              "stability_sd3_medium_hf::text_0025",
+              "stability_sd3_medium_hf::table_0000",
+              "stability_sd3_medium_hf::table_0002"
+            ]
+          },
+          "organizational_governance": {
+            "category_id": "organizational_governance",
+            "name_en": "Organizational & Governance",
+            "governance_axis": "governance",
+            "importance_weight": 0.9,
+            "coverage_score": 0.0024390243902439024,
+            "hit_count": 3,
+            "matched_keywords": [
+              "responsible AI",
+              "updates"
+            ],
+            "table_hits": 1,
+            "text_hits": 2,
+            "risk_flag": "high_gap",
+            "missing_questions_en": [
+              "Which governance structures and review processes oversee this system through its lifecycle?",
+              "Has the system undergone external audits or evaluations? By whom and with what access?",
+              "What are the update, rollback, and deprecation policies for this model?",
+              "How are decisions about model changes and deployments made?",
+              "What mechanisms exist for users to report issues or appeal decisions?"
+            ],
+            "evidence_chunks": [
+              "stability_sd3_medium_hf::text_0005",
+              "stability_sd3_medium_hf::text_0024",
+              "stability_sd3_medium_hf::table_0002"
+            ]
+          },
+          "access_deployment": {
+            "category_id": "access_deployment",
+            "name_en": "Access & Deployment",
+            "governance_axis": "deployment",
+            "importance_weight": 0.8,
+            "coverage_score": 0.014506769825918761,
+            "hit_count": 14,
+            "matched_keywords": [
+              "acceptable use",
+              "access",
+              "available",
+              "commercial",
+              "deployment",
+              "enterprise",
+              "pricing",
+              "public"
+            ],
+            "table_hits": 3,
+            "text_hits": 11,
+            "risk_flag": "medium_gap",
+            "missing_questions_en": [
+              "Who is allowed to access this system, and under what conditions?",
+              "What rate limits, logging, or monitoring are in place to detect misuse?",
+              "What infrastructure is required to deploy this system safely in sensitive environments?",
+              "What verification or approval processes exist for accessing the system?",
+              "How long are usage logs retained, and who has access to them?"
+            ],
+            "evidence_chunks": [
+              "stability_sd3_medium_hf::text_0001",
+              "stability_sd3_medium_hf::text_0005",
+              "stability_sd3_medium_hf::text_0008",
+              "stability_sd3_medium_hf::text_0012",
+              "stability_sd3_medium_hf::text_0013",
+              "stability_sd3_medium_hf::text_0014",
+              "stability_sd3_medium_hf::text_0016",
+              "stability_sd3_medium_hf::text_0022",
+              "stability_sd3_medium_hf::text_0024",
+              "stability_sd3_medium_hf::text_0026"
+            ]
+          },
+          "equity_bias": {
+            "category_id": "equity_bias",
+            "name_en": "Equity & Bias",
+            "governance_axis": "equity",
+            "importance_weight": 1.0,
+            "coverage_score": 0.016876456876456877,
+            "hit_count": 22,
+            "matched_keywords": [
+              "accessible",
+              "age",
+              "bias",
+              "biased",
+              "harm",
+              "harmful",
+              "harms",
+              "mitigate",
+              "mitigation",
+              "representation"
+            ],
+            "table_hits": 3,
+            "text_hits": 19,
+            "risk_flag": "high_gap",
+            "missing_questions_en": [
+              "How does the system perform across different demographic and intersectional groups?",
+              "Which fairness metrics or evaluations have been applied, and what were the results?",
+              "What harms or disparities have been identified for marginalized communities, and what mitigations exist?",
+              "Are performance metrics disaggregated by protected characteristics?",
+              "What representational or allocative harms have been documented?",
+              "How does the system handle dialect, accent, or non-standard language variations?"
+            ],
+            "evidence_chunks": [
+              "stability_sd3_medium_hf::text_0000",
+              "stability_sd3_medium_hf::text_0001",
+              "stability_sd3_medium_hf::text_0003",
+              "stability_sd3_medium_hf::text_0006",
+              "stability_sd3_medium_hf::text_0008",
+              "stability_sd3_medium_hf::text_0009",
+              "stability_sd3_medium_hf::text_0010",
+              "stability_sd3_medium_hf::text_0013",
+              "stability_sd3_medium_hf::text_0016",
+              "stability_sd3_medium_hf::text_0017"
+            ]
+          },
+          "other": {
+            "category_id": "other",
+            "name_en": "Other / Uncategorised",
+            "governance_axis": "misc",
+            "importance_weight": 0.2,
+            "coverage_score": 0.0,
+            "hit_count": 0,
+            "matched_keywords": [],
+            "table_hits": 0,
+            "text_hits": 0,
+            "risk_flag": "ok",
+            "missing_questions_en": [
+              "Which parts of the documentation are primarily marketing rather than substantive transparency?",
+              "Where are there high-level commitments without concrete metrics or mechanisms?",
+              "What information is missing that would turn generic claims into accountable commitments?"
+            ],
+            "evidence_chunks": []
+          }
+        },
+        "gap_analysis": {
+          "safety_risk": {
+            "category_id": "safety_risk",
+            "name": "Safety & Risk Information",
+            "severity": "medium",
+            "coverage_score": 0.006262626262626262,
+            "importance": 0.95,
+            "gap_size": 0.29373737373737374,
+            "table_evidence": 1,
+            "text_evidence": 4,
+            "missing_question_templates": [
+              "What are the main dangerous capabilities of this system, and how are they measured?",
+              "What red-teaming or adversarial testing has been conducted, and with what results?",
+              "How are safety incidents recorded, investigated, and reported?",
+              "What is the refusal rate for different categories of harmful requests?",
+              "How does the system handle attempts to bypass safety measures?"
+            ],
+            "recommendation": "Safety & Risk Information has some safety data. Enhance with threat model documentation and post-deployment monitoring plans."
+          },
+          "intended_use_limitations": {
+            "category_id": "intended_use_limitations",
+            "name": "Intended Use & Limitations",
+            "severity": "medium",
+            "coverage_score": 0.012855831037649219,
+            "importance": 0.9,
+            "gap_size": 0.2871441689623508,
+            "table_evidence": 0,
+            "text_evidence": 4,
+            "missing_question_templates": [
+              "What is this system explicitly designed for, and what uses are out-of-scope?",
+              "In which domains or decision contexts should this model never be used?",
+              "How does performance degrade outside the intended domain or beyond the context window?",
+              "What warnings or disclaimers are provided to users about limitations?",
+              "Are there specific populations or contexts where this system should not be deployed?"
+            ],
+            "recommendation": "Intended Use & Limitations needs better documentation. Key questions to address: What is this system explicitly designed for, and what uses are out-of-scope?"
+          },
+          "training_data": {
+            "category_id": "training_data",
+            "name": "Training & Data",
+            "severity": "medium",
+            "coverage_score": 0.017193675889328065,
+            "importance": 0.9,
+            "gap_size": 0.2828063241106719,
+            "table_evidence": 3,
+            "text_evidence": 9,
+            "missing_question_templates": [
+              "From which sources and time periods does the training data come?",
+              "How were data filtered, deduplicated, and moderated before training?",
+              "What proportion of the training data is synthetic, and for which purposes is it used?",
+              "What is the demographic and linguistic composition of the training data?",
+              "What licensing constraints exist on the training data?",
+              "How was human feedback or RLHF data collected and annotated?"
+            ],
+            "recommendation": "Training & Data documentation is incomplete. Require data provenance, filtering methodology, demographic composition, and licensing information."
+          },
+          "performance_capabilities": {
+            "category_id": "performance_capabilities",
+            "name": "Performance & Capabilities",
+            "severity": "medium",
+            "coverage_score": 0.00717377860235003,
+            "importance": 0.85,
+            "gap_size": 0.29282622139764997,
+            "table_evidence": 2,
+            "text_evidence": 8,
+            "missing_question_templates": [
+              "On which benchmarks has this system been evaluated, and how do the scores compare to baselines?",
+              "In which domains should the model be considered strong, and where should it not be trusted?",
+              "How do capabilities differ from previous versions or neighbouring models?",
+              "What are the known failure modes or task categories where performance is poor?",
+              "How does performance vary across different languages or cultural contexts?"
+            ],
+            "recommendation": "Performance & Capabilities needs better documentation. Key questions to address: On which benchmarks has this system been evaluated, and how do the scores compare to baselines?"
+          },
+          "organizational_governance": {
+            "category_id": "organizational_governance",
+            "name": "Organizational & Governance",
+            "severity": "medium",
+            "coverage_score": 0.0024390243902439024,
+            "importance": 0.9,
+            "gap_size": 0.2975609756097561,
+            "table_evidence": 1,
+            "text_evidence": 2,
+            "missing_question_templates": [
+              "Which governance structures and review processes oversee this system through its lifecycle?",
+              "Has the system undergone external audits or evaluations? By whom and with what access?",
+              "What are the update, rollback, and deprecation policies for this model?",
+              "How are decisions about model changes and deployments made?",
+              "What mechanisms exist for users to report issues or appeal decisions?"
+            ],
+            "recommendation": "Organizational & Governance needs better documentation. Key questions to address: Which governance structures and review processes oversee this system through its lifecycle?"
+          },
+          "access_deployment": {
+            "category_id": "access_deployment",
+            "name": "Access & Deployment",
+            "severity": "medium",
+            "coverage_score": 0.014506769825918761,
+            "importance": 0.8,
+            "gap_size": 0.28549323017408124,
+            "table_evidence": 3,
+            "text_evidence": 11,
+            "missing_question_templates": [
+              "Who is allowed to access this system, and under what conditions?",
+              "What rate limits, logging, or monitoring are in place to detect misuse?",
+              "What infrastructure is required to deploy this system safely in sensitive environments?",
+              "What verification or approval processes exist for accessing the system?",
+              "How long are usage logs retained, and who has access to them?"
+            ],
+            "recommendation": "Access & Deployment needs better documentation. Key questions to address: Who is allowed to access this system, and under what conditions?"
+          },
+          "equity_bias": {
+            "category_id": "equity_bias",
+            "name": "Equity & Bias",
+            "severity": "high",
+            "coverage_score": 0.016876456876456877,
+            "importance": 1.0,
+            "gap_size": 0.2831235431235431,
+            "has_quantitative_data": true,
+            "missing_question_templates": [
+              "How does the system perform across different demographic and intersectional groups?",
+              "Which fairness metrics or evaluations have been applied, and what were the results?",
+              "What harms or disparities have been identified for marginalized communities, and what mitigations exist?",
+              "Are performance metrics disaggregated by protected characteristics?",
+              "What representational or allocative harms have been documented?",
+              "How does the system handle dialect, accent, or non-standard language variations?"
+            ],
+            "recommendation": "Equity & Bias has some quantitative data but coverage is incomplete. Expand to include intersectional analysis and document mitigation strategies."
+          },
+          "other": {
+            "category_id": "other",
+            "name": "Other / Uncategorised",
+            "severity": "low",
+            "coverage_score": 0.0,
+            "importance": 0.2,
+            "gap_size": 0.3,
+            "table_evidence": 0,
+            "text_evidence": 0,
+            "missing_question_templates": [
+              "Which parts of the documentation are primarily marketing rather than substantive transparency?",
+              "Where are there high-level commitments without concrete metrics or mechanisms?",
+              "What information is missing that would turn generic claims into accountable commitments?"
+            ],
+            "recommendation": "Other / Uncategorised needs better documentation. Key questions to address: Which parts of the documentation are primarily marketing rather than substantive transparency?"
+          }
+        }
+      },
+      "huggingface_whisper_large_v3": {
+        "document": {
+          "doc_id": "huggingface_whisper_large_v3",
+          "title": "Whisper Large v3 HF page",
+          "year": 2024,
+          "doc_type": "artifact",
+          "total_chunks": 31,
+          "chunk_types": {
+            "text": 26,
+            "table": 5
+          }
+        },
+        "coverage": {
+          "overall_score": 0.008,
+          "categories_evaluated": 8
+        },
+        "gaps": {
+          "critical": [
+            {
+              "category": "Safety & Risk Information",
+              "score": 0.0,
+              "importance": 0.95,
+              "matched_keywords": [
+                "risk"
+              ],
+              "evidence_count": 1
+            },
+            {
+              "category": "Intended Use & Limitations",
+              "score": 0.0,
+              "importance": 0.9,
+              "matched_keywords": [
+                "caution",
+                "constraints",
+                "disclaimer",
+                "intended use",
+                "limitation",
+                "limitations"
+              ],
+              "evidence_count": 4
+            },
+            {
+              "category": "Training & Data",
+              "score": 0.031136044880785408,
+              "importance": 0.9,
+              "matched_keywords": [
+                "copyright",
+                "dataset",
+                "datasets",
+                "labeled",
+                "languages",
+                "license",
+                "multilingual",
+                "training data"
+              ],
+              "evidence_count": 18
+            },
+            {
+              "category": "Organizational & Governance",
+              "score": 0.003383162863886704,
+              "importance": 0.9,
+              "matched_keywords": [
+                "board",
+                "decision-making",
+                "independent"
+              ],
+              "evidence_count": 4
+            },
+            {
+              "category": "Equity & Bias",
+              "score": 0.02228287841191067,
+              "importance": 1.0,
+              "matched_keywords": [
+                "accent",
+                "accessibility",
+                "accessible",
+                "age",
+                "bias",
+                "biases",
+                "demographic",
+                "dialect",
+                "gender",
+                "language",
+                "mitigate",
+                "race"
+              ],
+              "evidence_count": 22
+            }
+          ],
+          "high": [
+            {
+              "category": "Performance & Capabilities",
+              "score": 0.0,
+              "importance": 0.85,
+              "matched_keywords": [
+                "ARC",
+                "F1",
+                "MATH",
+                "accuracy",
+                "capabilities",
+                "coding",
+                "error rate",
+                "evaluated",
+                "evaluation",
+                "improvement",
+                "latency",
+                "math",
+                "multilingual",
+                "performance",
+                "precision",
+                "results",
+                "state-of-the-art",
+                "translation"
+              ],
+              "evidence_count": 22
+            },
+            {
+              "category": "Access & Deployment",
+              "score": 0.0,
+              "importance": 0.8,
+              "matched_keywords": [
+                "GPU",
+                "access",
+                "available",
+                "pricing"
+              ],
+              "evidence_count": 13
+            }
+          ]
+        },
+        "strengths": [],
+        "category_details": {
+          "safety_risk": {
+            "category_id": "safety_risk",
+            "name_en": "Safety & Risk Information",
+            "governance_axis": "safety",
+            "importance_weight": 0.95,
+            "coverage_score": 0.0,
+            "hit_count": 1,
+            "matched_keywords": [
+              "risk"
+            ],
+            "table_hits": 0,
+            "text_hits": 1,
+            "risk_flag": "high_gap",
+            "missing_questions_en": [
+              "What are the main dangerous capabilities of this system, and how are they measured?",
+              "What red-teaming or adversarial testing has been conducted, and with what results?",
+              "How are safety incidents recorded, investigated, and reported?",
+              "What is the refusal rate for different categories of harmful requests?",
+              "How does the system handle attempts to bypass safety measures?"
+            ],
+            "evidence_chunks": [
+              "huggingface_whisper_large_v3::text_0020"
+            ]
+          },
+          "intended_use_limitations": {
+            "category_id": "intended_use_limitations",
+            "name_en": "Intended Use & Limitations",
+            "governance_axis": "scope",
+            "importance_weight": 0.9,
+            "coverage_score": 0.0,
+            "hit_count": 4,
+            "matched_keywords": [
+              "caution",
+              "constraints",
+              "disclaimer",
+              "intended use",
+              "limitation",
+              "limitations"
+            ],
+            "table_hits": 0,
+            "text_hits": 4,
+            "risk_flag": "high_gap",
+            "missing_questions_en": [
+              "What is this system explicitly designed for, and what uses are out-of-scope?",
+              "In which domains or decision contexts should this model never be used?",
+              "How does performance degrade outside the intended domain or beyond the context window?",
+              "What warnings or disclaimers are provided to users about limitations?",
+              "Are there specific populations or contexts where this system should not be deployed?"
+            ],
+            "evidence_chunks": [
+              "huggingface_whisper_large_v3::text_0005",
+              "huggingface_whisper_large_v3::text_0019",
+              "huggingface_whisper_large_v3::text_0020",
+              "huggingface_whisper_large_v3::text_0021"
+            ]
+          },
+          "training_data": {
+            "category_id": "training_data",
+            "name_en": "Training & Data",
+            "governance_axis": "data",
+            "importance_weight": 0.9,
+            "coverage_score": 0.031136044880785408,
+            "hit_count": 18,
+            "matched_keywords": [
+              "copyright",
+              "dataset",
+              "datasets",
+              "labeled",
+              "languages",
+              "license",
+              "multilingual",
+              "training data"
+            ],
+            "table_hits": 2,
+            "text_hits": 16,
+            "risk_flag": "high_gap",
+            "missing_questions_en": [
+              "From which sources and time periods does the training data come?",
+              "How were data filtered, deduplicated, and moderated before training?",
+              "What proportion of the training data is synthetic, and for which purposes is it used?",
+              "What is the demographic and linguistic composition of the training data?",
+              "What licensing constraints exist on the training data?",
+              "How was human feedback or RLHF data collected and annotated?"
+            ],
+            "evidence_chunks": [
+              "huggingface_whisper_large_v3::text_0000",
+              "huggingface_whisper_large_v3::text_0002",
+              "huggingface_whisper_large_v3::text_0004",
+              "huggingface_whisper_large_v3::text_0005",
+              "huggingface_whisper_large_v3::text_0006",
+              "huggingface_whisper_large_v3::text_0007",
+              "huggingface_whisper_large_v3::text_0010",
+              "huggingface_whisper_large_v3::text_0011",
+              "huggingface_whisper_large_v3::text_0013",
+              "huggingface_whisper_large_v3::text_0017"
+            ]
+          },
+          "performance_capabilities": {
+            "category_id": "performance_capabilities",
+            "name_en": "Performance & Capabilities",
+            "governance_axis": "capabilities",
+            "importance_weight": 0.85,
+            "coverage_score": 0.0,
+            "hit_count": 22,
+            "matched_keywords": [
+              "ARC",
+              "F1",
+              "MATH",
+              "accuracy",
+              "capabilities",
+              "coding",
+              "error rate",
+              "evaluated",
+              "evaluation",
+              "improvement",
+              "latency",
+              "math",
+              "multilingual",
+              "performance",
+              "precision",
+              "results",
+              "state-of-the-art",
+              "translation"
+            ],
+            "table_hits": 2,
+            "text_hits": 20,
+            "risk_flag": "medium_gap",
+            "missing_questions_en": [
+              "On which benchmarks has this system been evaluated, and how do the scores compare to baselines?",
+              "In which domains should the model be considered strong, and where should it not be trusted?",
+              "How do capabilities differ from previous versions or neighbouring models?",
+              "What are the known failure modes or task categories where performance is poor?",
+              "How does performance vary across different languages or cultural contexts?"
+            ],
+            "evidence_chunks": [
+              "huggingface_whisper_large_v3::text_0000",
+              "huggingface_whisper_large_v3::text_0001",
+              "huggingface_whisper_large_v3::text_0002",
+              "huggingface_whisper_large_v3::text_0003",
+              "huggingface_whisper_large_v3::text_0005",
+              "huggingface_whisper_large_v3::text_0007",
+              "huggingface_whisper_large_v3::text_0008",
+              "huggingface_whisper_large_v3::text_0009",
+              "huggingface_whisper_large_v3::text_0010",
+              "huggingface_whisper_large_v3::text_0011"
+            ]
+          },
+          "organizational_governance": {
+            "category_id": "organizational_governance",
+            "name_en": "Organizational & Governance",
+            "governance_axis": "governance",
+            "importance_weight": 0.9,
+            "coverage_score": 0.003383162863886704,
+            "hit_count": 4,
+            "matched_keywords": [
+              "board",
+              "decision-making",
+              "independent"
+            ],
+            "table_hits": 1,
+            "text_hits": 3,
+            "risk_flag": "high_gap",
+            "missing_questions_en": [
+              "Which governance structures and review processes oversee this system through its lifecycle?",
+              "Has the system undergone external audits or evaluations? By whom and with what access?",
+              "What are the update, rollback, and deprecation policies for this model?",
+              "How are decisions about model changes and deployments made?",
+              "What mechanisms exist for users to report issues or appeal decisions?"
+            ],
+            "evidence_chunks": [
+              "huggingface_whisper_large_v3::text_0000",
+              "huggingface_whisper_large_v3::text_0010",
+              "huggingface_whisper_large_v3::text_0020",
+              "huggingface_whisper_large_v3::table_0000"
+            ]
+          },
+          "access_deployment": {
+            "category_id": "access_deployment",
+            "name_en": "Access & Deployment",
+            "governance_axis": "deployment",
+            "importance_weight": 0.8,
+            "coverage_score": 0.0,
+            "hit_count": 13,
+            "matched_keywords": [
+              "GPU",
+              "access",
+              "available",
+              "pricing"
+            ],
+            "table_hits": 1,
+            "text_hits": 12,
+            "risk_flag": "medium_gap",
+            "missing_questions_en": [
+              "Who is allowed to access this system, and under what conditions?",
+              "What rate limits, logging, or monitoring are in place to detect misuse?",
+              "What infrastructure is required to deploy this system safely in sensitive environments?",
+              "What verification or approval processes exist for accessing the system?",
+              "How long are usage logs retained, and who has access to them?"
+            ],
+            "evidence_chunks": [
+              "huggingface_whisper_large_v3::text_0005",
+              "huggingface_whisper_large_v3::text_0006",
+              "huggingface_whisper_large_v3::text_0010",
+              "huggingface_whisper_large_v3::text_0011",
+              "huggingface_whisper_large_v3::text_0012",
+              "huggingface_whisper_large_v3::text_0015",
+              "huggingface_whisper_large_v3::text_0016",
+              "huggingface_whisper_large_v3::text_0017",
+              "huggingface_whisper_large_v3::text_0019",
+              "huggingface_whisper_large_v3::text_0023"
+            ]
+          },
+          "equity_bias": {
+            "category_id": "equity_bias",
+            "name_en": "Equity & Bias",
+            "governance_axis": "equity",
+            "importance_weight": 1.0,
+            "coverage_score": 0.02228287841191067,
+            "hit_count": 22,
+            "matched_keywords": [
+              "accent",
+              "accessibility",
+              "accessible",
+              "age",
+              "bias",
+              "biases",
+              "demographic",
+              "dialect",
+              "gender",
+              "language",
+              "mitigate",
+              "race"
+            ],
+            "table_hits": 2,
+            "text_hits": 20,
+            "risk_flag": "high_gap",
+            "missing_questions_en": [
+              "How does the system perform across different demographic and intersectional groups?",
+              "Which fairness metrics or evaluations have been applied, and what were the results?",
+              "What harms or disparities have been identified for marginalized communities, and what mitigations exist?",
+              "Are performance metrics disaggregated by protected characteristics?",
+              "What representational or allocative harms have been documented?",
+              "How does the system handle dialect, accent, or non-standard language variations?"
+            ],
+            "evidence_chunks": [
+              "huggingface_whisper_large_v3::text_0000",
+              "huggingface_whisper_large_v3::text_0004",
+              "huggingface_whisper_large_v3::text_0005",
+              "huggingface_whisper_large_v3::text_0006",
+              "huggingface_whisper_large_v3::text_0007",
+              "huggingface_whisper_large_v3::text_0008",
+              "huggingface_whisper_large_v3::text_0009",
+              "huggingface_whisper_large_v3::text_0010",
+              "huggingface_whisper_large_v3::text_0011",
+              "huggingface_whisper_large_v3::text_0012"
+            ]
+          },
+          "other": {
+            "category_id": "other",
+            "name_en": "Other / Uncategorised",
+            "governance_axis": "misc",
+            "importance_weight": 0.2,
+            "coverage_score": 0.008728652751423151,
+            "hit_count": 4,
+            "matched_keywords": [
+              "vision"
+            ],
+            "table_hits": 2,
+            "text_hits": 2,
+            "risk_flag": "ok",
+            "missing_questions_en": [
+              "Which parts of the documentation are primarily marketing rather than substantive transparency?",
+              "Where are there high-level commitments without concrete metrics or mechanisms?",
+              "What information is missing that would turn generic claims into accountable commitments?"
+            ],
+            "evidence_chunks": [
+              "huggingface_whisper_large_v3::text_0002",
+              "huggingface_whisper_large_v3::text_0024",
+              "huggingface_whisper_large_v3::table_0000",
+              "huggingface_whisper_large_v3::table_0004"
+            ]
+          }
+        },
+        "gap_analysis": {
+          "safety_risk": {
+            "category_id": "safety_risk",
+            "name": "Safety & Risk Information",
+            "severity": "medium",
+            "coverage_score": 0.0,
+            "importance": 0.95,
+            "gap_size": 0.3,
+            "table_evidence": 0,
+            "text_evidence": 1,
+            "missing_question_templates": [
+              "What are the main dangerous capabilities of this system, and how are they measured?",
+              "What red-teaming or adversarial testing has been conducted, and with what results?",
+              "How are safety incidents recorded, investigated, and reported?",
+              "What is the refusal rate for different categories of harmful requests?",
+              "How does the system handle attempts to bypass safety measures?"
+            ],
+            "recommendation": "Safety & Risk Information lacks structured safety benchmarks. Require standardized red-teaming results, refusal rate tables, and incident tracking with severity classifications."
+          },
+          "intended_use_limitations": {
+            "category_id": "intended_use_limitations",
+            "name": "Intended Use & Limitations",
+            "severity": "medium",
+            "coverage_score": 0.0,
+            "importance": 0.9,
+            "gap_size": 0.3,
+            "table_evidence": 0,
+            "text_evidence": 4,
+            "missing_question_templates": [
+              "What is this system explicitly designed for, and what uses are out-of-scope?",
+              "In which domains or decision contexts should this model never be used?",
+              "How does performance degrade outside the intended domain or beyond the context window?",
+              "What warnings or disclaimers are provided to users about limitations?",
+              "Are there specific populations or contexts where this system should not be deployed?"
+            ],
+            "recommendation": "Intended Use & Limitations needs better documentation. Key questions to address: What is this system explicitly designed for, and what uses are out-of-scope?"
+          },
+          "training_data": {
+            "category_id": "training_data",
+            "name": "Training & Data",
+            "severity": "medium",
+            "coverage_score": 0.031136044880785408,
+            "importance": 0.9,
+            "gap_size": 0.26886395511921457,
+            "table_evidence": 2,
+            "text_evidence": 16,
+            "missing_question_templates": [
+              "From which sources and time periods does the training data come?",
+              "How were data filtered, deduplicated, and moderated before training?",
+              "What proportion of the training data is synthetic, and for which purposes is it used?",
+              "What is the demographic and linguistic composition of the training data?",
+              "What licensing constraints exist on the training data?",
+              "How was human feedback or RLHF data collected and annotated?"
+            ],
+            "recommendation": "Training & Data documentation is incomplete. Require data provenance, filtering methodology, demographic composition, and licensing information."
+          },
+          "performance_capabilities": {
+            "category_id": "performance_capabilities",
+            "name": "Performance & Capabilities",
+            "severity": "medium",
+            "coverage_score": 0.0,
+            "importance": 0.85,
+            "gap_size": 0.3,
+            "table_evidence": 2,
+            "text_evidence": 20,
+            "missing_question_templates": [
+              "On which benchmarks has this system been evaluated, and how do the scores compare to baselines?",
+              "In which domains should the model be considered strong, and where should it not be trusted?",
+              "How do capabilities differ from previous versions or neighbouring models?",
+              "What are the known failure modes or task categories where performance is poor?",
+              "How does performance vary across different languages or cultural contexts?"
+            ],
+            "recommendation": "Performance & Capabilities needs better documentation. Key questions to address: On which benchmarks has this system been evaluated, and how do the scores compare to baselines?"
+          },
+          "organizational_governance": {
+            "category_id": "organizational_governance",
+            "name": "Organizational & Governance",
+            "severity": "medium",
+            "coverage_score": 0.003383162863886704,
+            "importance": 0.9,
+            "gap_size": 0.2966168371361133,
+            "table_evidence": 1,
+            "text_evidence": 3,
+            "missing_question_templates": [
+              "Which governance structures and review processes oversee this system through its lifecycle?",
+              "Has the system undergone external audits or evaluations? By whom and with what access?",
+              "What are the update, rollback, and deprecation policies for this model?",
+              "How are decisions about model changes and deployments made?",
+              "What mechanisms exist for users to report issues or appeal decisions?"
+            ],
+            "recommendation": "Organizational & Governance needs better documentation. Key questions to address: Which governance structures and review processes oversee this system through its lifecycle?"
+          },
+          "access_deployment": {
+            "category_id": "access_deployment",
+            "name": "Access & Deployment",
+            "severity": "medium",
+            "coverage_score": 0.0,
+            "importance": 0.8,
+            "gap_size": 0.3,
+            "table_evidence": 1,
+            "text_evidence": 12,
+            "missing_question_templates": [
+              "Who is allowed to access this system, and under what conditions?",
+              "What rate limits, logging, or monitoring are in place to detect misuse?",
+              "What infrastructure is required to deploy this system safely in sensitive environments?",
+              "What verification or approval processes exist for accessing the system?",
+              "How long are usage logs retained, and who has access to them?"
+            ],
+            "recommendation": "Access & Deployment needs better documentation. Key questions to address: Who is allowed to access this system, and under what conditions?"
+          },
+          "equity_bias": {
+            "category_id": "equity_bias",
+            "name": "Equity & Bias",
+            "severity": "high",
+            "coverage_score": 0.02228287841191067,
+            "importance": 1.0,
+            "gap_size": 0.2777171215880893,
+            "has_quantitative_data": true,
+            "missing_question_templates": [
+              "How does the system perform across different demographic and intersectional groups?",
+              "Which fairness metrics or evaluations have been applied, and what were the results?",
+              "What harms or disparities have been identified for marginalized communities, and what mitigations exist?",
+              "Are performance metrics disaggregated by protected characteristics?",
+              "What representational or allocative harms have been documented?",
+              "How does the system handle dialect, accent, or non-standard language variations?"
+            ],
+            "recommendation": "Equity & Bias has some quantitative data but coverage is incomplete. Expand to include intersectional analysis and document mitigation strategies."
+          },
+          "other": {
+            "category_id": "other",
+            "name": "Other / Uncategorised",
+            "severity": "low",
+            "coverage_score": 0.008728652751423151,
+            "importance": 0.2,
+            "gap_size": 0.29127134724857684,
+            "table_evidence": 2,
+            "text_evidence": 2,
+            "missing_question_templates": [
+              "Which parts of the documentation are primarily marketing rather than substantive transparency?",
+              "Where are there high-level commitments without concrete metrics or mechanisms?",
+              "What information is missing that would turn generic claims into accountable commitments?"
+            ],
+            "recommendation": "Other / Uncategorised needs better documentation. Key questions to address: Which parts of the documentation are primarily marketing rather than substantive transparency?"
+          }
+        }
+      }
+    },
+    "category_insights": {
+      "equity_bias": {
+        "category_id": "equity_bias",
+        "name": "Equity & Bias",
+        "governance_axis": "equity",
+        "importance": 1.0,
+        "description": "Specific information about demographic biases, subgroup performance, fairness metrics, and known harms or disparities affecting marginalized or intersectional groups.",
+        "examples": [
+          "Performance metrics disaggregated by race, gender, language, disability status, or geography.",
+          "Qualitative accounts of harms experienced by marginalized groups in real deployments.",
+          "Fairness metrics used (e.g., demographic parity, equalized odds) and their limitations.",
+          "Mitigation strategies (data balancing, debiasing, selective deployment, warnings) with evidence.",
+          "Discussion of intersectional risks (e.g., Black women, queer communities, migrants)."
+        ],
+        "question_templates": [
+          "How does the system perform across different demographic and intersectional groups?",
+          "Which fairness metrics or evaluations have been applied, and what were the results?",
+          "What harms or disparities have been identified for marginalized communities, and what mitigations exist?",
+          "Are performance metrics disaggregated by protected characteristics?",
+          "What representational or allocative harms have been documented?",
+          "How does the system handle dialect, accent, or non-standard language variations?"
+        ],
+        "overall_coverage": {
+          "mean": 0.017,
+          "min": 0.0,
+          "max": 0.062,
+          "docs_evaluated": 22
+        }
+      },
+      "safety_risk": {
+        "category_id": "safety_risk",
+        "name": "Safety & Risk Information",
+        "governance_axis": "safety",
+        "importance": 0.95,
+        "description": "Information about safety evaluations, known dangerous capabilities, refusal behaviour, incidents, red-teaming results, and risk-specific benchmarks for the AI system.",
+        "examples": [
+          "Reported jailbreak / attack success rates under different prompts or threat models.",
+          "Explicit descriptions of dangerous capabilities (e.g., generating phishing emails, helping with malware, or enabling fraud).",
+          "Refusal rates by category (e.g., CBRN, hate, self-harm) and how they were measured.",
+          "Post-deployment incident reports with dates, severity, and remediation status.",
+          "Safety evaluation benchmark scores (toxicity, red-teaming suites, hallucination tests) and how representative they are."
+        ],
+        "question_templates": [
+          "What are the main dangerous capabilities of this system, and how are they measured?",
+          "What red-teaming or adversarial testing has been conducted, and with what results?",
+          "How are safety incidents recorded, investigated, and reported?",
+          "What is the refusal rate for different categories of harmful requests?",
+          "How does the system handle attempts to bypass safety measures?"
+        ],
+        "overall_coverage": {
+          "mean": 0.005,
+          "min": 0.0,
+          "max": 0.036,
+          "docs_evaluated": 22
+        }
+      },
+      "training_data": {
+        "category_id": "training_data",
+        "name": "Training & Data",
+        "governance_axis": "data",
+        "importance": 0.9,
+        "description": "Sources, time ranges, curation, filtering, licensing, and synthetic data usage for training and fine-tuning the model or system.",
+        "examples": [
+          "Training data sourced from web crawl up to June 2024, with specific exclusions (e.g., certain sites or content types).",
+          "High-level breakdown of data domains (code, natural language, images, speech) and languages.",
+          "Details on data filtering, deduplication, and content moderation applied pre-training.",
+          "Percentage and role of synthetic data (self-play, distilled, augmented) in pre-training or fine-tuning.",
+          "Licensing status of key data sources or datasets."
+        ],
+        "question_templates": [
+          "From which sources and time periods does the training data come?",
+          "How were data filtered, deduplicated, and moderated before training?",
+          "What proportion of the training data is synthetic, and for which purposes is it used?",
+          "What is the demographic and linguistic composition of the training data?",
+          "What licensing constraints exist on the training data?",
+          "How was human feedback or RLHF data collected and annotated?"
+        ],
+        "overall_coverage": {
+          "mean": 0.018,
+          "min": 0.0,
+          "max": 0.066,
+          "docs_evaluated": 22
+        }
+      }
+    },
+    "gap_summary": {
+      "gaps_by_severity": {
+        "critical": [],
+        "high": [
+          {
+            "doc_id": "openai_gpt5_system_card",
+            "category": "Equity & Bias",
+            "category_id": "equity_bias",
+            "gap_size": 0.3,
+            "recommendation": "CRITICAL: Equity & Bias lacks quantitative fairness metrics. Require disaggregated performance data across demographic groups, standardized fairness metrics (e.g., equalized odds, demographic parity), and transparent reporting of disparate impact."
+          },
+          {
+            "doc_id": "llama3_tech_report",
+            "category": "Equity & Bias",
+            "category_id": "equity_bias",
+            "gap_size": 0.3,
+            "recommendation": "CRITICAL: Equity & Bias lacks quantitative fairness metrics. Require disaggregated performance data across demographic groups, standardized fairness metrics (e.g., equalized odds, demographic parity), and transparent reporting of disparate impact."
+          },
+          {
+            "doc_id": "qwen3_tech_report",
+            "category": "Equity & Bias",
+            "category_id": "equity_bias",
+            "gap_size": 0.3,
+            "recommendation": "Equity & Bias has some quantitative data but coverage is incomplete. Expand to include intersectional analysis and document mitigation strategies."
+          },
+          {
+            "doc_id": "stability_sd3_medium_hf",
+            "category": "Equity & Bias",
+            "category_id": "equity_bias",
+            "gap_size": 0.2831235431235431,
+            "recommendation": "Equity & Bias has some quantitative data but coverage is incomplete. Expand to include intersectional analysis and document mitigation strategies."
+          },
+          {
+            "doc_id": "huggingface_whisper_large_v3",
+            "category": "Equity & Bias",
+            "category_id": "equity_bias",
+            "gap_size": 0.2777171215880893,
+            "recommendation": "Equity & Bias has some quantitative data but coverage is incomplete. Expand to include intersectional analysis and document mitigation strategies."
+          }
+        ],
+        "medium": [
+          {
+            "doc_id": "openai_gpt5_system_card",
+            "category": "Safety & Risk Information",
+            "category_id": "safety_risk",
+            "gap_size": 0.3,
+            "recommendation": "Safety & Risk Information lacks structured safety benchmarks. Require standardized red-teaming results, refusal rate tables, and incident tracking with severity classifications."
+          },
+          {
+            "doc_id": "openai_gpt5_system_card",
+            "category": "Intended Use & Limitations",
+            "category_id": "intended_use_limitations",
+            "gap_size": 0.3,
+            "recommendation": "Intended Use & Limitations needs better documentation. Key questions to address: What is this system explicitly designed for, and what uses are out-of-scope?"
+          },
+          {
+            "doc_id": "openai_gpt5_system_card",
+            "category": "Training & Data",
+            "category_id": "training_data",
+            "gap_size": 0.3,
+            "recommendation": "Training & Data documentation is incomplete. Require data provenance, filtering methodology, demographic composition, and licensing information."
+          },
+          {
+            "doc_id": "openai_gpt5_system_card",
+            "category": "Performance & Capabilities",
+            "category_id": "performance_capabilities",
+            "gap_size": 0.3,
+            "recommendation": "Performance & Capabilities needs better documentation. Key questions to address: On which benchmarks has this system been evaluated, and how do the scores compare to baselines?"
+          },
+          {
+            "doc_id": "openai_gpt5_system_card",
+            "category": "Organizational & Governance",
+            "category_id": "organizational_governance",
+            "gap_size": 0.2938323521166246,
+            "recommendation": "Organizational & Governance needs better documentation. Key questions to address: Which governance structures and review processes oversee this system through its lifecycle?"
+          },
+          {
+            "doc_id": "openai_gpt5_system_card",
+            "category": "Access & Deployment",
+            "category_id": "access_deployment",
+            "gap_size": 0.3,
+            "recommendation": "Access & Deployment needs better documentation. Key questions to address: Who is allowed to access this system, and under what conditions?"
+          },
+          {
+            "doc_id": "llama3_tech_report",
+            "category": "Safety & Risk Information",
+            "category_id": "safety_risk",
+            "gap_size": 0.3,
+            "recommendation": "Safety & Risk Information lacks structured safety benchmarks. Require standardized red-teaming results, refusal rate tables, and incident tracking with severity classifications."
+          },
+          {
+            "doc_id": "llama3_tech_report",
+            "category": "Intended Use & Limitations",
+            "category_id": "intended_use_limitations",
+            "gap_size": 0.3,
+            "recommendation": "Intended Use & Limitations needs better documentation. Key questions to address: What is this system explicitly designed for, and what uses are out-of-scope?"
+          },
+          {
+            "doc_id": "llama3_tech_report",
+            "category": "Training & Data",
+            "category_id": "training_data",
+            "gap_size": 0.3,
+            "recommendation": "Training & Data documentation is incomplete. Require data provenance, filtering methodology, demographic composition, and licensing information."
+          },
+          {
+            "doc_id": "llama3_tech_report",
+            "category": "Performance & Capabilities",
+            "category_id": "performance_capabilities",
+            "gap_size": 0.3,
+            "recommendation": "Performance & Capabilities needs better documentation. Key questions to address: On which benchmarks has this system been evaluated, and how do the scores compare to baselines?"
+          },
+          {
+            "doc_id": "llama3_tech_report",
+            "category": "Organizational & Governance",
+            "category_id": "organizational_governance",
+            "gap_size": 0.2980714690867839,
+            "recommendation": "Organizational & Governance needs better documentation. Key questions to address: Which governance structures and review processes oversee this system through its lifecycle?"
+          },
+          {
+            "doc_id": "llama3_tech_report",
+            "category": "Access & Deployment",
+            "category_id": "access_deployment",
+            "gap_size": 0.3,
+            "recommendation": "Access & Deployment needs better documentation. Key questions to address: Who is allowed to access this system, and under what conditions?"
+          },
+          {
+            "doc_id": "qwen3_tech_report",
+            "category": "Safety & Risk Information",
+            "category_id": "safety_risk",
+            "gap_size": 0.29934640522875816,
+            "recommendation": "Safety & Risk Information lacks structured safety benchmarks. Require standardized red-teaming results, refusal rate tables, and incident tracking with severity classifications."
+          },
+          {
+            "doc_id": "qwen3_tech_report",
+            "category": "Intended Use & Limitations",
+            "category_id": "intended_use_limitations",
+            "gap_size": 0.299331550802139,
+            "recommendation": "Intended Use & Limitations needs better documentation. Key questions to address: What is this system explicitly designed for, and what uses are out-of-scope?"
+          },
+          {
+            "doc_id": "qwen3_tech_report",
+            "category": "Training & Data",
+            "category_id": "training_data",
+            "gap_size": 0.2875319693094629,
+            "recommendation": "Training & Data documentation is incomplete. Require data provenance, filtering methodology, demographic composition, and licensing information."
+          },
+          {
+            "doc_id": "qwen3_tech_report",
+            "category": "Performance & Capabilities",
+            "category_id": "performance_capabilities",
+            "gap_size": 0.3,
+            "recommendation": "Performance & Capabilities needs better documentation. Key questions to address: On which benchmarks has this system been evaluated, and how do the scores compare to baselines?"
+          },
+          {
+            "doc_id": "qwen3_tech_report",
+            "category": "Organizational & Governance",
+            "category_id": "organizational_governance",
+            "gap_size": 0.29874461979913913,
+            "recommendation": "Organizational & Governance needs better documentation. Key questions to address: Which governance structures and review processes oversee this system through its lifecycle?"
+          },
+          {
+            "doc_id": "qwen3_tech_report",
+            "category": "Access & Deployment",
+            "category_id": "access_deployment",
+            "gap_size": 0.3,
+            "recommendation": "Access & Deployment needs better documentation. Key questions to address: Who is allowed to access this system, and under what conditions?"
+          },
+          {
+            "doc_id": "stability_sd3_medium_hf",
+            "category": "Safety & Risk Information",
+            "category_id": "safety_risk",
+            "gap_size": 0.29373737373737374,
+            "recommendation": "Safety & Risk Information has some safety data. Enhance with threat model documentation and post-deployment monitoring plans."
+          },
+          {
+            "doc_id": "stability_sd3_medium_hf",
+            "category": "Intended Use & Limitations",
+            "category_id": "intended_use_limitations",
+            "gap_size": 0.2871441689623508,
+            "recommendation": "Intended Use & Limitations needs better documentation. Key questions to address: What is this system explicitly designed for, and what uses are out-of-scope?"
+          },
+          {
+            "doc_id": "stability_sd3_medium_hf",
+            "category": "Training & Data",
+            "category_id": "training_data",
+            "gap_size": 0.2828063241106719,
+            "recommendation": "Training & Data documentation is incomplete. Require data provenance, filtering methodology, demographic composition, and licensing information."
+          },
+          {
+            "doc_id": "stability_sd3_medium_hf",
+            "category": "Performance & Capabilities",
+            "category_id": "performance_capabilities",
+            "gap_size": 0.29282622139764997,
+            "recommendation": "Performance & Capabilities needs better documentation. Key questions to address: On which benchmarks has this system been evaluated, and how do the scores compare to baselines?"
+          },
+          {
+            "doc_id": "stability_sd3_medium_hf",
+            "category": "Organizational & Governance",
+            "category_id": "organizational_governance",
+            "gap_size": 0.2975609756097561,
+            "recommendation": "Organizational & Governance needs better documentation. Key questions to address: Which governance structures and review processes oversee this system through its lifecycle?"
+          },
+          {
+            "doc_id": "stability_sd3_medium_hf",
+            "category": "Access & Deployment",
+            "category_id": "access_deployment",
+            "gap_size": 0.28549323017408124,
+            "recommendation": "Access & Deployment needs better documentation. Key questions to address: Who is allowed to access this system, and under what conditions?"
+          },
+          {
+            "doc_id": "huggingface_whisper_large_v3",
+            "category": "Safety & Risk Information",
+            "category_id": "safety_risk",
+            "gap_size": 0.3,
+            "recommendation": "Safety & Risk Information lacks structured safety benchmarks. Require standardized red-teaming results, refusal rate tables, and incident tracking with severity classifications."
+          },
+          {
+            "doc_id": "huggingface_whisper_large_v3",
+            "category": "Intended Use & Limitations",
+            "category_id": "intended_use_limitations",
+            "gap_size": 0.3,
+            "recommendation": "Intended Use & Limitations needs better documentation. Key questions to address: What is this system explicitly designed for, and what uses are out-of-scope?"
+          },
+          {
+            "doc_id": "huggingface_whisper_large_v3",
+            "category": "Training & Data",
+            "category_id": "training_data",
+            "gap_size": 0.26886395511921457,
+            "recommendation": "Training & Data documentation is incomplete. Require data provenance, filtering methodology, demographic composition, and licensing information."
+          },
+          {
+            "doc_id": "huggingface_whisper_large_v3",
+            "category": "Performance & Capabilities",
+            "category_id": "performance_capabilities",
+            "gap_size": 0.3,
+            "recommendation": "Performance & Capabilities needs better documentation. Key questions to address: On which benchmarks has this system been evaluated, and how do the scores compare to baselines?"
+          },
+          {
+            "doc_id": "huggingface_whisper_large_v3",
+            "category": "Organizational & Governance",
+            "category_id": "organizational_governance",
+            "gap_size": 0.2966168371361133,
+            "recommendation": "Organizational & Governance needs better documentation. Key questions to address: Which governance structures and review processes oversee this system through its lifecycle?"
+          },
+          {
+            "doc_id": "huggingface_whisper_large_v3",
+            "category": "Access & Deployment",
+            "category_id": "access_deployment",
+            "gap_size": 0.3,
+            "recommendation": "Access & Deployment needs better documentation. Key questions to address: Who is allowed to access this system, and under what conditions?"
+          }
+        ]
+      },
+      "category_gap_frequency": {
+        "safety_risk": {
+          "category_name": "Safety & Risk Information",
+          "count": 5,
+          "avg_gap_size": 0.299,
+          "affected_docs": [
+            "openai_gpt5_system_card",
+            "llama3_tech_report",
+            "qwen3_tech_report",
+            "stability_sd3_medium_hf",
+            "huggingface_whisper_large_v3"
+          ]
+        },
+        "intended_use_limitations": {
+          "category_name": "Intended Use & Limitations",
+          "count": 5,
+          "avg_gap_size": 0.297,
+          "affected_docs": [
+            "openai_gpt5_system_card",
+            "llama3_tech_report",
+            "qwen3_tech_report",
+            "stability_sd3_medium_hf",
+            "huggingface_whisper_large_v3"
+          ]
+        },
+        "training_data": {
+          "category_name": "Training & Data",
+          "count": 5,
+          "avg_gap_size": 0.288,
+          "affected_docs": [
+            "openai_gpt5_system_card",
+            "llama3_tech_report",
+            "qwen3_tech_report",
+            "stability_sd3_medium_hf",
+            "huggingface_whisper_large_v3"
+          ]
+        },
+        "performance_capabilities": {
+          "category_name": "Performance & Capabilities",
+          "count": 5,
+          "avg_gap_size": 0.299,
+          "affected_docs": [
+            "openai_gpt5_system_card",
+            "llama3_tech_report",
+            "qwen3_tech_report",
+            "stability_sd3_medium_hf",
+            "huggingface_whisper_large_v3"
+          ]
+        },
+        "organizational_governance": {
+          "category_name": "Organizational & Governance",
+          "count": 5,
+          "avg_gap_size": 0.297,
+          "affected_docs": [
+            "openai_gpt5_system_card",
+            "llama3_tech_report",
+            "qwen3_tech_report",
+            "stability_sd3_medium_hf",
+            "huggingface_whisper_large_v3"
+          ]
+        },
+        "access_deployment": {
+          "category_name": "Access & Deployment",
+          "count": 5,
+          "avg_gap_size": 0.297,
+          "affected_docs": [
+            "openai_gpt5_system_card",
+            "llama3_tech_report",
+            "qwen3_tech_report",
+            "stability_sd3_medium_hf",
+            "huggingface_whisper_large_v3"
+          ]
+        },
+        "equity_bias": {
+          "category_name": "Equity & Bias",
+          "count": 5,
+          "avg_gap_size": 0.292,
+          "affected_docs": [
+            "openai_gpt5_system_card",
+            "llama3_tech_report",
+            "qwen3_tech_report",
+            "stability_sd3_medium_hf",
+            "huggingface_whisper_large_v3"
+          ]
+        },
+        "other": {
+          "category_name": "Other / Uncategorised",
+          "count": 5,
+          "avg_gap_size": 0.297,
+          "affected_docs": [
+            "openai_gpt5_system_card",
+            "llama3_tech_report",
+            "qwen3_tech_report",
+            "stability_sd3_medium_hf",
+            "huggingface_whisper_large_v3"
+          ]
+        }
+      },
+      "summary": {
+        "total_critical_gaps": 0,
+        "total_high_gaps": 5,
+        "total_medium_gaps": 30,
+        "most_problematic_categories": [
+          [
+            "safety_risk",
+            {
+              "category_name": "Safety & Risk Information",
+              "count": 5,
+              "avg_gap_size": 0.299,
+              "affected_docs": [
+                "openai_gpt5_system_card",
+                "llama3_tech_report",
+                "qwen3_tech_report",
+                "stability_sd3_medium_hf",
+                "huggingface_whisper_large_v3"
+              ]
+            }
+          ],
+          [
+            "performance_capabilities",
+            {
+              "category_name": "Performance & Capabilities",
+              "count": 5,
+              "avg_gap_size": 0.299,
+              "affected_docs": [
+                "openai_gpt5_system_card",
+                "llama3_tech_report",
+                "qwen3_tech_report",
+                "stability_sd3_medium_hf",
+                "huggingface_whisper_large_v3"
+              ]
+            }
+          ],
+          [
+            "intended_use_limitations",
+            {
+              "category_name": "Intended Use & Limitations",
+              "count": 5,
+              "avg_gap_size": 0.297,
+              "affected_docs": [
+                "openai_gpt5_system_card",
+                "llama3_tech_report",
+                "qwen3_tech_report",
+                "stability_sd3_medium_hf",
+                "huggingface_whisper_large_v3"
+              ]
+            }
+          ]
+        ]
+      }
+    },
+    "policy_recommendations": {
+      "executive_summary": "EXECUTIVE SUMMARY\n\nThis analysis evaluated 22 AI documentation artifacts against 8 governance categories \nusing evidence-based keyword matching and structural analysis.\n\nKEY FINDINGS:\n\n1. EQUITY CRISIS: Only 9/22 documents include quantitative fairness \n   metrics. 10 documents have no equity coverage whatsoever.\n\n2. CRITICAL GAPS: Identified 0 critical and 5 high-priority documentation \n   gaps across safety, equity, and training data categories.\n\n3. FRAMEWORK-PRACTICE GAP: Significant divergence between what documentation frameworks recommend \n   and what organizations actually disclose.\n\n4. ENFORCEMENT OPPORTUNITY: Standardized, machine-readable documentation formats could enable \n   automated compliance checking for procurement and regulation.\n\nPOLICY IMPLICATIONS:\n\n- Mandating structured documentation with minimum coverage thresholds is technically feasible\n- Equity metrics should be elevated to mandatory disclosure requirements\n- Current voluntary approaches are insufficient for governance needs",
+      "immediate_actions": [],
+      "regulatory_requirements": [],
+      "procurement_standards": [
+        {
+          "standard": "Minimum documentation coverage threshold",
+          "threshold": 0.6,
+          "rationale": "Based on analysis of best-practice artifacts",
+          "categories": [
+            "equity_bias",
+            "safety_risk",
+            "training_data",
+            "intended_use_limitations"
+          ],
+          "enforcement": "Procurement contracts should require coverage scores above threshold"
+        }
+      ],
+      "framework_improvements": [
+        {
+          "improvement": "Machine-readable documentation format",
+          "justification": "Current frameworks are human-readable only, making automated auditing difficult",
+          "proposed_format": "Structured JSON schema with mandatory fields and validation",
+          "benefits": [
+            "Automated compliance checking",
+            "Cross-model comparison",
+            "Standardized auditing"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,52 @@
+======================================================================
+DOCSCOPE COPILOT - ANALYSIS SUMMARY
+======================================================================
+
+EXECUTIVE SUMMARY
+
+This analysis evaluated 22 AI documentation artifacts against 8 governance categories 
+using evidence-based keyword matching and structural analysis.
+
+KEY FINDINGS:
+
+1. EQUITY CRISIS: Only 9/22 documents include quantitative fairness 
+   metrics. 10 documents have no equity coverage whatsoever.
+
+2. CRITICAL GAPS: Identified 0 critical and 5 high-priority documentation 
+   gaps across safety, equity, and training data categories.
+
+3. FRAMEWORK-PRACTICE GAP: Significant divergence between what documentation frameworks recommend 
+   and what organizations actually disclose.
+
+4. ENFORCEMENT OPPORTUNITY: Standardized, machine-readable documentation formats could enable 
+   automated compliance checking for procurement and regulation.
+
+POLICY IMPLICATIONS:
+
+- Mandating structured documentation with minimum coverage thresholds is technically feasible
+- Equity metrics should be elevated to mandatory disclosure requirements
+- Current voluntary approaches are insufficient for governance needs
+
+======================================================================
+DETAILED FINDINGS
+======================================================================
+
+EQUITY ANALYSIS:
+- Documents analyzed: 22
+- Documents with equity coverage: 12
+- Documents with quantitative equity data: 9
+- Critical gaps: 10
+
+GAP ANALYSIS:
+- Critical gaps: 0
+- High-priority gaps: 5
+- Medium-priority gaps: 30
+
+Most problematic categories:
+  - Safety & Risk Information: 5 gaps across documents
+  - Performance & Capabilities: 5 gaps across documents
+  - Intended Use & Limitations: 5 gaps across documents
+
+======================================================================
+See JSON files for detailed evidence and traceability
+======================================================================

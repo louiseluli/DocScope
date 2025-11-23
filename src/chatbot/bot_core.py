@@ -1,12 +1,19 @@
-from typing import List, Dict, Optional, Tuple
+from typing import List, Dict, Optional
 import json
 from pathlib import Path
 
 from src.audit.snippet_auditor import SnippetAuditor
 from src.audit.category_utils import CategoryAnalyzer
 from src.audit.category_schema import load_category_schema
-from src.indexing.search import search_chunks
 from src.config.settings import PROCESSED_DIR
+
+# Optional import for semantic search
+try:
+    from src.indexing.search import ChunkSearcher
+    SEARCH_AVAILABLE = True
+except (ImportError, FileNotFoundError) as e:
+    SEARCH_AVAILABLE = False
+    print(f"[INFO] Semantic search not available: {e}")
 
 
 class DocScopeCopilot:
@@ -32,6 +39,15 @@ class DocScopeCopilot:
         
         # Organize chunks by document
         self.chunks_by_doc = self._organize_chunks_by_doc()
+        
+        # Initialize searcher if available
+        self.searcher = None
+        if SEARCH_AVAILABLE:
+            try:
+                self.searcher = ChunkSearcher()
+                print(f"[INFO] Semantic search initialized")
+            except Exception as e:
+                print(f"[INFO] Semantic search not initialized: {e}")
         
         print(f"[INFO] Loaded {len(self.chunks)} chunks from {len(self.doc_metadata)} documents")
         print(f"[INFO] Schema has {len(self.schema)} governance categories")
@@ -202,7 +218,7 @@ class DocScopeCopilot:
     
     def answer_question(self, question: str, top_k: int = 5) -> Dict:
         """
-        Answer a question using semantic search over chunks.
+        Answer a question using semantic search over chunks (if available).
         
         Parameters
         ----------
@@ -216,8 +232,20 @@ class DocScopeCopilot:
         Dict
             Answer with supporting evidence
         """
+        if not self.searcher:
+            return {
+                "error": "Semantic search not available. Run build_embeddings_index.py first.",
+                "fallback": "Use audit_document() or compare_documents() for analysis."
+            }
+        
         # Perform semantic search
-        results = search_chunks(question, top_k=top_k)
+        try:
+            results = self.searcher.search(question, top_k=top_k)
+        except Exception as e:
+            return {
+                "error": f"Search failed: {e}",
+                "question": question
+            }
         
         if not results:
             return {
@@ -228,18 +256,16 @@ class DocScopeCopilot:
         # Extract unique sources
         sources = []
         for result in results:
-            chunk = result.get("chunk", {})
-            doc_id = chunk.get("doc_id")
+            doc_id = result.get("doc_id")
             
             if doc_id:
                 metadata = self.doc_metadata.get(doc_id, {})
                 sources.append({
                     "doc_id": doc_id,
-                    "title": metadata.get("title", doc_id),
-                    "section": chunk.get("section_heading", ""),
-                    "chunk_type": chunk.get("chunk_type", "text"),
-                    "relevance_score": result.get("score", 0.0),
-                    "text_preview": chunk.get("text", "")[:200] + "..."
+                    "title": result.get("title", metadata.get("title", doc_id)),
+                    "chunk_id": result.get("chunk_id", ""),
+                    "relevance_score": round(result.get("score", 0.0), 3),
+                    "text_preview": result.get("text", "")[:200] + "..."
                 })
         
         return {

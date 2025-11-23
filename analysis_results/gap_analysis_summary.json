@@ -1,0 +1,404 @@
+{
+  "gaps_by_severity": {
+    "critical": [],
+    "high": [
+      {
+        "doc_id": "openai_gpt5_system_card",
+        "category": "Equity & Bias",
+        "category_id": "equity_bias",
+        "gap_size": 0.3,
+        "recommendation": "CRITICAL: Equity & Bias lacks quantitative fairness metrics. Require disaggregated performance data across demographic groups, standardized fairness metrics (e.g., equalized odds, demographic parity), and transparent reporting of disparate impact."
+      },
+      {
+        "doc_id": "llama3_tech_report",
+        "category": "Equity & Bias",
+        "category_id": "equity_bias",
+        "gap_size": 0.3,
+        "recommendation": "CRITICAL: Equity & Bias lacks quantitative fairness metrics. Require disaggregated performance data across demographic groups, standardized fairness metrics (e.g., equalized odds, demographic parity), and transparent reporting of disparate impact."
+      },
+      {
+        "doc_id": "qwen3_tech_report",
+        "category": "Equity & Bias",
+        "category_id": "equity_bias",
+        "gap_size": 0.3,
+        "recommendation": "Equity & Bias has some quantitative data but coverage is incomplete. Expand to include intersectional analysis and document mitigation strategies."
+      },
+      {
+        "doc_id": "stability_sd3_medium_hf",
+        "category": "Equity & Bias",
+        "category_id": "equity_bias",
+        "gap_size": 0.2831235431235431,
+        "recommendation": "Equity & Bias has some quantitative data but coverage is incomplete. Expand to include intersectional analysis and document mitigation strategies."
+      },
+      {
+        "doc_id": "huggingface_whisper_large_v3",
+        "category": "Equity & Bias",
+        "category_id": "equity_bias",
+        "gap_size": 0.2777171215880893,
+        "recommendation": "Equity & Bias has some quantitative data but coverage is incomplete. Expand to include intersectional analysis and document mitigation strategies."
+      }
+    ],
+    "medium": [
+      {
+        "doc_id": "openai_gpt5_system_card",
+        "category": "Safety & Risk Information",
+        "category_id": "safety_risk",
+        "gap_size": 0.3,
+        "recommendation": "Safety & Risk Information lacks structured safety benchmarks. Require standardized red-teaming results, refusal rate tables, and incident tracking with severity classifications."
+      },
+      {
+        "doc_id": "openai_gpt5_system_card",
+        "category": "Intended Use & Limitations",
+        "category_id": "intended_use_limitations",
+        "gap_size": 0.3,
+        "recommendation": "Intended Use & Limitations needs better documentation. Key questions to address: What is this system explicitly designed for, and what uses are out-of-scope?"
+      },
+      {
+        "doc_id": "openai_gpt5_system_card",
+        "category": "Training & Data",
+        "category_id": "training_data",
+        "gap_size": 0.3,
+        "recommendation": "Training & Data documentation is incomplete. Require data provenance, filtering methodology, demographic composition, and licensing information."
+      },
+      {
+        "doc_id": "openai_gpt5_system_card",
+        "category": "Performance & Capabilities",
+        "category_id": "performance_capabilities",
+        "gap_size": 0.3,
+        "recommendation": "Performance & Capabilities needs better documentation. Key questions to address: On which benchmarks has this system been evaluated, and how do the scores compare to baselines?"
+      },
+      {
+        "doc_id": "openai_gpt5_system_card",
+        "category": "Organizational & Governance",
+        "category_id": "organizational_governance",
+        "gap_size": 0.2938323521166246,
+        "recommendation": "Organizational & Governance needs better documentation. Key questions to address: Which governance structures and review processes oversee this system through its lifecycle?"
+      },
+      {
+        "doc_id": "openai_gpt5_system_card",
+        "category": "Access & Deployment",
+        "category_id": "access_deployment",
+        "gap_size": 0.3,
+        "recommendation": "Access & Deployment needs better documentation. Key questions to address: Who is allowed to access this system, and under what conditions?"
+      },
+      {
+        "doc_id": "llama3_tech_report",
+        "category": "Safety & Risk Information",
+        "category_id": "safety_risk",
+        "gap_size": 0.3,
+        "recommendation": "Safety & Risk Information lacks structured safety benchmarks. Require standardized red-teaming results, refusal rate tables, and incident tracking with severity classifications."
+      },
+      {
+        "doc_id": "llama3_tech_report",
+        "category": "Intended Use & Limitations",
+        "category_id": "intended_use_limitations",
+        "gap_size": 0.3,
+        "recommendation": "Intended Use & Limitations needs better documentation. Key questions to address: What is this system explicitly designed for, and what uses are out-of-scope?"
+      },
+      {
+        "doc_id": "llama3_tech_report",
+        "category": "Training & Data",
+        "category_id": "training_data",
+        "gap_size": 0.3,
+        "recommendation": "Training & Data documentation is incomplete. Require data provenance, filtering methodology, demographic composition, and licensing information."
+      },
+      {
+        "doc_id": "llama3_tech_report",
+        "category": "Performance & Capabilities",
+        "category_id": "performance_capabilities",
+        "gap_size": 0.3,
+        "recommendation": "Performance & Capabilities needs better documentation. Key questions to address: On which benchmarks has this system been evaluated, and how do the scores compare to baselines?"
+      },
+      {
+        "doc_id": "llama3_tech_report",
+        "category": "Organizational & Governance",
+        "category_id": "organizational_governance",
+        "gap_size": 0.2980714690867839,
+        "recommendation": "Organizational & Governance needs better documentation. Key questions to address: Which governance structures and review processes oversee this system through its lifecycle?"
+      },
+      {
+        "doc_id": "llama3_tech_report",
+        "category": "Access & Deployment",
+        "category_id": "access_deployment",
+        "gap_size": 0.3,
+        "recommendation": "Access & Deployment needs better documentation. Key questions to address: Who is allowed to access this system, and under what conditions?"
+      },
+      {
+        "doc_id": "qwen3_tech_report",
+        "category": "Safety & Risk Information",
+        "category_id": "safety_risk",
+        "gap_size": 0.29934640522875816,
+        "recommendation": "Safety & Risk Information lacks structured safety benchmarks. Require standardized red-teaming results, refusal rate tables, and incident tracking with severity classifications."
+      },
+      {
+        "doc_id": "qwen3_tech_report",
+        "category": "Intended Use & Limitations",
+        "category_id": "intended_use_limitations",
+        "gap_size": 0.299331550802139,
+        "recommendation": "Intended Use & Limitations needs better documentation. Key questions to address: What is this system explicitly designed for, and what uses are out-of-scope?"
+      },
+      {
+        "doc_id": "qwen3_tech_report",
+        "category": "Training & Data",
+        "category_id": "training_data",
+        "gap_size": 0.2875319693094629,
+        "recommendation": "Training & Data documentation is incomplete. Require data provenance, filtering methodology, demographic composition, and licensing information."
+      },
+      {
+        "doc_id": "qwen3_tech_report",
+        "category": "Performance & Capabilities",
+        "category_id": "performance_capabilities",
+        "gap_size": 0.3,
+        "recommendation": "Performance & Capabilities needs better documentation. Key questions to address: On which benchmarks has this system been evaluated, and how do the scores compare to baselines?"
+      },
+      {
+        "doc_id": "qwen3_tech_report",
+        "category": "Organizational & Governance",
+        "category_id": "organizational_governance",
+        "gap_size": 0.29874461979913913,
+        "recommendation": "Organizational & Governance needs better documentation. Key questions to address: Which governance structures and review processes oversee this system through its lifecycle?"
+      },
+      {
+        "doc_id": "qwen3_tech_report",
+        "category": "Access & Deployment",
+        "category_id": "access_deployment",
+        "gap_size": 0.3,
+        "recommendation": "Access & Deployment needs better documentation. Key questions to address: Who is allowed to access this system, and under what conditions?"
+      },
+      {
+        "doc_id": "stability_sd3_medium_hf",
+        "category": "Safety & Risk Information",
+        "category_id": "safety_risk",
+        "gap_size": 0.29373737373737374,
+        "recommendation": "Safety & Risk Information has some safety data. Enhance with threat model documentation and post-deployment monitoring plans."
+      },
+      {
+        "doc_id": "stability_sd3_medium_hf",
+        "category": "Intended Use & Limitations",
+        "category_id": "intended_use_limitations",
+        "gap_size": 0.2871441689623508,
+        "recommendation": "Intended Use & Limitations needs better documentation. Key questions to address: What is this system explicitly designed for, and what uses are out-of-scope?"
+      },
+      {
+        "doc_id": "stability_sd3_medium_hf",
+        "category": "Training & Data",
+        "category_id": "training_data",
+        "gap_size": 0.2828063241106719,
+        "recommendation": "Training & Data documentation is incomplete. Require data provenance, filtering methodology, demographic composition, and licensing information."
+      },
+      {
+        "doc_id": "stability_sd3_medium_hf",
+        "category": "Performance & Capabilities",
+        "category_id": "performance_capabilities",
+        "gap_size": 0.29282622139764997,
+        "recommendation": "Performance & Capabilities needs better documentation. Key questions to address: On which benchmarks has this system been evaluated, and how do the scores compare to baselines?"
+      },
+      {
+        "doc_id": "stability_sd3_medium_hf",
+        "category": "Organizational & Governance",
+        "category_id": "organizational_governance",
+        "gap_size": 0.2975609756097561,
+        "recommendation": "Organizational & Governance needs better documentation. Key questions to address: Which governance structures and review processes oversee this system through its lifecycle?"
+      },
+      {
+        "doc_id": "stability_sd3_medium_hf",
+        "category": "Access & Deployment",
+        "category_id": "access_deployment",
+        "gap_size": 0.28549323017408124,
+        "recommendation": "Access & Deployment needs better documentation. Key questions to address: Who is allowed to access this system, and under what conditions?"
+      },
+      {
+        "doc_id": "huggingface_whisper_large_v3",
+        "category": "Safety & Risk Information",
+        "category_id": "safety_risk",
+        "gap_size": 0.3,
+        "recommendation": "Safety & Risk Information lacks structured safety benchmarks. Require standardized red-teaming results, refusal rate tables, and incident tracking with severity classifications."
+      },
+      {
+        "doc_id": "huggingface_whisper_large_v3",
+        "category": "Intended Use & Limitations",
+        "category_id": "intended_use_limitations",
+        "gap_size": 0.3,
+        "recommendation": "Intended Use & Limitations needs better documentation. Key questions to address: What is this system explicitly designed for, and what uses are out-of-scope?"
+      },
+      {
+        "doc_id": "huggingface_whisper_large_v3",
+        "category": "Training & Data",
+        "category_id": "training_data",
+        "gap_size": 0.26886395511921457,
+        "recommendation": "Training & Data documentation is incomplete. Require data provenance, filtering methodology, demographic composition, and licensing information."
+      },
+      {
+        "doc_id": "huggingface_whisper_large_v3",
+        "category": "Performance & Capabilities",
+        "category_id": "performance_capabilities",
+        "gap_size": 0.3,
+        "recommendation": "Performance & Capabilities needs better documentation. Key questions to address: On which benchmarks has this system been evaluated, and how do the scores compare to baselines?"
+      },
+      {
+        "doc_id": "huggingface_whisper_large_v3",
+        "category": "Organizational & Governance",
+        "category_id": "organizational_governance",
+        "gap_size": 0.2966168371361133,
+        "recommendation": "Organizational & Governance needs better documentation. Key questions to address: Which governance structures and review processes oversee this system through its lifecycle?"
+      },
+      {
+        "doc_id": "huggingface_whisper_large_v3",
+        "category": "Access & Deployment",
+        "category_id": "access_deployment",
+        "gap_size": 0.3,
+        "recommendation": "Access & Deployment needs better documentation. Key questions to address: Who is allowed to access this system, and under what conditions?"
+      }
+    ]
+  },
+  "category_gap_frequency": {
+    "safety_risk": {
+      "category_name": "Safety & Risk Information",
+      "count": 5,
+      "avg_gap_size": 0.299,
+      "affected_docs": [
+        "openai_gpt5_system_card",
+        "llama3_tech_report",
+        "qwen3_tech_report",
+        "stability_sd3_medium_hf",
+        "huggingface_whisper_large_v3"
+      ]
+    },
+    "intended_use_limitations": {
+      "category_name": "Intended Use & Limitations",
+      "count": 5,
+      "avg_gap_size": 0.297,
+      "affected_docs": [
+        "openai_gpt5_system_card",
+        "llama3_tech_report",
+        "qwen3_tech_report",
+        "stability_sd3_medium_hf",
+        "huggingface_whisper_large_v3"
+      ]
+    },
+    "training_data": {
+      "category_name": "Training & Data",
+      "count": 5,
+      "avg_gap_size": 0.288,
+      "affected_docs": [
+        "openai_gpt5_system_card",
+        "llama3_tech_report",
+        "qwen3_tech_report",
+        "stability_sd3_medium_hf",
+        "huggingface_whisper_large_v3"
+      ]
+    },
+    "performance_capabilities": {
+      "category_name": "Performance & Capabilities",
+      "count": 5,
+      "avg_gap_size": 0.299,
+      "affected_docs": [
+        "openai_gpt5_system_card",
+        "llama3_tech_report",
+        "qwen3_tech_report",
+        "stability_sd3_medium_hf",
+        "huggingface_whisper_large_v3"
+      ]
+    },
+    "organizational_governance": {
+      "category_name": "Organizational & Governance",
+      "count": 5,
+      "avg_gap_size": 0.297,
+      "affected_docs": [
+        "openai_gpt5_system_card",
+        "llama3_tech_report",
+        "qwen3_tech_report",
+        "stability_sd3_medium_hf",
+        "huggingface_whisper_large_v3"
+      ]
+    },
+    "access_deployment": {
+      "category_name": "Access & Deployment",
+      "count": 5,
+      "avg_gap_size": 0.297,
+      "affected_docs": [
+        "openai_gpt5_system_card",
+        "llama3_tech_report",
+        "qwen3_tech_report",
+        "stability_sd3_medium_hf",
+        "huggingface_whisper_large_v3"
+      ]
+    },
+    "equity_bias": {
+      "category_name": "Equity & Bias",
+      "count": 5,
+      "avg_gap_size": 0.292,
+      "affected_docs": [
+        "openai_gpt5_system_card",
+        "llama3_tech_report",
+        "qwen3_tech_report",
+        "stability_sd3_medium_hf",
+        "huggingface_whisper_large_v3"
+      ]
+    },
+    "other": {
+      "category_name": "Other / Uncategorised",
+      "count": 5,
+      "avg_gap_size": 0.297,
+      "affected_docs": [
+        "openai_gpt5_system_card",
+        "llama3_tech_report",
+        "qwen3_tech_report",
+        "stability_sd3_medium_hf",
+        "huggingface_whisper_large_v3"
+      ]
+    }
+  },
+  "summary": {
+    "total_critical_gaps": 0,
+    "total_high_gaps": 5,
+    "total_medium_gaps": 30,
+    "most_problematic_categories": [
+      [
+        "safety_risk",
+        {
+          "category_name": "Safety & Risk Information",
+          "count": 5,
+          "avg_gap_size": 0.299,
+          "affected_docs": [
+            "openai_gpt5_system_card",
+            "llama3_tech_report",
+            "qwen3_tech_report",
+            "stability_sd3_medium_hf",
+            "huggingface_whisper_large_v3"
+          ]
+        }
+      ],
+      [
+        "performance_capabilities",
+        {
+          "category_name": "Performance & Capabilities",
+          "count": 5,
+          "avg_gap_size": 0.299,
+          "affected_docs": [
+            "openai_gpt5_system_card",
+            "llama3_tech_report",
+            "qwen3_tech_report",
+            "stability_sd3_medium_hf",
+            "huggingface_whisper_large_v3"
+          ]
+        }
+      ],
+      [
+        "intended_use_limitations",
+        {
+          "category_name": "Intended Use & Limitations",
+          "count": 5,
+          "avg_gap_size": 0.297,
+          "affected_docs": [
+            "openai_gpt5_system_card",
+            "llama3_tech_report",
+            "qwen3_tech_report",
+            "stability_sd3_medium_hf",
+            "huggingface_whisper_large_v3"
+          ]
+        }
+      ]
+    ]
+  }
+}

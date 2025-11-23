@@ -1,0 +1,462 @@
+{
+  "document_analyses": {
+    "openai_gpt5_system_card": {
+      "document_level": {
+        "mean_quality_score": 0.522,
+        "median_quality_score": 0.539,
+        "quality_std_dev": 0.103,
+        "mean_substantive_score": 0.038,
+        "mean_promotional_score": 0.024,
+        "chunks_analyzed": 87
+      },
+      "quality_distribution": {
+        "excellent": 1,
+        "good": 58,
+        "fair": 26,
+        "poor": 2
+      },
+      "common_issues": [
+        {
+          "flag": "low_technical_content",
+          "frequency": 86,
+          "affected_chunks": 86
+        },
+        {
+          "flag": "qualitative_claims_without_quantification",
+          "frequency": 4,
+          "affected_chunks": 4
+        },
+        {
+          "flag": "vague_claims_without_metrics",
+          "frequency": 1,
+          "affected_chunks": 1
+        }
+      ],
+      "poor_quality_chunks": [
+        {
+          "chunk_id": "openai_gpt5_system_card::text_0001",
+          "score": 0.489,
+          "flags": [
+            "low_technical_content"
+          ]
+        },
+        {
+          "chunk_id": "openai_gpt5_system_card::text_0006",
+          "score": 0.43,
+          "flags": [
+            "low_technical_content",
+            "qualitative_claims_without_quantification"
+          ]
+        },
+        {
+          "chunk_id": "openai_gpt5_system_card::text_0011",
+          "score": 0.443,
+          "flags": [
+            "low_technical_content"
+          ]
+        },
+        {
+          "chunk_id": "openai_gpt5_system_card::text_0012",
+          "score": 0.441,
+          "flags": [
+            "low_technical_content"
+          ]
+        },
+        {
+          "chunk_id": "openai_gpt5_system_card::text_0014",
+          "score": 0.344,
+          "flags": [
+            "low_technical_content"
+          ]
+        }
+      ],
+      "recommendations": [
+        "SYSTEMATIC ISSUE: 'low_technical_content' affects 86 chunks. Address this consistently."
+      ],
+      "document": {
+        "doc_id": "openai_gpt5_system_card",
+        "title": "gpt-5 System Card",
+        "doc_type": "artifact"
+      }
+    },
+    "llama3_tech_report": {
+      "document_level": {
+        "mean_quality_score": 0.544,
+        "median_quality_score": 0.561,
+        "quality_std_dev": 0.087,
+        "mean_substantive_score": 0.037,
+        "mean_promotional_score": 0.034,
+        "chunks_analyzed": 215
+      },
+      "quality_distribution": {
+        "excellent": 5,
+        "good": 155,
+        "fair": 54,
+        "poor": 1
+      },
+      "common_issues": [
+        {
+          "flag": "low_technical_content",
+          "frequency": 206,
+          "affected_chunks": 206
+        },
+        {
+          "flag": "qualitative_claims_without_quantification",
+          "frequency": 11,
+          "affected_chunks": 11
+        },
+        {
+          "flag": "excessive_vagueness",
+          "frequency": 8,
+          "affected_chunks": 8
+        },
+        {
+          "flag": "high_promotional_language",
+          "frequency": 2,
+          "affected_chunks": 2
+        },
+        {
+          "flag": "superlatives_without_data",
+          "frequency": 1,
+          "affected_chunks": 1
+        }
+      ],
+      "poor_quality_chunks": [
+        {
+          "chunk_id": "llama3_tech_report::text_0000",
+          "score": 0.499,
+          "flags": [
+            "low_technical_content"
+          ]
+        },
+        {
+          "chunk_id": "llama3_tech_report::text_0007",
+          "score": 0.463,
+          "flags": [
+            "low_technical_content",
+            "qualitative_claims_without_quantification",
+            "excessive_vagueness"
+          ]
+        },
+        {
+          "chunk_id": "llama3_tech_report::text_0015",
+          "score": 0.45,
+          "flags": [
+            "low_technical_content"
+          ]
+        },
+        {
+          "chunk_id": "llama3_tech_report::text_0022",
+          "score": 0.496,
+          "flags": [
+            "low_technical_content"
+          ]
+        },
+        {
+          "chunk_id": "llama3_tech_report::text_0027",
+          "score": 0.484,
+          "flags": [
+            "low_technical_content"
+          ]
+        }
+      ],
+      "recommendations": [
+        "SYSTEMATIC ISSUE: 'low_technical_content' affects 206 chunks. Address this consistently."
+      ],
+      "document": {
+        "doc_id": "llama3_tech_report",
+        "title": "Llama 3 Technical Report",
+        "doc_type": "artifact"
+      }
+    },
+    "qwen3_tech_report": {
+      "document_level": {
+        "mean_quality_score": 0.606,
+        "median_quality_score": 0.58,
+        "quality_std_dev": 0.053,
+        "mean_substantive_score": 0.049,
+        "mean_promotional_score": 0.008,
+        "chunks_analyzed": 136
+      },
+      "quality_distribution": {
+        "excellent": 7,
+        "good": 128,
+        "fair": 1,
+        "poor": 0
+      },
+      "common_issues": [
+        {
+          "flag": "low_technical_content",
+          "frequency": 127,
+          "affected_chunks": 127
+        },
+        {
+          "flag": "qualitative_claims_without_quantification",
+          "frequency": 2,
+          "affected_chunks": 2
+        }
+      ],
+      "poor_quality_chunks": [
+        {
+          "chunk_id": "qwen3_tech_report::text_0105",
+          "score": 0.479,
+          "flags": [
+            "low_technical_content"
+          ]
+        }
+      ],
+      "recommendations": [
+        "SYSTEMATIC ISSUE: 'low_technical_content' affects 127 chunks. Address this consistently."
+      ],
+      "document": {
+        "doc_id": "qwen3_tech_report",
+        "title": "Qwen3 Technical Report",
+        "doc_type": "artifact"
+      }
+    },
+    "stability_sd3_medium_hf": {
+      "document_level": {
+        "mean_quality_score": 0.516,
+        "median_quality_score": 0.58,
+        "quality_std_dev": 0.1,
+        "mean_substantive_score": 0.01,
+        "mean_promotional_score": 0.005,
+        "chunks_analyzed": 33
+      },
+      "quality_distribution": {
+        "excellent": 0,
+        "good": 22,
+        "fair": 9,
+        "poor": 2
+      },
+      "common_issues": [
+        {
+          "flag": "low_technical_content",
+          "frequency": 33,
+          "affected_chunks": 33
+        },
+        {
+          "flag": "vague_claims_without_metrics",
+          "frequency": 2,
+          "affected_chunks": 2
+        }
+      ],
+      "poor_quality_chunks": [
+        {
+          "chunk_id": "stability_sd3_medium_hf::text_0001",
+          "score": 0.468,
+          "flags": [
+            "low_technical_content"
+          ]
+        },
+        {
+          "chunk_id": "stability_sd3_medium_hf::text_0008",
+          "score": 0.422,
+          "flags": [
+            "low_technical_content"
+          ]
+        },
+        {
+          "chunk_id": "stability_sd3_medium_hf::text_0011",
+          "score": 0.455,
+          "flags": [
+            "low_technical_content"
+          ]
+        },
+        {
+          "chunk_id": "stability_sd3_medium_hf::text_0012",
+          "score": 0.484,
+          "flags": [
+            "low_technical_content"
+          ]
+        },
+        {
+          "chunk_id": "stability_sd3_medium_hf::text_0016",
+          "score": 0.481,
+          "flags": [
+            "low_technical_content"
+          ]
+        }
+      ],
+      "recommendations": [
+        "SYSTEMATIC ISSUE: 'low_technical_content' affects 33 chunks. Address this consistently.",
+        "INSUFFICIENT EVIDENCE: Add quantitative benchmarks, performance metrics, and evaluation results."
+      ],
+      "document": {
+        "doc_id": "stability_sd3_medium_hf",
+        "title": "Stable Diffusion 3 Medium HF page",
+        "doc_type": "artifact"
+      }
+    },
+    "huggingface_whisper_large_v3": {
+      "document_level": {
+        "mean_quality_score": 0.496,
+        "median_quality_score": 0.525,
+        "quality_std_dev": 0.083,
+        "mean_substantive_score": 0.016,
+        "mean_promotional_score": 0.101,
+        "chunks_analyzed": 31
+      },
+      "quality_distribution": {
+        "excellent": 0,
+        "good": 18,
+        "fair": 13,
+        "poor": 0
+      },
+      "common_issues": [
+        {
+          "flag": "low_technical_content",
+          "frequency": 31,
+          "affected_chunks": 31
+        },
+        {
+          "flag": "high_promotional_language",
+          "frequency": 2,
+          "affected_chunks": 2
+        }
+      ],
+      "poor_quality_chunks": [
+        {
+          "chunk_id": "huggingface_whisper_large_v3::text_0001",
+          "score": 0.38,
+          "flags": [
+            "high_promotional_language",
+            "low_technical_content"
+          ]
+        },
+        {
+          "chunk_id": "huggingface_whisper_large_v3::text_0002",
+          "score": 0.427,
+          "flags": [
+            "low_technical_content"
+          ]
+        },
+        {
+          "chunk_id": "huggingface_whisper_large_v3::text_0009",
+          "score": 0.499,
+          "flags": [
+            "low_technical_content"
+          ]
+        },
+        {
+          "chunk_id": "huggingface_whisper_large_v3::text_0013",
+          "score": 0.461,
+          "flags": [
+            "high_promotional_language",
+            "low_technical_content"
+          ]
+        },
+        {
+          "chunk_id": "huggingface_whisper_large_v3::text_0017",
+          "score": 0.493,
+          "flags": [
+            "low_technical_content"
+          ]
+        }
+      ],
+      "recommendations": [
+        "SYSTEMATIC ISSUE: 'low_technical_content' affects 31 chunks. Address this consistently.",
+        "INSUFFICIENT EVIDENCE: Add quantitative benchmarks, performance metrics, and evaluation results."
+      ],
+      "document": {
+        "doc_id": "huggingface_whisper_large_v3",
+        "title": "Whisper Large v3 HF page",
+        "doc_type": "artifact"
+      }
+    }
+  },
+  "overall_comparison": {
+    "rankings": [
+      {
+        "doc_id": "qwen3_tech_report",
+        "mean_quality": 0.606,
+        "mean_substantive": 0.049,
+        "mean_promotional": 0.008
+      },
+      {
+        "doc_id": "llama3_tech_report",
+        "mean_quality": 0.544,
+        "mean_substantive": 0.037,
+        "mean_promotional": 0.034
+      },
+      {
+        "doc_id": "openai_gpt5_system_card",
+        "mean_quality": 0.522,
+        "mean_substantive": 0.038,
+        "mean_promotional": 0.024
+      },
+      {
+        "doc_id": "stability_sd3_medium_hf",
+        "mean_quality": 0.516,
+        "mean_substantive": 0.01,
+        "mean_promotional": 0.005
+      },
+      {
+        "doc_id": "huggingface_whisper_large_v3",
+        "mean_quality": 0.496,
+        "mean_substantive": 0.016,
+        "mean_promotional": 0.101
+      }
+    ],
+    "quality_statistics": {
+      "best": 0.606,
+      "worst": 0.496,
+      "mean": 0.537,
+      "median": 0.522
+    },
+    "insights": [
+      "Quality gap between best and worst documentation: 0.110",
+      "Highest technical content: qwen3_tech_report (score: 0.049)"
+    ]
+  },
+  "framework_vs_artifact_quality": {
+    "framework_mean_quality": 0,
+    "artifact_mean_quality": 0.537,
+    "quality_gap": -0.537,
+    "interpretation": "Artifacts have higher quality than frameworks"
+  },
+  "key_findings": {
+    "most_promotional_docs": [
+      [
+        "huggingface_whisper_large_v3",
+        0.101
+      ],
+      [
+        "llama3_tech_report",
+        0.034
+      ],
+      [
+        "openai_gpt5_system_card",
+        0.024
+      ]
+    ],
+    "most_substantive_docs": [
+      [
+        "qwen3_tech_report",
+        0.049
+      ],
+      [
+        "openai_gpt5_system_card",
+        0.038
+      ],
+      [
+        "llama3_tech_report",
+        0.037
+      ]
+    ],
+    "lowest_quality_docs": [
+      [
+        "huggingface_whisper_large_v3",
+        0.496
+      ],
+      [
+        "stability_sd3_medium_hf",
+        0.516
+      ],
+      [
+        "openai_gpt5_system_card",
+        0.522
+      ]
+    ]
+  }
+}

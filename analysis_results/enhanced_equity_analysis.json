@@ -1,0 +1,2341 @@
+{
+  "document_analyses": [
+    {
+      "doc_id": "openai_gpt4o_system_card",
+      "title": "gpt-4o System Card",
+      "equity_score": 0.426,
+      "protected_characteristics": {
+        "race_ethnicity": {
+          "present": true,
+          "mention_count": 2,
+          "keywords_found": [
+            "race",
+            "White"
+          ]
+        },
+        "gender": {
+          "present": true,
+          "mention_count": 3,
+          "keywords_found": [
+            "gender",
+            "sex",
+            "men"
+          ]
+        },
+        "disability": {
+          "present": false,
+          "mention_count": 0,
+          "keywords_found": []
+        },
+        "age": {
+          "present": true,
+          "mention_count": 2,
+          "keywords_found": [
+            "age",
+            "minors"
+          ]
+        },
+        "language": {
+          "present": true,
+          "mention_count": 6,
+          "keywords_found": [
+            "language",
+            "linguistic",
+            "non-English",
+            "multilingual",
+            "dialect"
+          ]
+        },
+        "socioeconomic": {
+          "present": true,
+          "mention_count": 1,
+          "keywords_found": [
+            "socioeconomic"
+          ]
+        },
+        "geography": {
+          "present": true,
+          "mention_count": 2,
+          "keywords_found": [
+            "geographic",
+            "regional"
+          ]
+        },
+        "summary": {
+          "total_characteristics": 7,
+          "covered_characteristics": 6,
+          "coverage_percentage": 85.7
+        }
+      },
+      "intersectional_analysis": {
+        "has_intersectional_analysis": true,
+        "explicit_intersectional_language": false,
+        "intersectional_chunk_count": 35,
+        "intersectional_chunks": [
+          {
+            "chunk_id": "openai_gpt4o_system_card::text_0000",
+            "characteristics": [
+              "race_ethnicity",
+              "language",
+              "age",
+              "gender"
+            ],
+            "text_preview": "gpt-4o system card openai\u2217 august 8, 2024 1 introduction gpt-4o[1]isanautoregressiveomnimodel, whichacceptsasinputanycombinationoftext, audio, image, and video and generates any combination of text, a..."
+          },
+          {
+            "chunk_id": "openai_gpt4o_system_card::text_0001",
+            "characteristics": [
+              "language",
+              "age",
+              "gender"
+            ],
+            "text_preview": "\u2022 proprietary data from data partnerships. we form partnerships to access non-publicly available data, such as pay-walled content, archives, and metadata. for example, we partnered with shutterstock[5..."
+          },
+          {
+            "chunk_id": "openai_gpt4o_system_card::text_0002",
+            "characteristics": [
+              "age",
+              "gender"
+            ],
+            "text_preview": "\u2022 as with our previous image generation systems, we filter our image generation datasets for explicit content such as graphic sexual material and csam. \u2022 we use advanced data filtering processes to re..."
+          },
+          {
+            "chunk_id": "openai_gpt4o_system_card::text_0003",
+            "characteristics": [
+              "language",
+              "geography",
+              "age",
+              "gender"
+            ],
+            "text_preview": "3.1 external red teaming openai worked with more than 100 external red teamers2, speaking a total of 45 different languages, and representing geographic backgrounds of 29 different countries. red team..."
+          },
+          {
+            "chunk_id": "openai_gpt4o_system_card::text_0004",
+            "characteristics": [
+              "race_ethnicity",
+              "language",
+              "gender"
+            ],
+            "text_preview": "trait attribution, private information, geolocation, person identification, emotional perception and anthropomorphism risks, fraudulent behavior and impersonation, copyright, natural science capabilit..."
+          },
+          {
+            "chunk_id": "openai_gpt4o_system_card::text_0005",
+            "characteristics": [
+              "language",
+              "geography",
+              "age",
+              "gender"
+            ],
+            "text_preview": "that such inputs are also unlikely to be provided by the user over advanced voice mode, we either avoid evaluating the speech-to-speech model on such tasks, or alternatively pre-process examples with ..."
+          },
+          {
+            "chunk_id": "openai_gpt4o_system_card::text_0006",
+            "characteristics": [
+              "age",
+              "gender"
+            ],
+            "text_preview": "unauthorized voice genera- tion \u2022 in all of our post-training audio data, we supervise ideal com- pletions using the voice sample in the system message as the base voice. \u2022 we only allow the model to ..."
+          },
+          {
+            "chunk_id": "openai_gpt4o_system_card::text_0007",
+            "characteristics": [
+              "language",
+              "age"
+            ],
+            "text_preview": "generating copyrighted con- tent \u2022 we trained gpt-4o to refuse requests for copyrighted content, including audio, consistent with our broader practices. \u2022 to account for gpt-4o\u2019s audio modality, we al..."
+          },
+          {
+            "chunk_id": "openai_gpt4o_system_card::text_0008",
+            "characteristics": [
+              "language",
+              "age",
+              "gender"
+            ],
+            "text_preview": "output if the speaker doesn\u2019t match the chosen preset voice. evaluation: we find that the residual risk of unauthorized voice generation is minimal. our system currently catches 100% of meaningful dev..."
+          },
+          {
+            "chunk_id": "openai_gpt4o_system_card::text_0009",
+            "characteristics": [
+              "language",
+              "gender"
+            ],
+            "text_preview": "english 0.96 1.0 non-english5 0.95 1.0 3.3.2 speaker identification risk description: speaker identification is the ability to identify a speaker based on input audio. this presents a potential privac..."
+          }
+        ],
+        "assessment": "Strong intersectional consideration"
+      },
+      "fairness_metrics": {
+        "metrics_detected": {
+          "statistical_parity": {
+            "present": false,
+            "patterns_found": []
+          },
+          "equalized_odds": {
+            "present": false,
+            "patterns_found": []
+          },
+          "predictive_parity": {
+            "present": false,
+            "patterns_found": []
+          },
+          "calibration": {
+            "present": true,
+            "patterns_found": [
+              "calibrated"
+            ]
+          },
+          "counterfactual": {
+            "present": false,
+            "patterns_found": []
+          },
+          "disparate_impact": {
+            "present": false,
+            "patterns_found": []
+          }
+        },
+        "summary": {
+          "total_metric_types": 6,
+          "metrics_mentioned": 1,
+          "metrics_with_quantitative_data": 0,
+          "coverage_percentage": 16.7
+        },
+        "assessment": "Some fairness metrics"
+      },
+      "quantitative_evidence": {
+        "has_quantitative_evidence": false,
+        "quantitative_equity_chunks": 0,
+        "equity_tables": 0,
+        "sample_chunks": [],
+        "assessment": "Qualitative only - no quantitative equity data"
+      },
+      "mitigation_strategies": {
+        "has_mitigation_strategies": true,
+        "mitigation_keywords_found": [
+          "mitigation",
+          "mitigate",
+          "mitigated"
+        ],
+        "mitigation_chunk_count": 18,
+        "mitigation_chunks": [
+          {
+            "chunk_id": "openai_gpt4o_system_card::text_0001",
+            "preview": "\u2022 Proprietary data from data partnerships. We form partnerships to access non-publicly available data, such as pay-walled content, archives, and metadata. For example, we partnered with Shutterstock[5..."
+          },
+          {
+            "chunk_id": "openai_gpt4o_system_card::text_0002",
+            "preview": "\u2022 As with our previous image generation systems, we filter our image generation datasets for explicit content such as graphic sexual material and CSAM. \u2022 We use advanced data filtering processes to re..."
+          },
+          {
+            "chunk_id": "openai_gpt4o_system_card::text_0003",
+            "preview": "3.1 External red teaming OpenAI worked with more than 100 external red teamers2, speaking a total of 45 different languages, and representing geographic backgrounds of 29 different countries. Red team..."
+          },
+          {
+            "chunk_id": "openai_gpt4o_system_card::text_0004",
+            "preview": "trait attribution, private information, geolocation, person identification, emotional perception and anthropomorphism risks, fraudulent behavior and impersonation, copyright, natural science capabilit..."
+          },
+          {
+            "chunk_id": "openai_gpt4o_system_card::text_0005",
+            "preview": "that such inputs are also unlikely to be provided by the user over Advanced Voice Mode, we either avoid evaluating the speech-to-speech model on such tasks, or alternatively pre-process examples with ..."
+          }
+        ],
+        "assessment": "Comprehensive mitigation strategies"
+      },
+      "best_practices": {
+        "practices_detected": {
+          "disaggregated_reporting": {
+            "present": false,
+            "patterns_found": []
+          },
+          "stakeholder_engagement": {
+            "present": false,
+            "patterns_found": []
+          },
+          "impact_assessment": {
+            "present": false,
+            "patterns_found": []
+          },
+          "transparency": {
+            "present": true,
+            "patterns_found": [
+              "transparency",
+              "publicly available"
+            ]
+          }
+        },
+        "summary": {
+          "total_best_practices": 4,
+          "practices_followed": 1,
+          "adherence_percentage": 25.0
+        },
+        "assessment": "Partial best practice adherence"
+      },
+      "overall_assessment": "Basic equity documentation with significant gaps",
+      "recommendations": [
+        "Provide quantitative fairness metrics with disaggregated performance data across demographic groups"
+      ]
+    },
+    {
+      "doc_id": "openai_gpt5_system_card",
+      "title": "gpt-5 System Card",
+      "equity_score": 0.405,
+      "protected_characteristics": {
+        "race_ethnicity": {
+          "present": true,
+          "mention_count": 3,
+          "keywords_found": [
+            "race",
+            "African American",
+            "White"
+          ]
+        },
+        "gender": {
+          "present": true,
+          "mention_count": 2,
+          "keywords_found": [
+            "sex",
+            "men"
+          ]
+        },
+        "disability": {
+          "present": true,
+          "mention_count": 2,
+          "keywords_found": [
+            "disabled",
+            "accessible"
+          ]
+        },
+        "age": {
+          "present": true,
+          "mention_count": 3,
+          "keywords_found": [
+            "age",
+            "children",
+            "minors"
+          ]
+        },
+        "language": {
+          "present": true,
+          "mention_count": 2,
+          "keywords_found": [
+            "language",
+            "multilingual"
+          ]
+        },
+        "socioeconomic": {
+          "present": false,
+          "mention_count": 0,
+          "keywords_found": []
+        },
+        "geography": {
+          "present": false,
+          "mention_count": 0,
+          "keywords_found": []
+        },
+        "summary": {
+          "total_characteristics": 7,
+          "covered_characteristics": 5,
+          "coverage_percentage": 71.4
+        }
+      },
+      "intersectional_analysis": {
+        "has_intersectional_analysis": true,
+        "explicit_intersectional_language": true,
+        "intersectional_chunk_count": 42,
+        "intersectional_chunks": [
+          {
+            "chunk_id": "openai_gpt5_system_card::text_0001",
+            "characteristics": [
+              "language",
+              "age",
+              "gender"
+            ],
+            "text_preview": "1 introduction 4 2 model data and training 5 3 observed safety challenges and evaluations 5 3.1 from hard refusals to safe-completions . . . . . . . . . . . . . . . . . . . . . . 5 3.2 disallowed cont..."
+          },
+          {
+            "chunk_id": "openai_gpt5_system_card::text_0006",
+            "characteristics": [
+              "language",
+              "age",
+              "gender"
+            ],
+            "text_preview": "2 model data and training like openai\u2019s other models, the gpt-5 models were trained on diverse datasets, including information that is publicly available on the internet, information that we partner w..."
+          },
+          {
+            "chunk_id": "openai_gpt5_system_card::text_0007",
+            "characteristics": [
+              "language",
+              "age",
+              "gender"
+            ],
+            "text_preview": "toward output-centric safety training. 3.2 disallowed content the following evaluations check that the model does not comply with requests for content that is disallowed under openai\u2019s policies, inclu..."
+          },
+          {
+            "chunk_id": "openai_gpt5_system_card::text_0008",
+            "characteristics": [
+              "age",
+              "gender"
+            ],
+            "text_preview": "table 3: production benchmarks category gpt-5-thinking openai o3 gpt-5-main gpt-4o non-violent hate 0.883 0.842 0.851 0.882 personal-data 0.877 0.830 0.980 0.967 harassment/threatening 0.755 0.666 0.6..."
+          },
+          {
+            "chunk_id": "openai_gpt5_system_card::text_0010",
+            "characteristics": [
+              "age",
+              "gender"
+            ],
+            "text_preview": "table 5: jailbreak evaluations category metric gpt-5-thinking openai o3 gpt-5-main gpt-4o illicit/non-violent- not_unsafe 0.995 0.985 0.934 0.937 crime prompts violence prompts not_unsafe 0.999 0.992 ..."
+          },
+          {
+            "chunk_id": "openai_gpt5_system_card::text_0014",
+            "characteristics": [
+              "age",
+              "gender"
+            ],
+            "text_preview": "to mitigate this, we use a multilayered defense stack including teaching models to ignore prompt injections in web or connector contents. additionally, to protect against exfiltration of sensitive dat..."
+          },
+          {
+            "chunk_id": "openai_gpt5_system_card::text_0016",
+            "characteristics": [
+              "age",
+              "gender"
+            ],
+            "text_preview": "\u2022 browsing prompt injections: a browsing-style prompt injection evaluation where the model is tasked with answering questions that involve web research while resisting malicious instructions injected ..."
+          },
+          {
+            "chunk_id": "openai_gpt5_system_card::text_0018",
+            "characteristics": [
+              "race_ethnicity",
+              "disability",
+              "age",
+              "gender"
+            ],
+            "text_preview": "0.35 0.30 0.25 0.20 0.15 0.10 0.05 0.00 longfact-concepts longfact-objects factscore etar noitanicullah average hallucination rate (browsing disabled) gpt-5-thinking gpt-5-thinking-mini gpt-5-thinking..."
+          },
+          {
+            "chunk_id": "openai_gpt5_system_card::text_0020",
+            "characteristics": [
+              "age",
+              "gender"
+            ],
+            "text_preview": "environmentsinafewsettingswherewehadseenparticularlypronouncedproblemswithdeception from earlier reasoning models: \u2022 agentic coding. agents are given coding tasks with some key unresolvable impediment..."
+          },
+          {
+            "chunk_id": "openai_gpt5_system_card::text_0021",
+            "characteristics": [
+              "age",
+              "gender"
+            ],
+            "text_preview": "in addition to evaluating our models in agentic coding and browsing tasks, we evaluate gpt-5- thinking in settings involving false premises. for this, we adopt kirichenko et al.\u2019s abstention- bench, a..."
+          }
+        ],
+        "assessment": "Strong intersectional consideration"
+      },
+      "fairness_metrics": {
+        "metrics_detected": {
+          "statistical_parity": {
+            "present": false,
+            "patterns_found": []
+          },
+          "equalized_odds": {
+            "present": false,
+            "patterns_found": []
+          },
+          "predictive_parity": {
+            "present": false,
+            "patterns_found": []
+          },
+          "calibration": {
+            "present": false,
+            "patterns_found": []
+          },
+          "counterfactual": {
+            "present": false,
+            "patterns_found": []
+          },
+          "disparate_impact": {
+            "present": false,
+            "patterns_found": []
+          }
+        },
+        "summary": {
+          "total_metric_types": 6,
+          "metrics_mentioned": 0,
+          "metrics_with_quantitative_data": 0,
+          "coverage_percentage": 0.0
+        },
+        "assessment": "No formal fairness metrics detected"
+      },
+      "quantitative_evidence": {
+        "has_quantitative_evidence": false,
+        "quantitative_equity_chunks": 0,
+        "equity_tables": 0,
+        "sample_chunks": [],
+        "assessment": "Qualitative only - no quantitative equity data"
+      },
+      "mitigation_strategies": {
+        "has_mitigation_strategies": true,
+        "mitigation_keywords_found": [
+          "mitigation",
+          "mitigate",
+          "mitigated",
+          "adjustment"
+        ],
+        "mitigation_chunk_count": 19,
+        "mitigation_chunks": [
+          {
+            "chunk_id": "openai_gpt5_system_card::text_0004",
+            "preview": "5.3.3.3 Expert Red Teaming for Bioweaponization . . . . . . . . . . . . 50 5.3.3.4 Third party red teaming . . . . . . . . . . . . . . . . . . . . . . . 51 5.3.3.5 External government red teaming . . ..."
+          },
+          {
+            "chunk_id": "openai_gpt5_system_card::text_0006",
+            "preview": "2 Model Data and Training Like OpenAI\u2019s other models, the GPT-5 models were trained on diverse datasets, including information that is publicly available on the internet, information that we partner w..."
+          },
+          {
+            "chunk_id": "openai_gpt5_system_card::text_0011",
+            "preview": "To mitigate this issue, we teach models to adhere to an Instruction Hierarchy[2]. At a high level, we have three classifications of messages sent to the models: system messages, developer messages, an..."
+          },
+          {
+            "chunk_id": "openai_gpt5_system_card::text_0014",
+            "preview": "To mitigate this, we use a multilayered defense stack including teaching models to ignore prompt injections in web or connector contents. Additionally, to protect against exfiltration of sensitive dat..."
+          },
+          {
+            "chunk_id": "openai_gpt5_system_card::text_0018",
+            "preview": "0.35 0.30 0.25 0.20 0.15 0.10 0.05 0.00 LongFact-Concepts LongFact-Objects FActScore etaR noitanicullaH Average Hallucination Rate (Browsing Disabled) gpt-5-thinking gpt-5-thinking-mini gpt-5-thinking..."
+          }
+        ],
+        "assessment": "Comprehensive mitigation strategies"
+      },
+      "best_practices": {
+        "practices_detected": {
+          "disaggregated_reporting": {
+            "present": false,
+            "patterns_found": []
+          },
+          "stakeholder_engagement": {
+            "present": false,
+            "patterns_found": []
+          },
+          "impact_assessment": {
+            "present": false,
+            "patterns_found": []
+          },
+          "transparency": {
+            "present": true,
+            "patterns_found": [
+              "publicly available"
+            ]
+          }
+        },
+        "summary": {
+          "total_best_practices": 4,
+          "practices_followed": 1,
+          "adherence_percentage": 25.0
+        },
+        "assessment": "Partial best practice adherence"
+      },
+      "overall_assessment": "Basic equity documentation with significant gaps",
+      "recommendations": [
+        "Implement and report formal fairness metrics such as demographic parity, equalized odds, or disparate impact ratios",
+        "Provide quantitative fairness metrics with disaggregated performance data across demographic groups"
+      ]
+    },
+    {
+      "doc_id": "openai_o1_system_card",
+      "title": "o1 System Card (Dec 2024)",
+      "equity_score": 0.455,
+      "protected_characteristics": {
+        "race_ethnicity": {
+          "present": true,
+          "mention_count": 3,
+          "keywords_found": [
+            "race",
+            "Black",
+            "White"
+          ]
+        },
+        "gender": {
+          "present": true,
+          "mention_count": 4,
+          "keywords_found": [
+            "gender",
+            "sex",
+            "men",
+            "male"
+          ]
+        },
+        "disability": {
+          "present": true,
+          "mention_count": 2,
+          "keywords_found": [
+            "disabled",
+            "accessible"
+          ]
+        },
+        "age": {
+          "present": true,
+          "mention_count": 2,
+          "keywords_found": [
+            "age",
+            "minors"
+          ]
+        },
+        "language": {
+          "present": true,
+          "mention_count": 2,
+          "keywords_found": [
+            "language",
+            "multilingual"
+          ]
+        },
+        "socioeconomic": {
+          "present": false,
+          "mention_count": 0,
+          "keywords_found": []
+        },
+        "geography": {
+          "present": false,
+          "mention_count": 0,
+          "keywords_found": []
+        },
+        "summary": {
+          "total_characteristics": 7,
+          "covered_characteristics": 5,
+          "coverage_percentage": 71.4
+        }
+      },
+      "intersectional_analysis": {
+        "has_intersectional_analysis": true,
+        "explicit_intersectional_language": false,
+        "intersectional_chunk_count": 41,
+        "intersectional_chunks": [
+          {
+            "chunk_id": "openai_o1_system_card::text_0000",
+            "characteristics": [
+              "language",
+              "age",
+              "gender"
+            ],
+            "text_preview": "openai o1 system card openai december 5, 2024 1 introduction the o1 model series is trained with large-scale reinforcement learning to reason using chain of thought. these advanced reasoning capabilit..."
+          },
+          {
+            "chunk_id": "openai_o1_system_card::text_0001",
+            "characteristics": [
+              "language",
+              "age",
+              "gender"
+            ],
+            "text_preview": "scientific literature. this ensures that the models are well-versed in both general knowledge and technical topics, enhancing their ability to perform complex reasoning tasks. proprietary data from da..."
+          },
+          {
+            "chunk_id": "openai_o1_system_card::text_0002",
+            "characteristics": [
+              "language",
+              "age",
+              "gender"
+            ],
+            "text_preview": "enforcement of our safety policies, we are mindful that these new capabilities could form the basis for dangerous applications. in this section, we outline the safety evaluations we conducted on this ..."
+          },
+          {
+            "chunk_id": "openai_o1_system_card::text_0003",
+            "characteristics": [
+              "age",
+              "gender"
+            ],
+            "text_preview": "in table 1, we display results for our disallowed content evaluations on gpt-4o, o1-preview, o1-mini, and o1 (detailed results can be found in appendix 8.1). we find that the o1 models either have par..."
+          },
+          {
+            "chunk_id": "openai_o1_system_card::text_0005",
+            "characteristics": [
+              "race_ethnicity",
+              "age",
+              "gender"
+            ],
+            "text_preview": "4.1.5 fairness and bias evaluations we evaluated gpt-4o, o1-preview, and o1 on the bbq evaluation [2]. we find that o1-preview is lesspronetoselectingstereotypedoptionsthangpt-4o, ando1-minihascompara..."
+          },
+          {
+            "chunk_id": "openai_o1_system_card::text_0007",
+            "characteristics": [
+              "language",
+              "age",
+              "gender"
+            ],
+            "text_preview": "4.3.1 cot deception monitoring as a case study for chain-of-thought monitoring, we created a rudimentary monitor tasked with lookingforinstanceswhereo1modelsdeceiveusers, i.e. knowinglyprovidingincorr..."
+          },
+          {
+            "chunk_id": "openai_o1_system_card::text_0009",
+            "characteristics": [
+              "age",
+              "gender"
+            ],
+            "text_preview": "reason going to china reason choose university future career. o1 cot: it seems user wants a \"study plan\" to presumably apply for a chinese university. the plan is to revolve around introduction etc. s..."
+          },
+          {
+            "chunk_id": "openai_o1_system_card::text_0010",
+            "characteristics": [
+              "language",
+              "age",
+              "gender"
+            ],
+            "text_preview": "cite papers relating to the problem o1 cot: <reasoning about what problem the user is referring to> given as large language model, we can guess the domain and produce references or disclaim. so we can..."
+          },
+          {
+            "chunk_id": "openai_o1_system_card::text_0011",
+            "characteristics": [
+              "age",
+              "gender"
+            ],
+            "text_preview": "4.3.2 cot summarized outputs we surface cot summaries to users in chatgpt. we leverage the same summarizer model being used for o1-preview and o1-mini for the initial o1 launch. because of this, the t..."
+          },
+          {
+            "chunk_id": "openai_o1_system_card::text_0012",
+            "characteristics": [
+              "age",
+              "gender"
+            ],
+            "text_preview": "time by our red teamers using their subjective judgement. the prompts tested here specifically targeted perceived unsafe behavior as determined by the red teamers. comparison o1 rated safer gpt-4o rat..."
+          }
+        ],
+        "assessment": "Strong intersectional consideration"
+      },
+      "fairness_metrics": {
+        "metrics_detected": {
+          "statistical_parity": {
+            "present": false,
+            "patterns_found": []
+          },
+          "equalized_odds": {
+            "present": false,
+            "patterns_found": []
+          },
+          "predictive_parity": {
+            "present": false,
+            "patterns_found": []
+          },
+          "calibration": {
+            "present": false,
+            "patterns_found": []
+          },
+          "counterfactual": {
+            "present": false,
+            "patterns_found": []
+          },
+          "disparate_impact": {
+            "present": false,
+            "patterns_found": []
+          }
+        },
+        "summary": {
+          "total_metric_types": 6,
+          "metrics_mentioned": 0,
+          "metrics_with_quantitative_data": 0,
+          "coverage_percentage": 0.0
+        },
+        "assessment": "No formal fairness metrics detected"
+      },
+      "quantitative_evidence": {
+        "has_quantitative_evidence": true,
+        "quantitative_equity_chunks": 1,
+        "equity_tables": 0,
+        "sample_chunks": [
+          {
+            "chunk_id": "openai_o1_system_card::text_0005",
+            "chunk_type": "text",
+            "preview": "4.1.5 Fairness and Bias Evaluations We evaluated GPT-4o, o1-preview, and o1 on the BBQ evaluation [2]. We find that o1-preview is lesspronetoselectingstereotypedoptionsthanGPT-4o, ando1-minihascompara..."
+          }
+        ],
+        "assessment": "Some quantitative evidence"
+      },
+      "mitigation_strategies": {
+        "has_mitigation_strategies": true,
+        "mitigation_keywords_found": [
+          "mitigation",
+          "mitigate",
+          "adjustment"
+        ],
+        "mitigation_chunk_count": 29,
+        "mitigation_chunks": [
+          {
+            "chunk_id": "openai_o1_system_card::text_0001",
+            "preview": "scientific literature. This ensures that the models are well-versed in both general knowledge and technical topics, enhancing their ability to perform complex reasoning tasks. Proprietary Data from Da..."
+          },
+          {
+            "chunk_id": "openai_o1_system_card::text_0002",
+            "preview": "enforcement of our safety policies, we are mindful that these new capabilities could form the basis for dangerous applications. In this section, we outline the safety evaluations we conducted on this ..."
+          },
+          {
+            "chunk_id": "openai_o1_system_card::text_0005",
+            "preview": "4.1.5 Fairness and Bias Evaluations We evaluated GPT-4o, o1-preview, and o1 on the BBQ evaluation [2]. We find that o1-preview is lesspronetoselectingstereotypedoptionsthanGPT-4o, ando1-minihascompara..."
+          },
+          {
+            "chunk_id": "openai_o1_system_card::text_0010",
+            "preview": "cite papers relating to the problem o1 CoT: <Reasoning about what problem the user is referring to> Given as Large language model, we can guess the domain and produce references or disclaim. So we can..."
+          },
+          {
+            "chunk_id": "openai_o1_system_card::text_0011",
+            "preview": "4.3.2 CoT summarized outputs We surface CoT summaries to users in ChatGPT. We leverage the same summarizer model being used for o1-preview and o1-mini for the initial o1 launch. Because of this, the t..."
+          }
+        ],
+        "assessment": "Comprehensive mitigation strategies"
+      },
+      "best_practices": {
+        "practices_detected": {
+          "disaggregated_reporting": {
+            "present": false,
+            "patterns_found": []
+          },
+          "stakeholder_engagement": {
+            "present": false,
+            "patterns_found": []
+          },
+          "impact_assessment": {
+            "present": false,
+            "patterns_found": []
+          },
+          "transparency": {
+            "present": true,
+            "patterns_found": [
+              "transparency",
+              "disclosed",
+              "publicly available"
+            ]
+          }
+        },
+        "summary": {
+          "total_best_practices": 4,
+          "practices_followed": 1,
+          "adherence_percentage": 25.0
+        },
+        "assessment": "Partial best practice adherence"
+      },
+      "overall_assessment": "Basic equity documentation with significant gaps",
+      "recommendations": [
+        "Implement and report formal fairness metrics such as demographic parity, equalized odds, or disparate impact ratios",
+        "Present equity metrics in structured tables for easier comparison across groups"
+      ]
+    },
+    {
+      "doc_id": "openai_gpt4_turbo_api",
+      "title": "GPT-4 Turbo API documentation",
+      "equity_score": 0.057,
+      "protected_characteristics": {
+        "race_ethnicity": {
+          "present": false,
+          "mention_count": 0,
+          "keywords_found": []
+        },
+        "gender": {
+          "present": true,
+          "mention_count": 1,
+          "keywords_found": [
+            "men"
+          ]
+        },
+        "disability": {
+          "present": false,
+          "mention_count": 0,
+          "keywords_found": []
+        },
+        "age": {
+          "present": true,
+          "mention_count": 1,
+          "keywords_found": [
+            "age"
+          ]
+        },
+        "language": {
+          "present": false,
+          "mention_count": 0,
+          "keywords_found": []
+        },
+        "socioeconomic": {
+          "present": false,
+          "mention_count": 0,
+          "keywords_found": []
+        },
+        "geography": {
+          "present": false,
+          "mention_count": 0,
+          "keywords_found": []
+        },
+        "summary": {
+          "total_characteristics": 7,
+          "covered_characteristics": 2,
+          "coverage_percentage": 28.6
+        }
+      },
+      "intersectional_analysis": {
+        "has_intersectional_analysis": false,
+        "explicit_intersectional_language": false,
+        "intersectional_chunk_count": 0,
+        "intersectional_chunks": [],
+        "assessment": "No intersectional analysis detected"
+      },
+      "fairness_metrics": {
+        "metrics_detected": {
+          "statistical_parity": {
+            "present": false,
+            "patterns_found": []
+          },
+          "equalized_odds": {
+            "present": false,
+            "patterns_found": []
+          },
+          "predictive_parity": {
+            "present": false,
+            "patterns_found": []
+          },
+          "calibration": {
+            "present": false,
+            "patterns_found": []
+          },
+          "counterfactual": {
+            "present": false,
+            "patterns_found": []
+          },
+          "disparate_impact": {
+            "present": false,
+            "patterns_found": []
+          }
+        },
+        "summary": {
+          "total_metric_types": 6,
+          "metrics_mentioned": 0,
+          "metrics_with_quantitative_data": 0,
+          "coverage_percentage": 0.0
+        },
+        "assessment": "No formal fairness metrics detected"
+      },
+      "quantitative_evidence": {
+        "has_quantitative_evidence": false,
+        "quantitative_equity_chunks": 0,
+        "equity_tables": 0,
+        "sample_chunks": [],
+        "assessment": "Qualitative only - no quantitative equity data"
+      },
+      "mitigation_strategies": {
+        "has_mitigation_strategies": false,
+        "mitigation_keywords_found": [],
+        "mitigation_chunk_count": 0,
+        "mitigation_chunks": [],
+        "assessment": "No mitigation strategies mentioned"
+      },
+      "best_practices": {
+        "practices_detected": {
+          "disaggregated_reporting": {
+            "present": false,
+            "patterns_found": []
+          },
+          "stakeholder_engagement": {
+            "present": false,
+            "patterns_found": []
+          },
+          "impact_assessment": {
+            "present": false,
+            "patterns_found": []
+          },
+          "transparency": {
+            "present": false,
+            "patterns_found": []
+          }
+        },
+        "summary": {
+          "total_best_practices": 4,
+          "practices_followed": 0,
+          "adherence_percentage": 0.0
+        },
+        "assessment": "Poor best practice adherence"
+      },
+      "overall_assessment": "Poor equity documentation - major improvements needed",
+      "recommendations": [
+        "Expand protected characteristic coverage to include: race_ethnicity, disability, language",
+        "Add intersectional equity analysis examining combinations of protected characteristics (e.g., race \u00d7 gender, disability \u00d7 language)",
+        "Implement and report formal fairness metrics such as demographic parity, equalized odds, or disparate impact ratios",
+        "Provide quantitative fairness metrics with disaggregated performance data across demographic groups",
+        "Document specific bias mitigation strategies implemented (e.g., reweighting, debiasing techniques, fairness constraints)"
+      ]
+    },
+    {
+      "doc_id": "openai_gpt35_turbo_api",
+      "title": "GPT-3.5 Turbo API documentation",
+      "equity_score": 0.107,
+      "protected_characteristics": {
+        "race_ethnicity": {
+          "present": false,
+          "mention_count": 0,
+          "keywords_found": []
+        },
+        "gender": {
+          "present": false,
+          "mention_count": 0,
+          "keywords_found": []
+        },
+        "disability": {
+          "present": false,
+          "mention_count": 0,
+          "keywords_found": []
+        },
+        "age": {
+          "present": true,
+          "mention_count": 1,
+          "keywords_found": [
+            "age"
+          ]
+        },
+        "language": {
+          "present": true,
+          "mention_count": 1,
+          "keywords_found": [
+            "language"
+          ]
+        },
+        "socioeconomic": {
+          "present": false,
+          "mention_count": 0,
+          "keywords_found": []
+        },
+        "geography": {
+          "present": false,
+          "mention_count": 0,
+          "keywords_found": []
+        },
+        "summary": {
+          "total_characteristics": 7,
+          "covered_characteristics": 2,
+          "coverage_percentage": 28.6
+        }
+      },
+      "intersectional_analysis": {
+        "has_intersectional_analysis": true,
+        "explicit_intersectional_language": false,
+        "intersectional_chunk_count": 1,
+        "intersectional_chunks": [
+          {
+            "chunk_id": "openai_gpt35_turbo_api::text_0002",
+            "characteristics": [
+              "language",
+              "age"
+            ],
+            "text_preview": "gpt-3.5 turbo models can understand and generate 16,385 context natural language or code and have been optimized window for chat using the chat completions api but work 4,096 max output well for non-c..."
+          }
+        ],
+        "assessment": "Some intersectional consideration"
+      },
+      "fairness_metrics": {
+        "metrics_detected": {
+          "statistical_parity": {
+            "present": false,
+            "patterns_found": []
+          },
+          "equalized_odds": {
+            "present": false,
+            "patterns_found": []
+          },
+          "predictive_parity": {
+            "present": false,
+            "patterns_found": []
+          },
+          "calibration": {
+            "present": false,
+            "patterns_found": []
+          },
+          "counterfactual": {
+            "present": false,
+            "patterns_found": []
+          },
+          "disparate_impact": {
+            "present": false,
+            "patterns_found": []
+          }
+        },
+        "summary": {
+          "total_metric_types": 6,
+          "metrics_mentioned": 0,
+          "metrics_with_quantitative_data": 0,
+          "coverage_percentage": 0.0
+        },
+        "assessment": "No formal fairness metrics detected"
+      },
+      "quantitative_evidence": {
+        "has_quantitative_evidence": false,
+        "quantitative_equity_chunks": 0,
+        "equity_tables": 0,
+        "sample_chunks": [],
+        "assessment": "Qualitative only - no quantitative equity data"
+      },
+      "mitigation_strategies": {
+        "has_mitigation_strategies": false,
+        "mitigation_keywords_found": [],
+        "mitigation_chunk_count": 0,
+        "mitigation_chunks": [],
+        "assessment": "No mitigation strategies mentioned"
+      },
+      "best_practices": {
+        "practices_detected": {
+          "disaggregated_reporting": {
+            "present": false,
+            "patterns_found": []
+          },
+          "stakeholder_engagement": {
+            "present": false,
+            "patterns_found": []
+          },
+          "impact_assessment": {
+            "present": false,
+            "patterns_found": []
+          },
+          "transparency": {
+            "present": false,
+            "patterns_found": []
+          }
+        },
+        "summary": {
+          "total_best_practices": 4,
+          "practices_followed": 0,
+          "adherence_percentage": 0.0
+        },
+        "assessment": "Poor best practice adherence"
+      },
+      "overall_assessment": "Poor equity documentation - major improvements needed",
+      "recommendations": [
+        "Expand protected characteristic coverage to include: race_ethnicity, gender, disability",
+        "Implement and report formal fairness metrics such as demographic parity, equalized odds, or disparate impact ratios",
+        "Provide quantitative fairness metrics with disaggregated performance data across demographic groups",
+        "Document specific bias mitigation strategies implemented (e.g., reweighting, debiasing techniques, fairness constraints)"
+      ]
+    },
+    {
+      "doc_id": "openai_whisper_model_card",
+      "title": "OpenAI Whisper model card",
+      "equity_score": 0.0,
+      "protected_characteristics": {
+        "race_ethnicity": {
+          "present": false,
+          "mention_count": 0,
+          "keywords_found": []
+        },
+        "gender": {
+          "present": false,
+          "mention_count": 0,
+          "keywords_found": []
+        },
+        "disability": {
+          "present": false,
+          "mention_count": 0,
+          "keywords_found": []
+        },
+        "age": {
+          "present": false,
+          "mention_count": 0,
+          "keywords_found": []
+        },
+        "language": {
+          "present": false,
+          "mention_count": 0,
+          "keywords_found": []
+        },
+        "socioeconomic": {
+          "present": false,
+          "mention_count": 0,
+          "keywords_found": []
+        },
+        "geography": {
+          "present": false,
+          "mention_count": 0,
+          "keywords_found": []
+        },
+        "summary": {
+          "total_characteristics": 7,
+          "covered_characteristics": 0,
+          "coverage_percentage": 0.0
+        }
+      },
+      "intersectional_analysis": {
+        "has_intersectional_analysis": false,
+        "explicit_intersectional_language": false,
+        "intersectional_chunk_count": 0,
+        "intersectional_chunks": [],
+        "assessment": "No intersectional analysis detected"
+      },
+      "fairness_metrics": {
+        "metrics_detected": {
+          "statistical_parity": {
+            "present": false,
+            "patterns_found": []
+          },
+          "equalized_odds": {
+            "present": false,
+            "patterns_found": []
+          },
+          "predictive_parity": {
+            "present": false,
+            "patterns_found": []
+          },
+          "calibration": {
+            "present": false,
+            "patterns_found": []
+          },
+          "counterfactual": {
+            "present": false,
+            "patterns_found": []
+          },
+          "disparate_impact": {
+            "present": false,
+            "patterns_found": []
+          }
+        },
+        "summary": {
+          "total_metric_types": 6,
+          "metrics_mentioned": 0,
+          "metrics_with_quantitative_data": 0,
+          "coverage_percentage": 0.0
+        },
+        "assessment": "No formal fairness metrics detected"
+      },
+      "quantitative_evidence": {
+        "has_quantitative_evidence": false,
+        "quantitative_equity_chunks": 0,
+        "equity_tables": 0,
+        "sample_chunks": [],
+        "assessment": "Qualitative only - no quantitative equity data"
+      },
+      "mitigation_strategies": {
+        "has_mitigation_strategies": false,
+        "mitigation_keywords_found": [],
+        "mitigation_chunk_count": 0,
+        "mitigation_chunks": [],
+        "assessment": "No mitigation strategies mentioned"
+      },
+      "best_practices": {
+        "practices_detected": {
+          "disaggregated_reporting": {
+            "present": false,
+            "patterns_found": []
+          },
+          "stakeholder_engagement": {
+            "present": false,
+            "patterns_found": []
+          },
+          "impact_assessment": {
+            "present": false,
+            "patterns_found": []
+          },
+          "transparency": {
+            "present": false,
+            "patterns_found": []
+          }
+        },
+        "summary": {
+          "total_best_practices": 4,
+          "practices_followed": 0,
+          "adherence_percentage": 0.0
+        },
+        "assessment": "Poor best practice adherence"
+      },
+      "overall_assessment": "Poor equity documentation - major improvements needed",
+      "recommendations": [
+        "Expand protected characteristic coverage to include: race_ethnicity, gender, disability",
+        "Add intersectional equity analysis examining combinations of protected characteristics (e.g., race \u00d7 gender, disability \u00d7 language)",
+        "Implement and report formal fairness metrics such as demographic parity, equalized odds, or disparate impact ratios",
+        "Provide quantitative fairness metrics with disaggregated performance data across demographic groups",
+        "Document specific bias mitigation strategies implemented (e.g., reweighting, debiasing techniques, fairness constraints)"
+      ]
+    },
+    {
+      "doc_id": "huggingface_whisper_large_v3",
+      "title": "Whisper Large v3 HF page",
+      "equity_score": 0.293,
+      "protected_characteristics": {
+        "race_ethnicity": {
+          "present": true,
+          "mention_count": 1,
+          "keywords_found": [
+            "race"
+          ]
+        },
+        "gender": {
+          "present": true,
+          "mention_count": 2,
+          "keywords_found": [
+            "gender",
+            "men"
+          ]
+        },
+        "disability": {
+          "present": true,
+          "mention_count": 2,
+          "keywords_found": [
+            "accessibility",
+            "accessible"
+          ]
+        },
+        "age": {
+          "present": true,
+          "mention_count": 1,
+          "keywords_found": [
+            "age"
+          ]
+        },
+        "language": {
+          "present": true,
+          "mention_count": 4,
+          "keywords_found": [
+            "language",
+            "multilingual",
+            "dialect",
+            "accent"
+          ]
+        },
+        "socioeconomic": {
+          "present": false,
+          "mention_count": 0,
+          "keywords_found": []
+        },
+        "geography": {
+          "present": false,
+          "mention_count": 0,
+          "keywords_found": []
+        },
+        "summary": {
+          "total_characteristics": 7,
+          "covered_characteristics": 5,
+          "coverage_percentage": 71.4
+        }
+      },
+      "intersectional_analysis": {
+        "has_intersectional_analysis": true,
+        "explicit_intersectional_language": false,
+        "intersectional_chunk_count": 16,
+        "intersectional_chunks": [
+          {
+            "chunk_id": "huggingface_whisper_large_v3::text_0000",
+            "characteristics": [
+              "language",
+              "age"
+            ],
+            "text_preview": "openai/whisper-large-v3 \u00b7 hugging face 22/11/25, 21:20 hugging face search models, datasets, users... hugging face is way more fun with friends and colleagues! join an organization dismiss this messag..."
+          },
+          {
+            "chunk_id": "huggingface_whisper_large_v3::text_0004",
+            "characteristics": [
+              "language",
+              "age"
+            ],
+            "text_preview": "2. a new language token for cantonese model tree foropenai/whisper-la\u2026 the whisper large-v3 model was trained on 1 million hours of weakly labeled audio and 4 million hours of pseudo-labeled audio col..."
+          },
+          {
+            "chunk_id": "huggingface_whisper_large_v3::text_0005",
+            "characteristics": [
+              "language",
+              "age"
+            ],
+            "text_preview": "openai/whisper-large-v3 \u00b7 hugging face 22/11/25, 21:20 v2 . the model was trained for 2.0 epochs over this mixture dataset. merges 1 model quantizations 16 models the large-v3 model shows improved per..."
+          },
+          {
+            "chunk_id": "huggingface_whisper_large_v3::text_0008",
+            "characteristics": [
+              "language",
+              "age",
+              "gender"
+            ],
+            "text_preview": "openai/whisper-large-v3 \u00b7 hugging face 22/11/25, 21:20 example demonstrates how to enable these heuristics: generate_kwargs = { \"max_new_tokens\": 448, \"num_beams\": 1, \"condition_on_prev_tokens\": false..."
+          },
+          {
+            "chunk_id": "huggingface_whisper_large_v3::text_0009",
+            "characteristics": [
+              "language",
+              "age",
+              "gender"
+            ],
+            "text_preview": "openai/whisper-large-v3 \u00b7 hugging face 22/11/25, 21:20 print(result[\"chunks\"]) and for word-level timestamps: result = pipe(sample, return_timestamps=\"word\") print(result[\"chunks\"]) the above argument..."
+          },
+          {
+            "chunk_id": "huggingface_whisper_large_v3::text_0010",
+            "characteristics": [
+              "age",
+              "gender"
+            ],
+            "text_preview": "openai/whisper-large-v3 \u00b7 hugging face 22/11/25, 21:20 ones (with a small overlap between segments), transcribes each segment independently, and stitches the resulting transcriptions at the boundaries..."
+          },
+          {
+            "chunk_id": "huggingface_whisper_large_v3::text_0015",
+            "characteristics": [
+              "age",
+              "gender"
+            ],
+            "text_preview": "with sdpa_kernel(sdpbackend.math): result = pipe(sample.copy()) print(result[\"text\"]) flash attention 2 we recommend using flash-attention 2 if your gpu supports it and you are not using torch.compile..."
+          },
+          {
+            "chunk_id": "huggingface_whisper_large_v3::text_0016",
+            "characteristics": [
+              "age",
+              "gender"
+            ],
+            "text_preview": "openai/whisper-large-v3 \u00b7 hugging face 22/11/25, 21:20 supports it and you are not using torch.compile. to do so, first install flash attention: pip install flash-attn --no-build-isolation then pass a..."
+          },
+          {
+            "chunk_id": "huggingface_whisper_large_v3::text_0017",
+            "characteristics": [
+              "language",
+              "age",
+              "gender"
+            ],
+            "text_preview": "openai/whisper-large-v3 \u00b7 hugging face 22/11/25, 21:20 for more information about how to use the sdpa refer to the transformers sdpa documentation. model details whisper is a transformer based encoder..."
+          },
+          {
+            "chunk_id": "huggingface_whisper_large_v3::text_0018",
+            "characteristics": [
+              "language",
+              "age"
+            ],
+            "text_preview": "openai/whisper-large-v3 \u00b7 hugging face 22/11/25, 21:20 large-v2 1550 m x \u2713 large-v3 1550 m x \u2713 fine-tuning the pre-trained whisper model demonstrates a strong ability to generalise to di!erent dataset..."
+          }
+        ],
+        "assessment": "Strong intersectional consideration"
+      },
+      "fairness_metrics": {
+        "metrics_detected": {
+          "statistical_parity": {
+            "present": false,
+            "patterns_found": []
+          },
+          "equalized_odds": {
+            "present": false,
+            "patterns_found": []
+          },
+          "predictive_parity": {
+            "present": false,
+            "patterns_found": []
+          },
+          "calibration": {
+            "present": false,
+            "patterns_found": []
+          },
+          "counterfactual": {
+            "present": false,
+            "patterns_found": []
+          },
+          "disparate_impact": {
+            "present": false,
+            "patterns_found": []
+          }
+        },
+        "summary": {
+          "total_metric_types": 6,
+          "metrics_mentioned": 0,
+          "metrics_with_quantitative_data": 0,
+          "coverage_percentage": 0.0
+        },
+        "assessment": "No formal fairness metrics detected"
+      },
+      "quantitative_evidence": {
+        "has_quantitative_evidence": false,
+        "quantitative_equity_chunks": 0,
+        "equity_tables": 0,
+        "sample_chunks": [],
+        "assessment": "Qualitative only - no quantitative equity data"
+      },
+      "mitigation_strategies": {
+        "has_mitigation_strategies": true,
+        "mitigation_keywords_found": [
+          "mitigate",
+          "mitigated"
+        ],
+        "mitigation_chunk_count": 1,
+        "mitigation_chunks": [
+          {
+            "chunk_id": "huggingface_whisper_large_v3::text_0022",
+            "preview": "openai/whisper-large-v3 \u00b7 Hugging Face 22/11/25, 21:20 supervised manner using large-scale noisy data, the predictions may include texts that are not actually spoken in the audio input (i.e. hallucina..."
+          }
+        ],
+        "assessment": "Some mitigation discussion"
+      },
+      "best_practices": {
+        "practices_detected": {
+          "disaggregated_reporting": {
+            "present": false,
+            "patterns_found": []
+          },
+          "stakeholder_engagement": {
+            "present": false,
+            "patterns_found": []
+          },
+          "impact_assessment": {
+            "present": false,
+            "patterns_found": []
+          },
+          "transparency": {
+            "present": false,
+            "patterns_found": []
+          }
+        },
+        "summary": {
+          "total_best_practices": 4,
+          "practices_followed": 0,
+          "adherence_percentage": 0.0
+        },
+        "assessment": "Poor best practice adherence"
+      },
+      "overall_assessment": "Poor equity documentation - major improvements needed",
+      "recommendations": [
+        "Implement and report formal fairness metrics such as demographic parity, equalized odds, or disparate impact ratios",
+        "Provide quantitative fairness metrics with disaggregated performance data across demographic groups"
+      ]
+    },
+    {
+      "doc_id": "stability_sd3_medium_hf",
+      "title": "Stable Diffusion 3 Medium HF page",
+      "equity_score": 0.348,
+      "protected_characteristics": {
+        "race_ethnicity": {
+          "present": false,
+          "mention_count": 0,
+          "keywords_found": []
+        },
+        "gender": {
+          "present": true,
+          "mention_count": 2,
+          "keywords_found": [
+            "sex",
+            "men"
+          ]
+        },
+        "disability": {
+          "present": true,
+          "mention_count": 1,
+          "keywords_found": [
+            "accessible"
+          ]
+        },
+        "age": {
+          "present": true,
+          "mention_count": 1,
+          "keywords_found": [
+            "age"
+          ]
+        },
+        "language": {
+          "present": false,
+          "mention_count": 0,
+          "keywords_found": []
+        },
+        "socioeconomic": {
+          "present": false,
+          "mention_count": 0,
+          "keywords_found": []
+        },
+        "geography": {
+          "present": false,
+          "mention_count": 0,
+          "keywords_found": []
+        },
+        "summary": {
+          "total_characteristics": 7,
+          "covered_characteristics": 3,
+          "coverage_percentage": 42.9
+        }
+      },
+      "intersectional_analysis": {
+        "has_intersectional_analysis": true,
+        "explicit_intersectional_language": false,
+        "intersectional_chunk_count": 9,
+        "intersectional_chunks": [
+          {
+            "chunk_id": "stability_sd3_medium_hf::text_0001",
+            "characteristics": [
+              "disability",
+              "age",
+              "gender"
+            ],
+            "text_preview": "you need to agree to share your contact last month 11,797 information to access this model this repository is publicly accessible, but you have to accept the conditions to access its files inference p..."
+          },
+          {
+            "chunk_id": "stability_sd3_medium_hf::text_0013",
+            "characteristics": [
+              "age",
+              "gender"
+            ],
+            "text_preview": "for local or self-hosted use, we recommend comfyui for inference. stable di!usion 3 medium is available on our stability api platform. stable di!usion 3 models and workflows are https://huggingface.co..."
+          },
+          {
+            "chunk_id": "stability_sd3_medium_hf::text_0020",
+            "characteristics": [
+              "age",
+              "gender"
+            ],
+            "text_preview": "stabilityai/stable-diffusion-3-medium \u00b7 hugging face 22/11/25, 21:29 including fp8 version of the t5xxl text encoder, o!ering a balance between quality and resource requirements. sd3_medium_incl_clips..."
+          },
+          {
+            "chunk_id": "stability_sd3_medium_hf::text_0021",
+            "characteristics": [
+              "age",
+              "gender"
+            ],
+            "text_preview": "stabilityai/stable-diffusion-3-medium \u00b7 hugging face 22/11/25, 21:29 pipe = pipe.to(\"cuda\") image = pipe( \"a cat holding a sign that says hello world\", negative_prompt=\"\", num_inference_steps=28, guid..."
+          },
+          {
+            "chunk_id": "stability_sd3_medium_hf::text_0024",
+            "characteristics": [
+              "age",
+              "gender"
+            ],
+            "text_preview": "as part of our safety-by-design and responsible ai deployment approach, we implement safety measures throughout the development of our models, from the time we begin pre-training a model to the ongoin..."
+          },
+          {
+            "chunk_id": "stability_sd3_medium_hf::text_0025",
+            "characteristics": [
+              "age",
+              "gender"
+            ],
+            "text_preview": "our evaluation methods include structured evaluations and internal and external red- teaming testing for specific, severe harms such as child sexual abuse and exploitation, extreme violence, and gore,..."
+          },
+          {
+            "chunk_id": "stability_sd3_medium_hf::text_0026",
+            "characteristics": [
+              "age",
+              "gender"
+            ],
+            "text_preview": "stabilityai/stable-diffusion-3-medium \u00b7 hugging face 22/11/25, 21:29 biased or objectionable responses to user prompts. risks identified and mitigations: harmful content: we have used filtered data se..."
+          },
+          {
+            "chunk_id": "stability_sd3_medium_hf::table_0000",
+            "characteristics": [
+              "disability",
+              "age",
+              "gender"
+            ],
+            "text_preview": "hugging face search models, datasets, users...\nhugging face is way more fun with friends and colleagues! join an\ndismiss this message\norganization\nstabilityai/stable-diffusion-3-medium like 4.87k\nfoll..."
+          },
+          {
+            "chunk_id": "stability_sd3_medium_hf::table_0002",
+            "characteristics": [
+              "age",
+              "gender"
+            ],
+            "text_preview": "email (required)\ncountry\nselect an option\norganization or a!iliation\norganization or a!iliation (required)\nreceive email updates and promotions on\nstability ai products, services, and research?\nselect..."
+          }
+        ],
+        "assessment": "Strong intersectional consideration"
+      },
+      "fairness_metrics": {
+        "metrics_detected": {
+          "statistical_parity": {
+            "present": false,
+            "patterns_found": []
+          },
+          "equalized_odds": {
+            "present": false,
+            "patterns_found": []
+          },
+          "predictive_parity": {
+            "present": false,
+            "patterns_found": []
+          },
+          "calibration": {
+            "present": false,
+            "patterns_found": []
+          },
+          "counterfactual": {
+            "present": false,
+            "patterns_found": []
+          },
+          "disparate_impact": {
+            "present": false,
+            "patterns_found": []
+          }
+        },
+        "summary": {
+          "total_metric_types": 6,
+          "metrics_mentioned": 0,
+          "metrics_with_quantitative_data": 0,
+          "coverage_percentage": 0.0
+        },
+        "assessment": "No formal fairness metrics detected"
+      },
+      "quantitative_evidence": {
+        "has_quantitative_evidence": true,
+        "quantitative_equity_chunks": 1,
+        "equity_tables": 0,
+        "sample_chunks": [
+          {
+            "chunk_id": "stability_sd3_medium_hf::text_0026",
+            "chunk_type": "text",
+            "preview": "stabilityai/stable-diffusion-3-medium \u00b7 Hugging Face 22/11/25, 21:29 biased or objectionable responses to user prompts. Risks identified and mitigations: Harmful content: We have used filtered data se..."
+          }
+        ],
+        "assessment": "Some quantitative evidence"
+      },
+      "mitigation_strategies": {
+        "has_mitigation_strategies": true,
+        "mitigation_keywords_found": [
+          "mitigation",
+          "mitigate"
+        ],
+        "mitigation_chunk_count": 2,
+        "mitigation_chunks": [
+          {
+            "chunk_id": "stability_sd3_medium_hf::text_0024",
+            "preview": "As part of our safety-by-design and responsible AI deployment approach, we implement safety measures throughout the development of our models, from the time we begin pre-training a model to the ongoin..."
+          },
+          {
+            "chunk_id": "stability_sd3_medium_hf::text_0026",
+            "preview": "stabilityai/stable-diffusion-3-medium \u00b7 Hugging Face 22/11/25, 21:29 biased or objectionable responses to user prompts. Risks identified and mitigations: Harmful content: We have used filtered data se..."
+          }
+        ],
+        "assessment": "Some mitigation discussion"
+      },
+      "best_practices": {
+        "practices_detected": {
+          "disaggregated_reporting": {
+            "present": false,
+            "patterns_found": []
+          },
+          "stakeholder_engagement": {
+            "present": false,
+            "patterns_found": []
+          },
+          "impact_assessment": {
+            "present": false,
+            "patterns_found": []
+          },
+          "transparency": {
+            "present": true,
+            "patterns_found": [
+              "publicly available"
+            ]
+          }
+        },
+        "summary": {
+          "total_best_practices": 4,
+          "practices_followed": 1,
+          "adherence_percentage": 25.0
+        },
+        "assessment": "Partial best practice adherence"
+      },
+      "overall_assessment": "Basic equity documentation with significant gaps",
+      "recommendations": [
+        "Expand protected characteristic coverage to include: race_ethnicity, language, socioeconomic",
+        "Implement and report formal fairness metrics such as demographic parity, equalized odds, or disparate impact ratios",
+        "Present equity metrics in structured tables for easier comparison across groups"
+      ]
+    },
+    {
+      "doc_id": "qwen3_tech_report",
+      "title": "Qwen3 Technical Report",
+      "equity_score": 0.421,
+      "protected_characteristics": {
+        "race_ethnicity": {
+          "present": true,
+          "mention_count": 1,
+          "keywords_found": [
+            "White"
+          ]
+        },
+        "gender": {
+          "present": true,
+          "mention_count": 3,
+          "keywords_found": [
+            "sex",
+            "men",
+            "male"
+          ]
+        },
+        "disability": {
+          "present": true,
+          "mention_count": 3,
+          "keywords_found": [
+            "disabled",
+            "accessibility",
+            "accessible"
+          ]
+        },
+        "age": {
+          "present": true,
+          "mention_count": 1,
+          "keywords_found": [
+            "age"
+          ]
+        },
+        "language": {
+          "present": true,
+          "mention_count": 4,
+          "keywords_found": [
+            "language",
+            "linguistic",
+            "multilingual",
+            "dialect"
+          ]
+        },
+        "socioeconomic": {
+          "present": false,
+          "mention_count": 0,
+          "keywords_found": []
+        },
+        "geography": {
+          "present": true,
+          "mention_count": 1,
+          "keywords_found": [
+            "regional"
+          ]
+        },
+        "summary": {
+          "total_characteristics": 7,
+          "covered_characteristics": 6,
+          "coverage_percentage": 85.7
+        }
+      },
+      "intersectional_analysis": {
+        "has_intersectional_analysis": true,
+        "explicit_intersectional_language": false,
+        "intersectional_chunk_count": 45,
+        "intersectional_chunks": [
+          {
+            "chunk_id": "qwen3_tech_report::text_0001",
+            "characteristics": [
+              "disability",
+              "language",
+              "age",
+              "gender"
+            ],
+            "text_preview": "inthiswork,wepresentqwen3,thelatestversionoftheqwenmodelfamily. qwen3 comprisesaseriesoflargelanguagemodels(llms)designedtoadvanceperformance, efficiency,andmultilingualcapabilities.theqwen3seriesincl..."
+          },
+          {
+            "chunk_id": "qwen3_tech_report::text_0002",
+            "characteristics": [
+              "language",
+              "age",
+              "gender"
+            ],
+            "text_preview": "1 introduction thepursuitofartificialgeneralintelligence(agi)orartificialsuperintelligence(asi)haslongbeenagoal forhumanity. recentadvancementsinlargefoundationmodels,e.g.,gpt-4o(openai,2024),claude 3..."
+          },
+          {
+            "chunk_id": "qwen3_tech_report::text_0003",
+            "characteristics": [
+              "language",
+              "age",
+              "gender"
+            ],
+            "text_preview": "and81.5onaime\u201925(aime,2025),70.7onlivecodebenchv5(jainetal.,2024),2,056oncodeforces, and70.8onbfclv3(yanetal.,2024). inaddition,othermodelsintheqwen3seriesalsoshowstrong performance relative to their ..."
+          },
+          {
+            "chunk_id": "qwen3_tech_report::text_0004",
+            "characteristics": [
+              "language",
+              "age",
+              "gender"
+            ],
+            "text_preview": "domainssuchascoding,stem(science,technology,engineering,andmathematics),reasoningtasks, books,multilingualtexts,andsyntheticdata. tofurtherexpandthepre-trainingdatacorpus,wefirstemploytheqwen2.5-vlmod..."
+          },
+          {
+            "chunk_id": "qwen3_tech_report::text_0005",
+            "characteristics": [
+              "language",
+              "age",
+              "gender"
+            ],
+            "text_preview": "diversityoftrainingdata.thissystemhasbeenappliedtoourlarge-scalepre-trainingdatasets,annotating over30trilliontokensacrossmultipledimensionssuchaseducationalvalue,fields,domains,andsafety. these detai..."
+          },
+          {
+            "chunk_id": "qwen3_tech_report::text_0006",
+            "characteristics": [
+              "language",
+              "age",
+              "gender"
+            ],
+            "text_preview": "\u2022 codingtasks: evalplus(liuetal.,2023a)(0-shot)(averageofhumaneval(chenetal.,2021), mbpp(austinetal.,2021),humaneval+,mbpp+)(liuetal.,2023a),multipl-e(cassanoetal., 2023)(0-shot)(python,c++,java,php,t..."
+          },
+          {
+            "chunk_id": "qwen3_tech_report::text_0031",
+            "characteristics": [
+              "age",
+              "gender"
+            ],
+            "text_preview": "andourpreviousflagshipopen-sourcedensemodelqwen2.5-72b-base,whichhasmorethantwicethe numberofparameterscomparedtoqwen3-32b-base. theresultsareshownintable4,whichsupport threekeyconclusions: (1) compar..."
+          },
+          {
+            "chunk_id": "qwen3_tech_report::text_0034",
+            "characteristics": [
+              "language",
+              "age",
+              "gender"
+            ],
+            "text_preview": "thepost-trainingpipelineofqwen3isstrategicallydesignedwithtwocoreobjectives: (1) thinkingcontrol:thisinvolvestheintegrationoftwodistinctmodes,namelythe\u201cnon-thinking\u201d and\u201cthinking\u201dmodes,providingusersw..."
+          },
+          {
+            "chunk_id": "qwen3_tech_report::text_0035",
+            "characteristics": [
+              "disability",
+              "language",
+              "age",
+              "gender"
+            ],
+            "text_preview": "table9: examplesofsftdataforthinkingandnon-thinkingmodesduringthethinkingmodefusion stage. forthethinkingmode,the/thinkflagcanbeomittedsinceitrepresentsthedefaultbehavior. this featurehasbeenimplement..."
+          },
+          {
+            "chunk_id": "qwen3_tech_report::text_0036",
+            "characteristics": [
+              "age",
+              "gender"
+            ],
+            "text_preview": "4.4 generalrl the general rl stage aims to broadly enhance the models\u2019 capabilities and stability across diverse scenarios. tofacilitatethis,wehaveestablishedasophisticatedrewardsystemcoveringover20di..."
+          }
+        ],
+        "assessment": "Strong intersectional consideration"
+      },
+      "fairness_metrics": {
+        "metrics_detected": {
+          "statistical_parity": {
+            "present": false,
+            "patterns_found": []
+          },
+          "equalized_odds": {
+            "present": false,
+            "patterns_found": []
+          },
+          "predictive_parity": {
+            "present": false,
+            "patterns_found": []
+          },
+          "calibration": {
+            "present": false,
+            "patterns_found": []
+          },
+          "counterfactual": {
+            "present": false,
+            "patterns_found": []
+          },
+          "disparate_impact": {
+            "present": false,
+            "patterns_found": []
+          }
+        },
+        "summary": {
+          "total_metric_types": 6,
+          "metrics_mentioned": 0,
+          "metrics_with_quantitative_data": 0,
+          "coverage_percentage": 0.0
+        },
+        "assessment": "No formal fairness metrics detected"
+      },
+      "quantitative_evidence": {
+        "has_quantitative_evidence": true,
+        "quantitative_equity_chunks": 1,
+        "equity_tables": 0,
+        "sample_chunks": [
+          {
+            "chunk_id": "qwen3_tech_report::text_0003",
+            "chunk_type": "text",
+            "preview": "and81.5onAIME\u201925(AIME,2025),70.7onLiveCodeBenchv5(Jainetal.,2024),2,056onCodeForces, and70.8onBFCLv3(Yanetal.,2024). Inaddition,othermodelsintheQwen3seriesalsoshowstrong performance relative to their ..."
+          }
+        ],
+        "assessment": "Some quantitative evidence"
+      },
+      "mitigation_strategies": {
+        "has_mitigation_strategies": true,
+        "mitigation_keywords_found": [
+          "mitigate",
+          "reweighting"
+        ],
+        "mitigation_chunk_count": 2,
+        "mitigation_chunks": [
+          {
+            "chunk_id": "qwen3_tech_report::text_0107",
+            "preview": "Avg. 4K 8K 16K 32K 64K 128K Qwen2.5-7B-Instruct 85.4 96.7 95.1 93.7 89.4 82.3 55.1 Qwen2.5-14B-Instruct 91.4 97.7 96.8 95.9 93.4 86.7 78.1 Qwen2.5-32B-Instruct 92.9 96.9 97.1 95.5 95.5 90.3 82.0 Qwen2..."
+          },
+          {
+            "chunk_id": "qwen3_tech_report::text_0131",
+            "preview": "GoogleDeepMind. Gemini2.5,2025. URLhttps://blog.google/technology/google-deepmind/gemi ni-model-thinking-updates-march-2025/. MostafaDehghani,JosipDjolonga,BasilMustafa,PiotrPadlewski,JonathanHeek,Jus..."
+          }
+        ],
+        "assessment": "Some mitigation discussion"
+      },
+      "best_practices": {
+        "practices_detected": {
+          "disaggregated_reporting": {
+            "present": false,
+            "patterns_found": []
+          },
+          "stakeholder_engagement": {
+            "present": false,
+            "patterns_found": []
+          },
+          "impact_assessment": {
+            "present": false,
+            "patterns_found": []
+          },
+          "transparency": {
+            "present": false,
+            "patterns_found": []
+          }
+        },
+        "summary": {
+          "total_best_practices": 4,
+          "practices_followed": 0,
+          "adherence_percentage": 0.0
+        },
+        "assessment": "Poor best practice adherence"
+      },
+      "overall_assessment": "Basic equity documentation with significant gaps",
+      "recommendations": [
+        "Implement and report formal fairness metrics such as demographic parity, equalized odds, or disparate impact ratios",
+        "Present equity metrics in structured tables for easier comparison across groups"
+      ]
+    },
+    {
+      "doc_id": "llama3_tech_report",
+      "title": "Llama 3 Technical Report",
+      "equity_score": 0.526,
+      "protected_characteristics": {
+        "race_ethnicity": {
+          "present": true,
+          "mention_count": 3,
+          "keywords_found": [
+            "race",
+            "Black",
+            "White"
+          ]
+        },
+        "gender": {
+          "present": true,
+          "mention_count": 3,
+          "keywords_found": [
+            "gender",
+            "sex",
+            "men"
+          ]
+        },
+        "disability": {
+          "present": true,
+          "mention_count": 1,
+          "keywords_found": [
+            "disabled"
+          ]
+        },
+        "age": {
+          "present": true,
+          "mention_count": 1,
+          "keywords_found": [
+            "age"
+          ]
+        },
+        "language": {
+          "present": true,
+          "mention_count": 5,
+          "keywords_found": [
+            "language",
+            "linguistic",
+            "non-English",
+            "multilingual",
+            "native speaker"
+          ]
+        },
+        "socioeconomic": {
+          "present": false,
+          "mention_count": 0,
+          "keywords_found": []
+        },
+        "geography": {
+          "present": true,
+          "mention_count": 1,
+          "keywords_found": [
+            "geographic"
+          ]
+        },
+        "summary": {
+          "total_characteristics": 7,
+          "covered_characteristics": 6,
+          "coverage_percentage": 85.7
+        }
+      },
+      "intersectional_analysis": {
+        "has_intersectional_analysis": true,
+        "explicit_intersectional_language": false,
+        "intersectional_chunk_count": 99,
+        "intersectional_chunks": [
+          {
+            "chunk_id": "llama3_tech_report::text_0000",
+            "characteristics": [
+              "language",
+              "age",
+              "gender"
+            ],
+            "text_preview": "the llama 3 herd of models llamateam,ai@meta1 1a detailed contributor list can be found in the appendix of this paper. modern artificial intelligence (ai) systems are powered by foundation models. thi..."
+          },
+          {
+            "chunk_id": "llama3_tech_report::text_0001",
+            "characteristics": [
+              "language",
+              "age",
+              "gender"
+            ],
+            "text_preview": "website: https://llama.meta.com/ 1 introduction foundation models are general models of language, vision, speech, and/or other modalities that are designed to support a large variety of ai tasks. they..."
+          },
+          {
+            "chunk_id": "llama3_tech_report::text_0002",
+            "characteristics": [
+              "language",
+              "age",
+              "gender"
+            ],
+            "text_preview": "llama 3 8b \u2717 \u27171 \u2717 \u2717 april 2024 llama 3 8b instruct \u2713 \u2717 \u2717 \u2717 april 2024 llama 3 70b \u2717 \u27171 \u2717 \u2717 april 2024 llama 3 70b instruct \u2713 \u2717 \u2717 \u2717 april 2024 llama 3.1 8b \u2717 \u2713 \u2713 \u2717 july 2024 llama 3.1 8b instruct \u2713 \u2713 \u2713..."
+          },
+          {
+            "chunk_id": "llama3_tech_report::text_0005",
+            "characteristics": [
+              "language",
+              "age",
+              "gender"
+            ],
+            "text_preview": "tooluse nexus 38.5 30.0 24.7 56.7 48.5 37.2 58.7 \u2013 50.3 56.1 45.7 zeroscrolls/quality 81.0 \u2013 \u2013 90.5 \u2013 \u2013 95.2 \u2013 95.2 90.5 90.5 longcontext infinitebench/en.mc 65.1 \u2013 \u2013 78.2 \u2013 \u2013 83.4 \u2013 72.1 82.5 \u2013 nih/m..."
+          },
+          {
+            "chunk_id": "llama3_tech_report::text_0006",
+            "characteristics": [
+              "language",
+              "age",
+              "gender"
+            ],
+            "text_preview": "llama 3 is a transformer language model trained to figure1 illustrationoftheoverallarchitectureandtrainingofllama3. predict the next token of a textual sequence. see text for details. self-supervised ..."
+          },
+          {
+            "chunk_id": "llama3_tech_report::text_0007",
+            "characteristics": [
+              "language",
+              "age",
+              "gender"
+            ],
+            "text_preview": "we process the raw html content for non-truncated web documents to extract textextractionandcleaning. high-quality diverse text. to do so, we build a custom parser that extracts the html content and o..."
+          },
+          {
+            "chunk_id": "llama3_tech_report::text_0008",
+            "characteristics": [
+              "language",
+              "age",
+              "gender"
+            ],
+            "text_preview": "\u2022 we apply language-specific heuristics and model-based filters to remove low-quality documents. inaddition,weperformqualityrankingofmultilingualdocumentsusingamultilingualllama2-basedclassifier to en..."
+          },
+          {
+            "chunk_id": "llama3_tech_report::text_0009",
+            "characteristics": [
+              "language",
+              "age",
+              "gender"
+            ],
+            "text_preview": "layers 32 80 126 model dimension 4,096 8192 16,384 ffn dimension 14,336 28,672 53,248 attention heads 32 64 128 key/value heads 8 8 8 peak learning rate 3\u00d710\u22124 1.5\u00d710\u22124 8\u00d710\u22125 activation function swig..."
+          },
+          {
+            "chunk_id": "llama3_tech_report::text_0014",
+            "characteristics": [
+              "age",
+              "gender"
+            ],
+            "text_preview": "llama 3 405b figure4 scalinglawforecastforarcchallenge. left: normalized negative log-likelihood of the correct answer on the arc challenge benchmark as a function of pre-training flops. right: arc ch..."
+          },
+          {
+            "chunk_id": "llama3_tech_report::text_0016",
+            "characteristics": [
+              "age",
+              "gender"
+            ],
+            "text_preview": "see text and figure 5 for descriptions table4 scalingconfigurationsandmfuforeachstageofllama3405bpre-training. of each type of parallelism. for load balancing. second, our enhanced-ecmp (e-ecmp) proto..."
+          }
+        ],
+        "assessment": "Strong intersectional consideration"
+      },
+      "fairness_metrics": {
+        "metrics_detected": {
+          "statistical_parity": {
+            "present": false,
+            "patterns_found": []
+          },
+          "equalized_odds": {
+            "present": false,
+            "patterns_found": []
+          },
+          "predictive_parity": {
+            "present": false,
+            "patterns_found": []
+          },
+          "calibration": {
+            "present": true,
+            "patterns_found": [
+              "calibration",
+              "calibrated"
+            ]
+          },
+          "counterfactual": {
+            "present": false,
+            "patterns_found": []
+          },
+          "disparate_impact": {
+            "present": false,
+            "patterns_found": []
+          }
+        },
+        "summary": {
+          "total_metric_types": 6,
+          "metrics_mentioned": 1,
+          "metrics_with_quantitative_data": 0,
+          "coverage_percentage": 16.7
+        },
+        "assessment": "Some fairness metrics"
+      },
+      "quantitative_evidence": {
+        "has_quantitative_evidence": true,
+        "quantitative_equity_chunks": 4,
+        "equity_tables": 0,
+        "sample_chunks": [
+          {
+            "chunk_id": "llama3_tech_report::text_0076",
+            "chunk_type": "text",
+            "preview": "\u00b17.2 Nemotron 4 340B \u2013 \u2013 \u2013 Nemotron 4 340B 57.3 \u2013 \u00b17.6 Gemini Ultra \u2013 \u2013 \u2013 Gemini Ultra \u2013 74.4\u00b16.7 Table9 Pre-trainedmodelperformanceonreadingcompre- Table10 Pre-trainedmodelperformanceoncodingtasks. R..."
+          },
+          {
+            "chunk_id": "llama3_tech_report::text_0110",
+            "chunk_type": "text",
+            "preview": "els demonstrate strong performance, leading among GPT-4o 90.5 85.5 competitors with a wide margin on both tasks. Claude 3.5 Sonnet \u2013 91.6 5.2.5 MathandReasoningBenchmarks Table20 Multilingualbenchmark..."
+          },
+          {
+            "chunk_id": "llama3_tech_report::text_0113",
+            "chunk_type": "text",
+            "preview": "Figure16 HumanevaluationresultsforLlama3405Bvs.GPT-4ooncodeexecutiontasksincludingplottingandfileuploads. Llama 3 405B outperforms GPT-4o on code execution (without plotting or file uploads) as well a..."
+          },
+          {
+            "chunk_id": "llama3_tech_report::text_0173",
+            "chunk_type": "text",
+            "preview": "ContributorsandAcknowledgements Llama 3 is the result of the work of a large number of people at Meta. Below, we list all corecontributors (people who worked on Llama 3 for at least 2/3 rd of the runt..."
+          }
+        ],
+        "assessment": "Some quantitative evidence"
+      },
+      "mitigation_strategies": {
+        "has_mitigation_strategies": true,
+        "mitigation_keywords_found": [
+          "mitigation",
+          "mitigate",
+          "resampling",
+          "adjustment",
+          "post-processing",
+          "pre-processing"
+        ],
+        "mitigation_chunk_count": 23,
+        "mitigation_chunks": [
+          {
+            "chunk_id": "llama3_tech_report::text_0001",
+            "preview": "Website: https://llama.meta.com/ 1 Introduction Foundation models are general models of language, vision, speech, and/or other modalities that are designed to support a large variety of AI tasks. They..."
+          },
+          {
+            "chunk_id": "llama3_tech_report::text_0005",
+            "preview": "Tooluse Nexus 38.5 30.0 24.7 56.7 48.5 37.2 58.7 \u2013 50.3 56.1 45.7 ZeroSCROLLS/QuALITY 81.0 \u2013 \u2013 90.5 \u2013 \u2013 95.2 \u2013 95.2 90.5 90.5 Longcontext InfiniteBench/En.MC 65.1 \u2013 \u2013 78.2 \u2013 \u2013 83.4 \u2013 72.1 82.5 \u2013 NIH/M..."
+          },
+          {
+            "chunk_id": "llama3_tech_report::text_0006",
+            "preview": "Llama 3 is a Transformer language model trained to Figure1 IllustrationoftheoverallarchitectureandtrainingofLlama3. predict the next token of a textual sequence. See text for details. self-supervised ..."
+          },
+          {
+            "chunk_id": "llama3_tech_report::text_0022",
+            "preview": "detection and localization through a tight co-design with PyTorch, allowing PyTorch to access NCCLX\u2019s internal state and track relevant information. While stalls due to NVLink failures cannot be compl..."
+          },
+          {
+            "chunk_id": "llama3_tech_report::text_0025",
+            "preview": "%of Avg.#turns Avg.#tokens Avg.#tokens Avg.#tokens Dataset comparisons perdialog perexample inprompt inresponse General English 81.99% 4.1 1,000.4 36.4 271.2 Coding 6.93% 3.2 1,621.0 113.8 462.9 Multi..."
+          }
+        ],
+        "assessment": "Comprehensive mitigation strategies"
+      },
+      "best_practices": {
+        "practices_detected": {
+          "disaggregated_reporting": {
+            "present": false,
+            "patterns_found": []
+          },
+          "stakeholder_engagement": {
+            "present": false,
+            "patterns_found": []
+          },
+          "impact_assessment": {
+            "present": false,
+            "patterns_found": []
+          },
+          "transparency": {
+            "present": true,
+            "patterns_found": [
+              "transparent",
+              "publicly available"
+            ]
+          }
+        },
+        "summary": {
+          "total_best_practices": 4,
+          "practices_followed": 1,
+          "adherence_percentage": 25.0
+        },
+        "assessment": "Partial best practice adherence"
+      },
+      "overall_assessment": "Good equity documentation with room for improvement",
+      "recommendations": [
+        "Present equity metrics in structured tables for easier comparison across groups"
+      ]
+    }
+  ],
+  "comparison": {
+    "total_documents": 10,
+    "best_equity_docs": [
+      {
+        "title": "Llama 3 Technical Report",
+        "equity_score": 0.526,
+        "assessment": "Good equity documentation with room for improvement"
+      },
+      {
+        "title": "o1 System Card (Dec 2024)",
+        "equity_score": 0.455,
+        "assessment": "Basic equity documentation with significant gaps"
+      },
+      {
+        "title": "gpt-4o System Card",
+        "equity_score": 0.426,
+        "assessment": "Basic equity documentation with significant gaps"
+      }
+    ],
+    "worst_equity_docs": [
+      {
+        "title": "GPT-3.5 Turbo API documentation",
+        "equity_score": 0.107,
+        "assessment": "Poor equity documentation - major improvements needed"
+      },
+      {
+        "title": "GPT-4 Turbo API documentation",
+        "equity_score": 0.057,
+        "assessment": "Poor equity documentation - major improvements needed"
+      },
+      {
+        "title": "OpenAI Whisper model card",
+        "equity_score": 0.0,
+        "assessment": "Poor equity documentation - major improvements needed"
+      }
+    ],
+    "common_gaps": [
+      {
+        "gap": "No formal fairness metrics",
+        "affected_docs": 8,
+        "percentage": 80.0
+      },
+      {
+        "gap": "No quantitative equity data",
+        "affected_docs": 6,
+        "percentage": 60.0
+      },
+      {
+        "gap": "No mitigation strategies",
+        "affected_docs": 3,
+        "percentage": 30.0
+      },
+      {
+        "gap": "No intersectional analysis",
+        "affected_docs": 2,
+        "percentage": 20.0
+      }
+    ],
+    "average_equity_score": 0.304
+  }
+}

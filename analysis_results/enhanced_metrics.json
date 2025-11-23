@@ -1,0 +1,300 @@
+{
+  "information_density": {
+    "openai_gpt5_system_card": {
+      "title": "gpt-5 System Card",
+      "total_chunks": 87,
+      "governance_chunks": 27,
+      "information_density": 0.31,
+      "interpretation": "Sparse - significant portions lack governance info"
+    },
+    "llama3_tech_report": {
+      "title": "Llama 3 Technical Report",
+      "total_chunks": 215,
+      "governance_chunks": 31,
+      "information_density": 0.144,
+      "interpretation": "Very sparse - most document is irrelevant to governance"
+    },
+    "qwen3_tech_report": {
+      "title": "Qwen3 Technical Report",
+      "total_chunks": 136,
+      "governance_chunks": 22,
+      "information_density": 0.162,
+      "interpretation": "Very sparse - most document is irrelevant to governance"
+    },
+    "stability_sd3_medium_hf": {
+      "title": "Stable Diffusion 3 Medium HF page",
+      "total_chunks": 33,
+      "governance_chunks": 23,
+      "information_density": 0.697,
+      "interpretation": "Good - most content is governance-relevant"
+    },
+    "huggingface_whisper_large_v3": {
+      "title": "Whisper Large v3 HF page",
+      "total_chunks": 31,
+      "governance_chunks": 22,
+      "information_density": 0.71,
+      "interpretation": "Good - most content is governance-relevant"
+    }
+  },
+  "missing_elements": {
+    "openai_gpt5_system_card": {
+      "title": "gpt-5 System Card",
+      "critical_missing_count": 5,
+      "missing_elements": [
+        {
+          "category": "Equity & Bias",
+          "missing_questions": [
+            "How does the system perform across different demographic and intersectional groups?",
+            "Which fairness metrics or evaluations have been applied, and what were the results?",
+            "What harms or disparities have been identified for marginalized communities, and what mitigations exist?"
+          ],
+          "importance": 1.0
+        },
+        {
+          "category": "Safety & Risk Information",
+          "missing_questions": [
+            "What are the main dangerous capabilities of this system, and how are they measured?",
+            "What red-teaming or adversarial testing has been conducted, and with what results?",
+            "How are safety incidents recorded, investigated, and reported?"
+          ],
+          "importance": 0.95
+        },
+        {
+          "category": "Intended Use & Limitations",
+          "missing_questions": [
+            "What is this system explicitly designed for, and what uses are out-of-scope?",
+            "In which domains or decision contexts should this model never be used?",
+            "How does performance degrade outside the intended domain or beyond the context window?"
+          ],
+          "importance": 0.9
+        },
+        {
+          "category": "Training & Data",
+          "missing_questions": [
+            "From which sources and time periods does the training data come?",
+            "How were data filtered, deduplicated, and moderated before training?",
+            "What proportion of the training data is synthetic, and for which purposes is it used?"
+          ],
+          "importance": 0.9
+        },
+        {
+          "category": "Organizational & Governance",
+          "missing_questions": [
+            "Which governance structures and review processes oversee this system through its lifecycle?",
+            "Has the system undergone external audits or evaluations? By whom and with what access?",
+            "What are the update, rollback, and deprecation policies for this model?"
+          ],
+          "importance": 0.9
+        }
+      ]
+    },
+    "llama3_tech_report": {
+      "title": "Llama 3 Technical Report",
+      "critical_missing_count": 5,
+      "missing_elements": [
+        {
+          "category": "Equity & Bias",
+          "missing_questions": [
+            "How does the system perform across different demographic and intersectional groups?",
+            "Which fairness metrics or evaluations have been applied, and what were the results?",
+            "What harms or disparities have been identified for marginalized communities, and what mitigations exist?"
+          ],
+          "importance": 1.0
+        },
+        {
+          "category": "Safety & Risk Information",
+          "missing_questions": [
+            "What are the main dangerous capabilities of this system, and how are they measured?",
+            "What red-teaming or adversarial testing has been conducted, and with what results?",
+            "How are safety incidents recorded, investigated, and reported?"
+          ],
+          "importance": 0.95
+        },
+        {
+          "category": "Intended Use & Limitations",
+          "missing_questions": [
+            "What is this system explicitly designed for, and what uses are out-of-scope?",
+            "In which domains or decision contexts should this model never be used?",
+            "How does performance degrade outside the intended domain or beyond the context window?"
+          ],
+          "importance": 0.9
+        },
+        {
+          "category": "Training & Data",
+          "missing_questions": [
+            "From which sources and time periods does the training data come?",
+            "How were data filtered, deduplicated, and moderated before training?",
+            "What proportion of the training data is synthetic, and for which purposes is it used?"
+          ],
+          "importance": 0.9
+        },
+        {
+          "category": "Organizational & Governance",
+          "missing_questions": [
+            "Which governance structures and review processes oversee this system through its lifecycle?",
+            "Has the system undergone external audits or evaluations? By whom and with what access?",
+            "What are the update, rollback, and deprecation policies for this model?"
+          ],
+          "importance": 0.9
+        }
+      ]
+    },
+    "qwen3_tech_report": {
+      "title": "Qwen3 Technical Report",
+      "critical_missing_count": 4,
+      "missing_elements": [
+        {
+          "category": "Equity & Bias",
+          "missing_questions": [
+            "How does the system perform across different demographic and intersectional groups?",
+            "Which fairness metrics or evaluations have been applied, and what were the results?",
+            "What harms or disparities have been identified for marginalized communities, and what mitigations exist?"
+          ],
+          "importance": 1.0
+        },
+        {
+          "category": "Safety & Risk Information",
+          "missing_questions": [
+            "What are the main dangerous capabilities of this system, and how are they measured?",
+            "What red-teaming or adversarial testing has been conducted, and with what results?",
+            "How are safety incidents recorded, investigated, and reported?"
+          ],
+          "importance": 0.95
+        },
+        {
+          "category": "Intended Use & Limitations",
+          "missing_questions": [
+            "What is this system explicitly designed for, and what uses are out-of-scope?",
+            "In which domains or decision contexts should this model never be used?",
+            "How does performance degrade outside the intended domain or beyond the context window?"
+          ],
+          "importance": 0.9
+        },
+        {
+          "category": "Organizational & Governance",
+          "missing_questions": [
+            "Which governance structures and review processes oversee this system through its lifecycle?",
+            "Has the system undergone external audits or evaluations? By whom and with what access?",
+            "What are the update, rollback, and deprecation policies for this model?"
+          ],
+          "importance": 0.9
+        },
+        {
+          "category": "Performance & Capabilities",
+          "missing_questions": [
+            "On which benchmarks has this system been evaluated, and how do the scores compare to baselines?",
+            "In which domains should the model be considered strong, and where should it not be trusted?",
+            "How do capabilities differ from previous versions or neighbouring models?"
+          ],
+          "importance": 0.85
+        }
+      ]
+    },
+    "stability_sd3_medium_hf": {
+      "title": "Stable Diffusion 3 Medium HF page",
+      "critical_missing_count": 2,
+      "missing_elements": [
+        {
+          "category": "Safety & Risk Information",
+          "missing_questions": [
+            "What are the main dangerous capabilities of this system, and how are they measured?",
+            "What red-teaming or adversarial testing has been conducted, and with what results?",
+            "How are safety incidents recorded, investigated, and reported?"
+          ],
+          "importance": 0.95
+        },
+        {
+          "category": "Organizational & Governance",
+          "missing_questions": [
+            "Which governance structures and review processes oversee this system through its lifecycle?",
+            "Has the system undergone external audits or evaluations? By whom and with what access?",
+            "What are the update, rollback, and deprecation policies for this model?"
+          ],
+          "importance": 0.9
+        },
+        {
+          "category": "Performance & Capabilities",
+          "missing_questions": [
+            "On which benchmarks has this system been evaluated, and how do the scores compare to baselines?",
+            "In which domains should the model be considered strong, and where should it not be trusted?",
+            "How do capabilities differ from previous versions or neighbouring models?"
+          ],
+          "importance": 0.85
+        },
+        {
+          "category": "Other / Uncategorised",
+          "missing_questions": [
+            "Which parts of the documentation are primarily marketing rather than substantive transparency?",
+            "Where are there high-level commitments without concrete metrics or mechanisms?",
+            "What information is missing that would turn generic claims into accountable commitments?"
+          ],
+          "importance": 0.2
+        }
+      ]
+    },
+    "huggingface_whisper_large_v3": {
+      "title": "Whisper Large v3 HF page",
+      "critical_missing_count": 3,
+      "missing_elements": [
+        {
+          "category": "Safety & Risk Information",
+          "missing_questions": [
+            "What are the main dangerous capabilities of this system, and how are they measured?",
+            "What red-teaming or adversarial testing has been conducted, and with what results?",
+            "How are safety incidents recorded, investigated, and reported?"
+          ],
+          "importance": 0.95
+        },
+        {
+          "category": "Intended Use & Limitations",
+          "missing_questions": [
+            "What is this system explicitly designed for, and what uses are out-of-scope?",
+            "In which domains or decision contexts should this model never be used?",
+            "How does performance degrade outside the intended domain or beyond the context window?"
+          ],
+          "importance": 0.9
+        },
+        {
+          "category": "Organizational & Governance",
+          "missing_questions": [
+            "Which governance structures and review processes oversee this system through its lifecycle?",
+            "Has the system undergone external audits or evaluations? By whom and with what access?",
+            "What are the update, rollback, and deprecation policies for this model?"
+          ],
+          "importance": 0.9
+        },
+        {
+          "category": "Performance & Capabilities",
+          "missing_questions": [
+            "On which benchmarks has this system been evaluated, and how do the scores compare to baselines?",
+            "In which domains should the model be considered strong, and where should it not be trusted?",
+            "How do capabilities differ from previous versions or neighbouring models?"
+          ],
+          "importance": 0.85
+        },
+        {
+          "category": "Access & Deployment",
+          "missing_questions": [
+            "Who is allowed to access this system, and under what conditions?",
+            "What rate limits, logging, or monitoring are in place to detect misuse?",
+            "What infrastructure is required to deploy this system safely in sensitive environments?"
+          ],
+          "importance": 0.8
+        }
+      ]
+    }
+  },
+  "best_in_class_analysis": {
+    "current_best": {
+      "doc_id": "mitchell_2019_model_cards",
+      "score": 0.062,
+      "vs_theoretical": "7.8% of ideal"
+    },
+    "current_mean": {
+      "score": 0.01709090909090909,
+      "vs_theoretical": "2.1% of ideal"
+    },
+    "gap_to_excellence": 0.782909090909091,
+    "interpretation": "Even best-in-class (0.062) achieves only 7.8% of comprehensive documentation"
+  }
+}

@@ -1,0 +1,346 @@
+{
+  "category": "Equity & Bias",
+  "total_docs_analyzed": 22,
+  "docs_with_equity_coverage": 12,
+  "docs_with_quantitative_equity": 9,
+  "coverage_by_doc": {
+    "gebru_2018_datasheets": {
+      "title": "Datasheets for Datasets",
+      "score": 0.038,
+      "has_quantitative": false,
+      "evidence_count": 22,
+      "matched_keywords": [
+        "age",
+        "bias",
+        "biases",
+        "debias",
+        "debiasing"
+      ]
+    },
+    "bender_2018_data_statements": {
+      "title": "Data Statements for Natural Language Processing",
+      "score": 0.0,
+      "has_quantitative": false,
+      "evidence_count": 27,
+      "matched_keywords": [
+        "accessible",
+        "age",
+        "bias",
+        "biased",
+        "biases"
+      ]
+    },
+    "holland_2018_dataset_nutrition_label": {
+      "title": "The Dataset Nutrition Label",
+      "score": 0.0,
+      "has_quantitative": true,
+      "evidence_count": 52,
+      "matched_keywords": [
+        "accessible",
+        "age",
+        "bias",
+        "biased",
+        "debias"
+      ]
+    },
+    "arnold_2019_factsheets": {
+      "title": "FactSheets: Increasing trust in AI services through supplier's declarations of conformity",
+      "score": 0.049,
+      "has_quantitative": false,
+      "evidence_count": 18,
+      "matched_keywords": [
+        "accessibility",
+        "age",
+        "bias",
+        "biases",
+        "demographic"
+      ]
+    },
+    "mitchell_2019_model_cards": {
+      "title": "Model Cards for Model Reporting",
+      "score": 0.062,
+      "has_quantitative": true,
+      "evidence_count": 25,
+      "matched_keywords": [
+        "age",
+        "bias",
+        "biases",
+        "demographic",
+        "disaggregated"
+      ]
+    },
+    "pushkarna_2022_data_cards": {
+      "title": "Data Cards: Purposeful and Transparent Dataset Documentation for Responsible AI",
+      "score": 0.025,
+      "has_quantitative": false,
+      "evidence_count": 31,
+      "matched_keywords": [
+        "accessible",
+        "age",
+        "bias",
+        "biases",
+        "demographic"
+      ]
+    },
+    "roman_2023_open_datasheets": {
+      "title": "Open Datasheets: Machine-Readable Documentation for Open Datasets and Responsible AI Assessments",
+      "score": 0.045,
+      "has_quantitative": false,
+      "evidence_count": 15,
+      "matched_keywords": [
+        "accessibility",
+        "accessible",
+        "age",
+        "bias",
+        "biased"
+      ]
+    },
+    "raji_2020_about_ml": {
+      "title": "ABOUT ML: Annotation and Benchmarking on Understanding and Transparency of Machine Learning Lifecycles",
+      "score": 0.032,
+      "has_quantitative": false,
+      "evidence_count": 10,
+      "matched_keywords": [
+        "accessible",
+        "age",
+        "bias",
+        "equitable",
+        "fair"
+      ]
+    },
+    "chmielinski_2024_clear": {
+      "title": "CLeAR Documentation Framework for AI Transparency",
+      "score": 0.0,
+      "has_quantitative": true,
+      "evidence_count": 40,
+      "matched_keywords": [
+        "LGBTQ",
+        "accessibility",
+        "accessible",
+        "age",
+        "bias"
+      ]
+    },
+    "winecoff_bogen_2024_improving_governance": {
+      "title": "Improving Governance Outcomes Through AI Documentation",
+      "score": 0.0,
+      "has_quantitative": false,
+      "evidence_count": 17,
+      "matched_keywords": [
+        "age",
+        "bias",
+        "biases",
+        "demographic",
+        "equitable"
+      ]
+    },
+    "fmit_2024_foundation_model_transparency_index": {
+      "title": "The Foundation Model Transparency Index",
+      "score": 0.026,
+      "has_quantitative": true,
+      "evidence_count": 134,
+      "matched_keywords": [
+        "accessible",
+        "age",
+        "bias",
+        "biased",
+        "biases"
+      ]
+    },
+    "pepe_2024_hf_models_doc_datasets": {
+      "title": "How do Hugging Face Models Document Datasets",
+      "score": 0.046,
+      "has_quantitative": false,
+      "evidence_count": 27,
+      "matched_keywords": [
+        "accent",
+        "accessible",
+        "age",
+        "bias",
+        "biased"
+      ]
+    },
+    "openai_gpt4o_system_card": {
+      "title": "gpt-4o System Card",
+      "score": 0.0,
+      "has_quantitative": true,
+      "evidence_count": 41,
+      "matched_keywords": [
+        "accent",
+        "age",
+        "bias",
+        "biased",
+        "dialect"
+      ]
+    },
+    "openai_gpt5_system_card": {
+      "title": "gpt-5 System Card",
+      "score": 0.0,
+      "has_quantitative": false,
+      "evidence_count": 63,
+      "matched_keywords": [
+        "accessible",
+        "age",
+        "bias",
+        "disabled",
+        "fair"
+      ]
+    },
+    "openai_o1_system_card": {
+      "title": "o1 System Card (Dec 2024)",
+      "score": 0.0,
+      "has_quantitative": true,
+      "evidence_count": 55,
+      "matched_keywords": [
+        "accessible",
+        "age",
+        "bias",
+        "demographic",
+        "disabled"
+      ]
+    },
+    "openai_gpt4_turbo_api": {
+      "title": "GPT-4 Turbo API documentation",
+      "score": 0.006,
+      "has_quantitative": false,
+      "evidence_count": 5,
+      "matched_keywords": [
+        "age",
+        "fair"
+      ]
+    },
+    "openai_gpt35_turbo_api": {
+      "title": "GPT-3.5 Turbo API documentation",
+      "score": 0.008,
+      "has_quantitative": false,
+      "evidence_count": 5,
+      "matched_keywords": [
+        "age",
+        "fair",
+        "language"
+      ]
+    },
+    "openai_whisper_model_card": {
+      "title": "OpenAI Whisper model card",
+      "score": 0.0,
+      "has_quantitative": false,
+      "evidence_count": 0,
+      "matched_keywords": []
+    },
+    "huggingface_whisper_large_v3": {
+      "title": "Whisper Large v3 HF page",
+      "score": 0.022,
+      "has_quantitative": true,
+      "evidence_count": 22,
+      "matched_keywords": [
+        "accent",
+        "accessibility",
+        "accessible",
+        "age",
+        "bias"
+      ]
+    },
+    "stability_sd3_medium_hf": {
+      "title": "Stable Diffusion 3 Medium HF page",
+      "score": 0.017,
+      "has_quantitative": true,
+      "evidence_count": 22,
+      "matched_keywords": [
+        "accessible",
+        "age",
+        "bias",
+        "biased",
+        "harm"
+      ]
+    },
+    "qwen3_tech_report": {
+      "title": "Qwen3 Technical Report",
+      "score": 0.0,
+      "has_quantitative": true,
+      "evidence_count": 57,
+      "matched_keywords": [
+        "accessibility",
+        "accessible",
+        "age",
+        "bias",
+        "dialect"
+      ]
+    },
+    "llama3_tech_report": {
+      "title": "Llama 3 Technical Report",
+      "score": 0.0,
+      "has_quantitative": false,
+      "evidence_count": 117,
+      "matched_keywords": [
+        "age",
+        "bias",
+        "biased",
+        "biases",
+        "disabled"
+      ]
+    }
+  },
+  "best_practices": [],
+  "critical_gaps": [
+    {
+      "doc_id": "openai_gpt4o_system_card",
+      "title": "gpt-4o System Card",
+      "score": 0.0,
+      "has_any_data": true
+    },
+    {
+      "doc_id": "openai_gpt5_system_card",
+      "title": "gpt-5 System Card",
+      "score": 0.0,
+      "has_any_data": true
+    },
+    {
+      "doc_id": "openai_o1_system_card",
+      "title": "o1 System Card (Dec 2024)",
+      "score": 0.0,
+      "has_any_data": true
+    },
+    {
+      "doc_id": "openai_gpt4_turbo_api",
+      "title": "GPT-4 Turbo API documentation",
+      "score": 0.006,
+      "has_any_data": true
+    },
+    {
+      "doc_id": "openai_gpt35_turbo_api",
+      "title": "GPT-3.5 Turbo API documentation",
+      "score": 0.008,
+      "has_any_data": true
+    },
+    {
+      "doc_id": "openai_whisper_model_card",
+      "title": "OpenAI Whisper model card",
+      "score": 0.0,
+      "has_any_data": false
+    },
+    {
+      "doc_id": "huggingface_whisper_large_v3",
+      "title": "Whisper Large v3 HF page",
+      "score": 0.022,
+      "has_any_data": true
+    },
+    {
+      "doc_id": "stability_sd3_medium_hf",
+      "title": "Stable Diffusion 3 Medium HF page",
+      "score": 0.017,
+      "has_any_data": true
+    },
+    {
+      "doc_id": "qwen3_tech_report",
+      "title": "Qwen3 Technical Report",
+      "score": 0.0,
+      "has_any_data": true
+    },
+    {
+      "doc_id": "llama3_tech_report",
+      "title": "Llama 3 Technical Report",
+      "score": 0.0,
+      "has_any_data": true
+    }
+  ]
+}

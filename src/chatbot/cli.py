@@ -1,355 +1,293 @@
 """
-Command-line interface for the docscope-copilot governance chatbot.
-
-This CLI:
-- Runs entirely on local / open-source components (no GPT / paid APIs).
-- Uses GovernanceCopilot.query() to retrieve:
-    - governance_view: structured coverage / risk scores per category
-    - evidence: top retrieved documentation snippets
-- Builds a human-readable answer that is:
-    - Focused on the user's question topic
-    - Explicit about best-documented vs weakest areas
-    - Grounded in the actual evidence list
-
-All comments and user-facing text are in English for hackathon demo purposes.
+Interactive CLI for DocScope Copilot.
+Designed for live demo during presentation.
 """
 
-from typing import Dict, Any, List, Tuple
-
-from src.chatbot.bot_core import GovernanceCopilot
-
-
-# Mapping from internal category IDs to nice names for display.
-PRETTY_CATEGORY_NAMES = {
-    "safety_risk": "Safety & Risk",
-    "intended_use_limitations": "Intended Use & Limitations",
-    "training_data": "Training Data",
-    "performance_capabilities": "Performance & Capabilities",
-    "organizational_governance": "Organizational & Governance",
-    "access_deployment": "Access & Deployment",
-    "equity_bias": "Equity & Bias",
-    "other": "Other / Misc.",
-}
-
-# Simple heuristic to ignore shell commands in the CLI.
-SHELL_LIKE_PREFIXES = (
-    "cd ",
-    "ls",
-    "pwd",
-    "python ",
-    "pip ",
-    "./",
-    "bash ",
-    "sh ",
-)
+import json
+from typing import Optional
+from src.chatbot.bot_core import DocScopeCopilot
 
 
-def pretty_cat(cat_id: str) -> str:
-    """Return a human-readable name for a category ID."""
-    return PRETTY_CATEGORY_NAMES.get(cat_id, cat_id)
+class InteractiveCLI:
+    """Interactive command-line interface for demonstrations."""
+    
+    def __init__(self):
+        print("\n" + "="*70)
+        print("DOCSCOPE COPILOT - AI Documentation Governance Tool")
+        print("="*70)
+        self.bot = DocScopeCopilot()
+        self.running = True
+    
+    def display_menu(self):
+        """Display main menu."""
+        print("\n" + "-"*70)
+        print("MAIN MENU")
+        print("-"*70)
+        print("1. List available documents")
+        print("2. Audit a specific document")
+        print("3. Compare frameworks vs. artifacts")
+        print("4. Analyze equity coverage")
+        print("5. View category information")
+        print("6. Quick demo (pre-configured analysis)")
+        print("7. Exit")
+        print("-"*70)
+    
+    def list_documents(self):
+        """List all documents."""
+        print("\n=== AVAILABLE DOCUMENTS ===\n")
+        
+        print("FRAMEWORKS & PAPERS:")
+        frameworks = self.bot.list_documents(doc_type="framework")
+        for doc in frameworks[:8]:
+            print(f"  [{doc['doc_id']}]")
+            print(f"    {doc['title']} ({doc['year']})")
+            print(f"    Chunks: {doc['chunk_count']}\n")
+        
+        print("\nARTIFACTS (Real Documentation):")
+        artifacts = self.bot.list_documents(doc_type="artifact")
+        for doc in artifacts[:8]:
+            print(f"  [{doc['doc_id']}]")
+            print(f"    {doc['title']} ({doc['year']})")
+            print(f"    Chunks: {doc['chunk_count']}\n")
+    
+    def audit_document(self):
+        """Audit a specific document."""
+        doc_id = input("\nEnter document ID (e.g., openai_gpt4o_system_card): ").strip()
+        
+        if not doc_id:
+            print("❌ No document ID provided")
+            return
+        
+        print(f"\n🔍 Auditing: {doc_id}...")
+        result = self.bot.audit_document(doc_id)
+        
+        if "error" in result:
+            print(f"❌ {result['error']}")
+            return
+        
+        # Display results
+        doc_info = result["document"]
+        coverage = result["coverage"]
+        
+        print(f"\n{'='*70}")
+        print(f"AUDIT REPORT: {doc_info['title']}")
+        print(f"{'='*70}")
+        print(f"Type: {doc_info['doc_type']}")
+        print(f"Year: {doc_info['year']}")
+        print(f"Total chunks: {doc_info['total_chunks']}")
+        print(f"Overall coverage: {coverage['overall_score']:.3f}")
+        print(f"\n{'='*70}")
+        print("CATEGORY COVERAGE:")
+        print(f"{'='*70}")
+        
+        # Display category scores
+        categories = result["category_details"]
+        for cat_id, cat_info in sorted(categories.items(), 
+                                       key=lambda x: x[1]['coverage_score'], 
+                                       reverse=True):
+            score = cat_info['coverage_score']
+            name = cat_info['name_en']
+            hits = cat_info['hit_count']
+            
+            # Visual bar
+            bar_length = int(score * 50)
+            bar = "█" * bar_length + "░" * (50 - bar_length)
+            
+            print(f"\n{name}")
+            print(f"  [{bar}] {score:.3f}")
+            print(f"  Evidence: {hits} chunks, {cat_info['table_hits']} tables")
+            
+            if cat_info['matched_keywords'][:3]:
+                print(f"  Keywords: {', '.join(cat_info['matched_keywords'][:3])}")
+        
+        # Display gaps
+        gaps = result.get("gap_analysis", {})
+        if gaps:
+            print(f"\n{'='*70}")
+            print("CRITICAL GAPS:")
+            print(f"{'='*70}")
+            
+            for cat_id, gap in gaps.items():
+                if gap.get("severity") in ["critical", "high"]:
+                    print(f"\n⚠️  {gap['name']}")
+                    print(f"   Severity: {gap['severity'].upper()}")
+                    print(f"   Recommendation: {gap['recommendation'][:150]}...")
+    
+    def compare_frameworks_artifacts(self):
+        """Compare framework recommendations vs. actual practice.
+
+        Prints a short summary and the top category gaps (frameworks - artifacts).
+        This implementation is defensive: it handles missing keys and empty
+        responses from `compare_documents`.
+        """
+        print("\n🔍 Comparing frameworks vs. artifacts...")
+        result = self.bot.compare_documents(by_type=True)
+
+        if not isinstance(result, dict) or result.get("error"):
+            err = result.get("error") if isinstance(result, dict) else "Unexpected result"
+            print(f"❌ Comparison failed: {err}")
+            return
+
+        frameworks_meta = result.get("frameworks", {})
+        artifacts_meta = result.get("artifacts", {})
+
+        fw_count = frameworks_meta.get("doc_count", 0)
+        art_count = artifacts_meta.get("doc_count", 0)
+
+        print(f"\n{'='*70}")
+        print("FRAMEWORK VS. ARTIFACT COMPARISON")
+        print(f"{'='*70}")
+        print(f"Frameworks analyzed: {fw_count}")
+        print(f"Artifacts analyzed: {art_count}")
+
+        print(f"\n{'='*70}")
+        print("CATEGORY GAPS:")
+        print(f"{'='*70}")
+
+        comparisons = result.get("category_comparison", {}) or {}
+        gap_list = []
+
+        for cat_id, comp in comparisons.items():
+            try:
+                gap = float(comp.get("gap", 0))
+            except Exception:
+                gap = 0.0
+
+            # Store tuple (gap, cat_id, comp) so sorting is explicit
+            gap_list.append((gap, cat_id, comp))
+
+        # Sort by gap size (descending)
+        gap_list.sort(key=lambda x: x[0], reverse=True)
+
+        printed = 0
+        for gap, cat_id, comp in gap_list:
+            if printed >= 5:
+                break
+
+            if gap <= 0.01:
+                # small or no gap — stop showing further items
+                continue
+
+            name = comp.get("category_name") or self.bot.schema.get(cat_id, {}).get("human_name_en", cat_id)
+            fw_mean = comp.get("framework_mean", 0.0)
+            art_mean = comp.get("artifact_mean", 0.0)
+
+            print(f"\n{name}")
+            print(f"  Framework mean: {fw_mean:.3f}")
+            print(f"  Artifact mean: {art_mean:.3f}")
+            print(f"  GAP: {gap:.3f} ⚠️")
+
+            printed += 1
+
+        if printed == 0:
+            print("No meaningful gaps found between frameworks and artifacts.")
+    
+    def analyze_equity(self):
+        """Analyze equity coverage."""
+        print("\n🔍 Analyzing equity & bias coverage...")
+        result = self.bot.analyze_equity_coverage()
+        
+        total = result['total_docs_analyzed']
+        with_coverage = result['docs_with_equity_coverage']
+        with_quant = result['docs_with_quantitative_equity']
+        
+        print(f"\n{'='*70}")
+        print("EQUITY & BIAS ANALYSIS")
+        print(f"{'='*70}")
+        print(f"Documents analyzed: {total}")
+        print(f"Documents with ANY equity coverage: {with_coverage}/{total} ({with_coverage/total*100:.1f}%)")
+        print(f"Documents with QUANTITATIVE equity data: {with_quant}/{total} ({with_quant/total*100:.1f}%)")
+        
+        critical_gaps = result.get('critical_gaps', [])
+        print(f"\n⚠️  CRITICAL EQUITY GAPS: {len(critical_gaps)}")
+        
+        for gap in critical_gaps[:5]:
+            print(f"  - {gap['title']}: score={gap['score']:.3f}")
+    
+    def view_category(self):
+        """View category information."""
+        print("\nAvailable categories:")
+        for i, cat_id in enumerate(self.bot.schema.keys(), 1):
+            name = self.bot.schema[cat_id].get('human_name_en')
+            print(f"  {i}. {cat_id}: {name}")
+        
+        choice = input("\nEnter category ID: ").strip()
+        
+        if choice not in self.bot.schema:
+            print("❌ Invalid category")
+            return
+        
+        result = self.bot.get_category_overview(choice)
+        
+        print(f"\n{'='*70}")
+        print(f"{result['name'].upper()}")
+        print(f"{'='*70}")
+        print(f"Importance: {result['importance']}")
+        print(f"Governance Axis: {result['governance_axis']}")
+        print(f"\nDescription:")
+        print(f"  {result['description']}")
+        
+        print(f"\n{'='*70}")
+        print("OVERALL COVERAGE STATISTICS:")
+        print(f"{'='*70}")
+        cov = result['overall_coverage']
+        print(f"Mean: {cov['mean']:.3f}")
+        print(f"Range: {cov['min']:.3f} - {cov['max']:.3f}")
+        print(f"Documents: {cov['docs_evaluated']}")
+        
+        print(f"\n{'='*70}")
+        print("KEY QUESTIONS THIS CATEGORY ADDRESSES:")
+        print(f"{'='*70}")
+        for q in result['question_templates'][:3]:
+            print(f"  • {q}")
+    
+    def quick_demo(self):
+        """Run pre-configured demo."""
+        print("\n🎯 RUNNING QUICK DEMO...")
+        
+        print("\n[1/3] Auditing GPT-4o System Card...")
+        self.bot.audit_document("openai_gpt4o_system_card")
+        
+        print("\n[2/3] Comparing frameworks vs artifacts...")
+        self.bot.compare_documents(by_type=True)
+        
+        print("\n[3/3] Analyzing equity coverage...")
+        self.bot.analyze_equity_coverage()
+        
+        print("\n✅ Demo complete!")
+    
+    def run(self):
+        """Main event loop."""
+        while self.running:
+            self.display_menu()
+            choice = input("\nSelect option (1-7): ").strip()
+            
+            if choice == "1":
+                self.list_documents()
+            elif choice == "2":
+                self.audit_document()
+            elif choice == "3":
+                self.compare_frameworks_artifacts()
+            elif choice == "4":
+                self.analyze_equity()
+            elif choice == "5":
+                self.view_category()
+            elif choice == "6":
+                self.quick_demo()
+            elif choice == "7":
+                print("\n👋 Goodbye!")
+                self.running = False
+            else:
+                print("\n❌ Invalid option")
+            
+            if self.running and choice != "7":
+                input("\nPress Enter to continue...")
 
 
-def list_to_english(items: List[str]) -> str:
-    """Turn a list into a human-readable phrase."""
-    if not items:
-        return ""
-    if len(items) == 1:
-        return items[0]
-    if len(items) == 2:
-        return f"{items[0]} and {items[1]}"
-    return ", ".join(items[:-1]) + f", and {items[-1]}"
-
-
-def detect_topic(query: str) -> str:
-    """
-    Very lightweight intent detection to tailor the answer.
-
-    Returns one of: "training", "equity", "safety", "performance", "general".
-    """
-    q = query.lower()
-    if any(k in q for k in ["equity", "bias", "fairness", "subgroup", "minority"]):
-        return "equity"
-    if any(k in q for k in ["train", "training data", "dataset", "corpus", "data "]):
-        return "training"
-    if any(k in q for k in ["safety", "risk", "red team", "jailbreak"]):
-        return "safety"
-    if any(k in q for k in ["performance", "benchmark", "capabilit"]):
-        return "performance"
-    return "general"
-
-
-def summarize_overall(overall: float) -> str:
-    """Map overall coverage score into a qualitative description."""
-    if overall >= 0.7:
-        return "strong and comparatively comprehensive"
-    if overall >= 0.4:
-        return "mixed and uneven"
-    return "limited and fragmented"
-
-
-def split_best_and_worst(
-    categories: Dict[str, Dict[str, float]],
-    top_k: int = 2,
-) -> Tuple[List[Tuple[str, float]], List[Tuple[str, float]]]:
-    """
-    Split categories into 'best' and 'worst' based on coverage.
-
-    Returns:
-        best: list of (cat_id, coverage) for top_k highest coverage
-        worst: list of (cat_id, coverage) for top_k lowest coverage
-    """
-    items = [
-        (cat_id, info.get("avg_coverage_score", 0.0))
-        for cat_id, info in categories.items()
-    ]
-    items.sort(key=lambda x: x[1], reverse=True)
-    best = items[:top_k]
-    worst = items[-top_k:] if len(items) > top_k else items
-    return best, worst
-
-
-def render_natural_language_answer(result: Dict[str, Any]) -> str:
-    """
-    Build a human-readable answer from the governance_view + evidence.
-
-    This function is intentionally:
-    - Local / deterministic (no external LLM).
-    - Topic-aware (training, equity, safety, performance).
-    - Focused on best-documented vs weakest areas instead of repeating
-      the same phrases for every question.
-    """
-    query = result.get("query", "")
-    topic = detect_topic(query)
-
-    gov = result.get("governance_view", {})
-    cats = gov.get("categories", {})
-    overall = gov.get("overall_coverage_score", 0.0)
-    equity_risk = gov.get("equity_risk_flag", "unknown")
-
-    lines: List[str] = []
-    lines.append("=== Answer ===")
-    if query:
-        lines.append(f"Question: {query}")
-        lines.append("")
-
-    # 1) Overall framing
-    overall_desc = summarize_overall(overall)
-    lines.append(
-        f"Across the documentation you ingested, coverage of key governance "
-        f"dimensions is {overall_desc} (overall score ≈ {overall:.2f})."
-    )
-
-    # 2) Best / worst documented areas (for comparability)
-    best, worst = split_best_and_worst(cats)
-
-    if best:
-        best_labels = [
-            f"{pretty_cat(cid)} (≈{cov:.2f})" for cid, cov in best if cov > 0
-        ]
-        if best_labels:
-            lines.append(
-                "The best-documented areas in this corpus are: "
-                f"{list_to_english(best_labels)}."
-            )
-
-    if worst:
-        worst_labels = [
-            f"{pretty_cat(cid)} (≈{cov:.2f})" for cid, cov in worst if cov < 0.4
-        ]
-        if worst_labels:
-            lines.append(
-                "The weakest areas, where documentation is systematically thin, are: "
-                f"{list_to_english(worst_labels)}."
-            )
-
-    # 3) Equity / bias always explicitly discussed (core to the challenge)
-    if equity_risk == "high":
-        lines.append(
-            "On **Equity & Bias**, the corpus exposes clear structural gaps: "
-            "very few documents report subgroup performance, demographic breakdowns, "
-            "or systematic fairness evaluations. This makes cross-model comparison "
-            "on equity nearly impossible."
-        )
-    elif equity_risk == "medium":
-        lines.append(
-            "On **Equity & Bias**, some documents include fairness or subgroup "
-            "analysis, but coverage is inconsistent and not aligned to a common "
-            "set of protected groups or metrics."
-        )
-    else:
-        lines.append(
-            "On **Equity & Bias**, the current evidence is too sparse to make a "
-            "reliable judgment about coverage."
-        )
-
-    # 4) Topic-specific commentary
-    td_cov = cats.get("training_data", {}).get("avg_coverage_score", 0.0)
-    eb_cov = cats.get("equity_bias", {}).get("avg_coverage_score", 0.0)
-    s_cov = cats.get("safety_risk", {}).get("avg_coverage_score", 0.0)
-    p_cov = cats.get("performance_capabilities", {}).get("avg_coverage_score", 0.0)
-
-    if topic == "training":
-        if td_cov >= 0.5:
-            lines.append(
-                "For **Training Data**, many documents provide high-level descriptions "
-                "of data sources and sometimes filtering or de-duplication methods, "
-                "but they still rarely break down demographics or sensitive domains."
-            )
-        elif td_cov >= 0.2:
-            lines.append(
-                "For **Training Data**, most documentation only mentions 'web-scale' "
-                "or 'proprietary' data. Details on collection pipelines, filtering, "
-                "and demographic composition are often missing or scattered."
-            )
-        else:
-            lines.append(
-                "For **Training Data**, documentation is extremely minimal: it is "
-                "often limited to a one-line reference to 'internal' or 'web' data "
-                "with no further structure."
-            )
-
-    elif topic == "equity":
-        if eb_cov >= 0.5:
-            lines.append(
-                "On **Equity & Bias**, a subset of documents do report subgroup "
-                "performance and mitigation strategies, but they use incompatible "
-                "definitions and metrics."
-            )
-        elif eb_cov >= 0.2:
-            lines.append(
-                "On **Equity & Bias**, there are scattered mentions of 'fairness' or "
-                "'demographic performance', but very few concrete, reproducible "
-                "evaluations across protected groups."
-            )
-        else:
-            lines.append(
-                "On **Equity & Bias**, documentation mostly consists of high-level "
-                "statements (e.g., 'we aim to reduce bias') without quantitative "
-                "evidence or clearly defined protected groups."
-            )
-
-    elif topic == "safety":
-        if s_cov >= 0.5:
-            lines.append(
-                "On **Safety & Risk**, some system cards document red-teaming "
-                "campaigns, qualitative failure modes, and mitigation strategies in "
-                "moderate detail."
-            )
-        elif s_cov >= 0.2:
-            lines.append(
-                "On **Safety & Risk**, many documents refer to alignment and safety "
-                "work but rarely provide quantitative metrics (e.g., refusal rates, "
-                "jailbreak success rates) that would enable comparison."
-            )
-        else:
-            lines.append(
-                "On **Safety & Risk**, documentation tends to be narrative, with "
-                "few concrete numbers or structured risk scenarios."
-            )
-
-    elif topic == "performance":
-        if p_cov >= 0.5:
-            lines.append(
-                "On **Performance & Capabilities**, many model cards and reports "
-                "do include benchmark tables and capability descriptions, but they "
-                "often use different suites or metrics, which complicates "
-                "cross-model comparison."
-            )
-        else:
-            lines.append(
-                "On **Performance & Capabilities**, benchmarks are mentioned, but "
-                "not in a way that is consistently comparable across model families."
-            )
-
-    # 5) Evidence grounding
-    evidence = result.get("evidence", [])
-    if evidence:
-        lines.append("")
-        lines.append(
-            "These conclusions are grounded in the top retrieved sources, for example:"
-        )
-        for ev in evidence[:3]:
-            lines.append(f"  • {ev['title']} ({ev['doc_type']})")
-
-    # 6) Policy / hackathon hook
-    lines.append("")
-    lines.append(
-        "From a policy and governance perspective, this analysis allows you to "
-        "treat documentation as a measurable object: you can specify minimum "
-        "coverage thresholds for categories like Safety & Risk, Training Data, "
-        "and Equity & Bias, and then compare model families against those "
-        "thresholds in a structured way."
-    )
-
-    return "\n".join(lines)
-
-
-def main() -> None:
-    """
-    Interactive CLI loop.
-
-    - Uses only local / open-source models and libraries.
-    - No external GPT or proprietary API calls are made.
-    """
-    bot = GovernanceCopilot()
-
-    print("=== docscope-copilot ===")
-    print("Governance chatbot for AI documentation")
-    print("Runs entirely on local, open-source components (no GPT / paid APIs).")
-    print("Type a question about documentation (or 'exit' to quit).")
-    print()
-
-    while True:
-        try:
-            user_input = input("> ").strip()
-        except (EOFError, KeyboardInterrupt):
-            print("\nBye!")
-            break
-
-        if not user_input:
-            continue
-        if user_input.lower() in {"exit", "quit"}:
-            print("Bye!")
-            break
-
-        # Ignore obvious shell commands accidentally pasted into the prompt.
-        if user_input.startswith(SHELL_LIKE_PREFIXES):
-            print(
-                "It looks like you typed a shell command. "
-                "Please ask a question about AI documentation instead."
-            )
-            continue
-
-        # Query the core bot: this returns governance_view + evidence.
-        result = bot.query(user_input)
-
-        print()
-        print(render_natural_language_answer(result))
-        print()
-
-        # Show the structured governance summary for transparency / demo purposes.
-        gov = result["governance_view"]
-        print("[Governance summary]")
-        print(f"  Overall coverage: {gov['overall_coverage_score']:.2f}")
-        print(f"  Equity risk flag: {gov['equity_risk_flag']}")
-        print("  Categories:")
-        for cat_id, info in gov["categories"].items():
-            print(
-                f"    - {pretty_cat(cat_id)}: "
-                f"avg_coverage={info['avg_coverage_score']:.2f}, "
-                f"risk={info['risk_flag']}"
-            )
-
-        print("\n[Top evidence]")
-        for ev in result["evidence"]:
-            print(
-                f"  - {ev['title']} ({ev['doc_type']}, score={ev['score']:.3f})"
-            )
-            preview = ev["text_preview"].replace("\n", " ")
-            if len(preview) > 240:
-                preview = preview[:240] + "..."
-            print(f"    {preview}")
-        print()
+def main():
+    """Entry point."""
+    cli = InteractiveCLI()
+    cli.run()
 
 
 if __name__ == "__main__":

@@ -1,0 +1,23 @@
+# Core
+numpy
+pandas
+scikit-learn
+tqdm
+
+# NLP / embeddings
+sentence-transformers
+
+# Vector search
+faiss-cpu
+
+# PDF / HTML processing
+pdfplumber
+beautifulsoup4
+lxml
+
+# CLI / formatting
+rich
+
+# Optional, for simple web demo (pick one if you want a UI later)
+flask
+gradio

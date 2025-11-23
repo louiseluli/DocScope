@@ -1,0 +1,200 @@
+{
+  "gebru_2018_datasheets": {
+    "doc_id": "gebru_2018_datasheets",
+    "title": "Datasheets for Datasets",
+    "year": 2018,
+    "doc_type": "data_framework",
+    "eval_type": "feasibility",
+    "rel_path": "papers/Datasheets_for_Datasets.pdf",
+    "priority": 1
+  },
+  "bender_2018_data_statements": {
+    "doc_id": "bender_2018_data_statements",
+    "title": "Data Statements for Natural Language Processing",
+    "year": 2018,
+    "doc_type": "data_framework",
+    "eval_type": "feasibility",
+    "rel_path": "papers/Data_Statements_for_NLP.pdf",
+    "priority": 2
+  },
+  "holland_2018_dataset_nutrition_label": {
+    "doc_id": "holland_2018_dataset_nutrition_label",
+    "title": "The Dataset Nutrition Label",
+    "year": 2018,
+    "doc_type": "data_framework",
+    "eval_type": "feasibility",
+    "rel_path": "papers/Dataset_Nutrition_Label.pdf",
+    "priority": 2
+  },
+  "arnold_2019_factsheets": {
+    "doc_id": "arnold_2019_factsheets",
+    "title": "FactSheets: Increasing trust in AI services through supplier's declarations of conformity",
+    "year": 2019,
+    "doc_type": "system_framework",
+    "eval_type": "feasibility",
+    "rel_path": "papers/FactSheets.pdf",
+    "priority": 1
+  },
+  "mitchell_2019_model_cards": {
+    "doc_id": "mitchell_2019_model_cards",
+    "title": "Model Cards for Model Reporting",
+    "year": 2019,
+    "doc_type": "model_framework",
+    "eval_type": "feasibility",
+    "rel_path": "papers/Model_Cards_for_Model_Reporting.pdf",
+    "priority": 1
+  },
+  "pushkarna_2022_data_cards": {
+    "doc_id": "pushkarna_2022_data_cards",
+    "title": "Data Cards: Purposeful and Transparent Dataset Documentation for Responsible AI",
+    "year": 2022,
+    "doc_type": "data_framework",
+    "eval_type": "real_world",
+    "rel_path": "papers/Data_Cards.pdf",
+    "priority": 2
+  },
+  "roman_2023_open_datasheets": {
+    "doc_id": "roman_2023_open_datasheets",
+    "title": "Open Datasheets: Machine-Readable Documentation for Open Datasets and Responsible AI Assessments",
+    "year": 2023,
+    "doc_type": "data_framework",
+    "eval_type": "feasibility",
+    "rel_path": "papers/Open_Datasheets.pdf",
+    "priority": 2
+  },
+  "raji_2020_about_ml": {
+    "doc_id": "raji_2020_about_ml",
+    "title": "ABOUT ML: Annotation and Benchmarking on Understanding and Transparency of Machine Learning Lifecycles",
+    "year": 2020,
+    "doc_type": "system_framework",
+    "eval_type": "none",
+    "rel_path": "papers/ABOUT_ML_Annotation_and_Benchmarking.pdf",
+    "priority": 2
+  },
+  "chmielinski_2024_clear": {
+    "doc_id": "chmielinski_2024_clear",
+    "title": "CLeAR Documentation Framework for AI Transparency",
+    "year": 2024,
+    "doc_type": "method_framework",
+    "eval_type": "none",
+    "rel_path": "papers/CLEAR_Documentation_Framework.pdf",
+    "priority": 2
+  },
+  "winecoff_bogen_2024_improving_governance": {
+    "doc_id": "winecoff_bogen_2024_improving_governance",
+    "title": "Improving Governance Outcomes Through AI Documentation",
+    "year": 2024,
+    "doc_type": "governance_synthesis",
+    "eval_type": "none",
+    "rel_path": "papers/Improving_Governance_Outcomes.pdf",
+    "priority": 1
+  },
+  "fmit_2024_foundation_model_transparency_index": {
+    "doc_id": "fmit_2024_foundation_model_transparency_index",
+    "title": "The Foundation Model Transparency Index",
+    "year": 2024,
+    "doc_type": "evaluation_study",
+    "eval_type": "artifact_study",
+    "rel_path": "papers/Foundation_Model_Transparency_Index.pdf",
+    "priority": 2
+  },
+  "pepe_2024_hf_models_doc_datasets": {
+    "doc_id": "pepe_2024_hf_models_doc_datasets",
+    "title": "How do Hugging Face Models Document Datasets",
+    "year": 2024,
+    "doc_type": "evaluation_study",
+    "eval_type": "artifact_study",
+    "rel_path": "papers/How_HF_Models_Document_Datasets.pdf",
+    "priority": 2
+  },
+  "openai_gpt4o_system_card": {
+    "doc_id": "openai_gpt4o_system_card",
+    "title": "gpt-4o System Card",
+    "year": 2024,
+    "doc_type": "artifact",
+    "eval_type": "n_a",
+    "rel_path": "artifacts/gpt-4o-system-card.pdf",
+    "priority": 1
+  },
+  "openai_gpt5_system_card": {
+    "doc_id": "openai_gpt5_system_card",
+    "title": "gpt-5 System Card",
+    "year": 2025,
+    "doc_type": "artifact",
+    "eval_type": "n_a",
+    "rel_path": "artifacts/gpt-5-system-card.pdf",
+    "priority": 1
+  },
+  "openai_o1_system_card": {
+    "doc_id": "openai_o1_system_card",
+    "title": "o1 System Card (Dec 2024)",
+    "year": 2024,
+    "doc_type": "artifact",
+    "eval_type": "n_a",
+    "rel_path": "artifacts/o1-system-card-20241205.pdf",
+    "priority": 1
+  },
+  "openai_gpt4_turbo_api": {
+    "doc_id": "openai_gpt4_turbo_api",
+    "title": "GPT-4 Turbo API documentation",
+    "year": 2023,
+    "doc_type": "artifact",
+    "eval_type": "n_a",
+    "rel_path": "artifacts/GPT-4-Turbo-API.pdf",
+    "priority": 2
+  },
+  "openai_gpt35_turbo_api": {
+    "doc_id": "openai_gpt35_turbo_api",
+    "title": "GPT-3.5 Turbo API documentation",
+    "year": 2023,
+    "doc_type": "artifact",
+    "eval_type": "n_a",
+    "rel_path": "artifacts/GPT-3.5-Turbo-API.pdf",
+    "priority": 3
+  },
+  "openai_whisper_model_card": {
+    "doc_id": "openai_whisper_model_card",
+    "title": "OpenAI Whisper model card",
+    "year": 2022,
+    "doc_type": "artifact",
+    "eval_type": "n_a",
+    "rel_path": "artifacts/model-card-Whisper.md",
+    "priority": 2
+  },
+  "huggingface_whisper_large_v3": {
+    "doc_id": "huggingface_whisper_large_v3",
+    "title": "Whisper Large v3 HF page",
+    "year": 2024,
+    "doc_type": "artifact",
+    "eval_type": "n_a",
+    "rel_path": "artifacts/Whisper_Large_v3_HF.pdf",
+    "priority": 3
+  },
+  "stability_sd3_medium_hf": {
+    "doc_id": "stability_sd3_medium_hf",
+    "title": "Stable Diffusion 3 Medium HF page",
+    "year": 2024,
+    "doc_type": "artifact",
+    "eval_type": "n_a",
+    "rel_path": "artifacts/Stable_Diffusion_3_Medium_HF.pdf",
+    "priority": 3
+  },
+  "qwen3_tech_report": {
+    "doc_id": "qwen3_tech_report",
+    "title": "Qwen3 Technical Report",
+    "year": 2024,
+    "doc_type": "artifact",
+    "eval_type": "n_a",
+    "rel_path": "artifacts/Qwen3_Technical_Report.pdf",
+    "priority": 2
+  },
+  "llama3_tech_report": {
+    "doc_id": "llama3_tech_report",
+    "title": "Llama 3 Technical Report",
+    "year": 2024,
+    "doc_type": "artifact",
+    "eval_type": "n_a",
+    "rel_path": "artifacts/Llama3_Tech_Report.pdf",
+    "priority": 2
+  }
+}

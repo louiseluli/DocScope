@@ -1,0 +1,23 @@
+doc_id,title,year,doc_type,eval_type,rel_path,priority
+gebru_2018_datasheets,Datasheets for Datasets,2018,data_framework,feasibility,"papers/Datasheets_for_Datasets.pdf",1
+bender_2018_data_statements,Data Statements for Natural Language Processing,2018,data_framework,feasibility,"papers/Data_Statements_for_NLP.pdf",2
+holland_2018_dataset_nutrition_label,The Dataset Nutrition Label,2018,data_framework,feasibility,"papers/Dataset_Nutrition_Label.pdf",2
+arnold_2019_factsheets,FactSheets: Increasing trust in AI services through supplier's declarations of conformity,2019,system_framework,feasibility,"papers/FactSheets.pdf",1
+mitchell_2019_model_cards,Model Cards for Model Reporting,2019,model_framework,feasibility,"papers/Model_Cards_for_Model_Reporting.pdf",1
+pushkarna_2022_data_cards,Data Cards: Purposeful and Transparent Dataset Documentation for Responsible AI,2022,data_framework,real_world,"papers/Data_Cards.pdf",2
+roman_2023_open_datasheets,Open Datasheets: Machine-Readable Documentation for Open Datasets and Responsible AI Assessments,2023,data_framework,feasibility,"papers/Open_Datasheets.pdf",2
+raji_2020_about_ml,ABOUT ML: Annotation and Benchmarking on Understanding and Transparency of Machine Learning Lifecycles,2020,system_framework,none,"papers/ABOUT_ML_Annotation_and_Benchmarking.pdf",2
+chmielinski_2024_clear,CLeAR Documentation Framework for AI Transparency,2024,method_framework,none,"papers/CLEAR_Documentation_Framework.pdf",2
+winecoff_bogen_2024_improving_governance,Improving Governance Outcomes Through AI Documentation,2024,governance_synthesis,none,"papers/Improving_Governance_Outcomes.pdf",1
+fmit_2024_foundation_model_transparency_index,The Foundation Model Transparency Index,2024,evaluation_study,artifact_study,"papers/Foundation_Model_Transparency_Index.pdf",2
+pepe_2024_hf_models_doc_datasets,How do Hugging Face Models Document Datasets,2024,evaluation_study,artifact_study,"papers/How_HF_Models_Document_Datasets.pdf",2
+openai_gpt4o_system_card,gpt-4o System Card,2024,artifact,n_a,"artifacts/gpt-4o-system-card.pdf",1
+openai_gpt5_system_card,gpt-5 System Card,2025,artifact,n_a,"artifacts/gpt-5-system-card.pdf",1
+openai_o1_system_card,o1 System Card (Dec 2024),2024,artifact,n_a,"artifacts/o1-system-card-20241205.pdf",1
+openai_gpt4_turbo_api,GPT-4 Turbo API documentation,2023,artifact,n_a,"artifacts/GPT-4-Turbo-API.pdf",2
+openai_gpt35_turbo_api,GPT-3.5 Turbo API documentation,2023,artifact,n_a,"artifacts/GPT-3.5-Turbo-API.pdf",3
+openai_whisper_model_card,OpenAI Whisper model card,2022,artifact,n_a,"artifacts/model-card-Whisper.md",2
+huggingface_whisper_large_v3,Whisper Large v3 HF page,2024,artifact,n_a,"artifacts/Whisper_Large_v3_HF.pdf",3
+stability_sd3_medium_hf,Stable Diffusion 3 Medium HF page,2024,artifact,n_a,"artifacts/Stable_Diffusion_3_Medium_HF.pdf",3
+qwen3_tech_report,Qwen3 Technical Report,2024,artifact,n_a,"artifacts/Qwen3_Technical_Report.pdf",2
+llama3_tech_report,Llama 3 Technical Report,2024,artifact,n_a,"artifacts/Llama3_Tech_Report.pdf",2

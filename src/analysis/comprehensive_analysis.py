@@ -12,6 +12,8 @@ from datetime import datetime
 
 from src.chatbot.bot_core import DocScopeCopilot
 from src.config.settings import PROCESSED_DIR
+from src.analysis.content_quality_detector import ContentQualityDetector
+from src.analysis.policy_recommendation_engine import PolicyRecommendationEngine
 
 
 class ComprehensiveAnalyzer:
@@ -23,6 +25,8 @@ class ComprehensiveAnalyzer:
     
     def __init__(self, output_dir: Path = None):
         self.bot = DocScopeCopilot()
+        self.quality_detector = ContentQualityDetector()
+        self.policy_engine = PolicyRecommendationEngine()
         self.output_dir = output_dir or Path("analysis_results")
         self.output_dir.mkdir(exist_ok=True)
         
@@ -89,21 +93,40 @@ class ComprehensiveAnalyzer:
         results["analyses"]["category_insights"] = category_insights
         self._save_json(category_insights, "category_deep_dives.json")
         
-        # 5. Gap Analysis Summary
-        print("[5/6] Generating Gap Analysis Summary...")
+        # 5. Content Quality Analysis (NEW - addresses "PR speak" challenge question)
+        print("[5/8] Analyzing Content Quality (PR speak vs. substantive)...")
+        quality_analysis = self._analyze_content_quality(audit_results)
+        results["analyses"]["quality_analysis"] = quality_analysis
+        self._save_json(quality_analysis, "quality_analysis.json")
+        
+        # 6. Gap Analysis Summary
+        print("[6/8] Generating Gap Analysis Summary...")
         gap_summary = self._generate_gap_summary(audit_results)
         results["analyses"]["gap_summary"] = gap_summary
         self._save_json(gap_summary, "gap_analysis_summary.json")
         
-        # 6. Policy Recommendations
-        print("[6/6] Generating Evidence-Based Policy Recommendations...")
+        # 7. Policy Recommendations
+        print("[7/8] Generating Evidence-Based Policy Recommendations...")
+        # Use internal generator to produce a recommendations package that
+        # includes an `executive_summary`. Keep engine output for traceability.
+        engine_output = self.policy_engine.generate(
+                    equity_data=equity,
+                    gap_data=gap_summary,
+                    quality_data=quality_analysis,
+                    framework_data=framework_artifact
+                )
         recommendations = self._generate_recommendations(
-            framework_artifact, equity, gap_summary
+            framework_artifact=framework_artifact,
+            equity_analysis=equity,
+            gap_summary=gap_summary,
+            quality_analysis=quality_analysis
         )
+        # attach engine output for debugging / traceability
+        recommendations["engine_output"] = engine_output
         results["analyses"]["policy_recommendations"] = recommendations
         self._save_json(recommendations, "policy_recommendations.json")
         
-        # Save complete results
+        # 8. Save complete results
         self._save_json(results, "complete_analysis.json")
         
         # Generate human-readable summary
@@ -115,6 +138,89 @@ class ComprehensiveAnalyzer:
         print(f"{'='*60}\n")
         
         return results
+    
+    def _analyze_content_quality(self, audit_results: Dict) -> Dict:
+        """
+        Analyze content quality across documents.
+        
+        Addresses challenge question: "How do you disincentivize promotional 
+        language (PR speak) in technical documentation?"
+        
+        Returns
+        -------
+        Dict
+            Quality analysis with PR speak detection and substantive content scoring
+        """
+        print("  Analyzing document quality...")
+        
+        doc_quality_analyses = {}
+        
+        for doc_id, audit in audit_results.items():
+            # Get chunks for this document
+            doc_chunks = [chunk for chunk in self.bot.chunks if chunk.get("doc_id") == doc_id]
+            
+            # Analyze quality
+            quality_result = self.quality_detector.analyze_document(doc_chunks)
+            
+            # Add document metadata
+            quality_result["document"] = {
+                "doc_id": doc_id,
+                "title": audit["document"]["title"],
+                "doc_type": audit["document"]["doc_type"]
+            }
+            
+            doc_quality_analyses[doc_id] = quality_result
+        
+        # Compare documents
+        comparison = self.quality_detector.compare_documents(doc_quality_analyses)
+        
+        # Separate frameworks vs. artifacts
+        framework_quality = {}
+        artifact_quality = {}
+        
+        for doc_id, analysis in doc_quality_analyses.items():
+            doc_type = analysis["document"]["doc_type"]
+            if "framework" in doc_type or "study" in doc_type:
+                framework_quality[doc_id] = analysis
+            else:
+                artifact_quality[doc_id] = analysis
+        
+        # Calculate framework vs. artifact quality gap
+        framework_scores = [a["document_level"]["mean_quality_score"] 
+                           for a in framework_quality.values()]
+        artifact_scores = [a["document_level"]["mean_quality_score"] 
+                          for a in artifact_quality.values()]
+        
+        quality_gap = (sum(framework_scores) / len(framework_scores) if framework_scores else 0) - \
+                     (sum(artifact_scores) / len(artifact_scores) if artifact_scores else 0)
+        
+        return {
+            "document_analyses": doc_quality_analyses,
+            "overall_comparison": comparison,
+            "framework_vs_artifact_quality": {
+                "framework_mean_quality": round(sum(framework_scores) / len(framework_scores), 3) if framework_scores else 0,
+                "artifact_mean_quality": round(sum(artifact_scores) / len(artifact_scores), 3) if artifact_scores else 0,
+                "quality_gap": round(quality_gap, 3),
+                "interpretation": "Positive gap means frameworks have higher quality than artifacts" if quality_gap > 0 else "Artifacts have higher quality than frameworks"
+            },
+            "key_findings": {
+                "most_promotional_docs": sorted(
+                    [(doc_id, a["document_level"]["mean_promotional_score"]) 
+                     for doc_id, a in doc_quality_analyses.items()],
+                    key=lambda x: x[1], reverse=True
+                )[:3],
+                "most_substantive_docs": sorted(
+                    [(doc_id, a["document_level"]["mean_substantive_score"]) 
+                     for doc_id, a in doc_quality_analyses.items()],
+                    key=lambda x: x[1], reverse=True
+                )[:3],
+                "lowest_quality_docs": sorted(
+                    [(doc_id, a["document_level"]["mean_quality_score"]) 
+                     for doc_id, a in doc_quality_analyses.items()],
+                    key=lambda x: x[1]
+                )[:3]
+            }
+        }
     
     def _generate_gap_summary(self, audit_results: Dict) -> Dict:
         """
@@ -183,7 +289,8 @@ class ComprehensiveAnalyzer:
         self, 
         framework_artifact: Dict,
         equity_analysis: Dict,
-        gap_summary: Dict
+        gap_summary: Dict,
+        quality_analysis: Dict
     ) -> Dict:
         """
         Generate evidence-based policy recommendations.
@@ -192,13 +299,35 @@ class ComprehensiveAnalyzer:
         """
         recommendations = {
             "executive_summary": self._create_executive_summary(
-                framework_artifact, equity_analysis, gap_summary
+                framework_artifact, equity_analysis, gap_summary, quality_analysis
             ),
             "immediate_actions": [],
             "regulatory_requirements": [],
             "procurement_standards": [],
             "framework_improvements": []
         }
+        
+        # QUALITY-BASED RECOMMENDATIONS (NEW - addresses PR speak challenge question)
+        quality_gap = quality_analysis["framework_vs_artifact_quality"]["quality_gap"]
+        lowest_quality = quality_analysis["key_findings"]["lowest_quality_docs"]
+        
+        if quality_gap < -0.1:  # Artifacts worse quality than frameworks
+            recommendations["immediate_actions"].append({
+                "action": "Mandate quality standards for technical documentation",
+                "rationale": f"Artifacts have {abs(quality_gap):.3f} lower quality than frameworks",
+                "evidence": f"Lowest quality documents: {', '.join([doc_id for doc_id, _ in lowest_quality])}",
+                "implementation": "Require minimum substantive content score of 0.5 and maximum promotional score of 0.3"
+            })
+        
+        # Check for high promotional content
+        most_promotional = quality_analysis["key_findings"]["most_promotional_docs"]
+        if any(score > 0.4 for _, score in most_promotional):
+            recommendations["regulatory_requirements"].append({
+                "requirement": "Prohibit promotional language in technical specifications",
+                "evidence": f"Documents with excessive marketing language: {', '.join([doc_id for doc_id, score in most_promotional if score > 0.4])}",
+                "policy_mechanism": "Technical documentation must score below 0.3 on promotional language detector",
+                "enforcement": "Third-party audits using automated quality detection tools"
+            })
         
         # Immediate Actions (based on critical gaps)
         critical_gaps = gap_summary["gaps_by_severity"]["critical"]
@@ -245,7 +374,8 @@ class ComprehensiveAnalyzer:
         self,
         framework_artifact: Dict,
         equity_analysis: Dict,
-        gap_summary: Dict
+        gap_summary: Dict,
+        quality_analysis: Dict
     ) -> str:
         """
         Create executive summary for policy memo.
@@ -257,11 +387,15 @@ class ComprehensiveAnalyzer:
         critical_count = gap_summary["summary"]["total_critical_gaps"]
         high_count = gap_summary["summary"]["total_high_gaps"]
         
+        # Quality metrics
+        quality_gap = quality_analysis["framework_vs_artifact_quality"]["quality_gap"]
+        artifact_quality = quality_analysis["framework_vs_artifact_quality"]["artifact_mean_quality"]
+        
         summary = f"""
 EXECUTIVE SUMMARY
 
 This analysis evaluated {equity_total} AI documentation artifacts against 8 governance categories 
-using evidence-based keyword matching and structural analysis.
+using evidence-based keyword matching, structural analysis, and novel content quality detection.
 
 KEY FINDINGS:
 
@@ -274,13 +408,18 @@ KEY FINDINGS:
 3. FRAMEWORK-PRACTICE GAP: Significant divergence between what documentation frameworks recommend 
    and what organizations actually disclose.
 
-4. ENFORCEMENT OPPORTUNITY: Standardized, machine-readable documentation formats could enable 
-   automated compliance checking for procurement and regulation.
+4. QUALITY CRISIS (NEW FINDING): Automated quality detection reveals artifact documentation quality 
+   score of {artifact_quality:.3f}/1.0, with quality gap of {quality_gap:.3f} compared to frameworks.
+   Many artifacts contain promotional language rather than substantive technical content.
+
+5. ENFORCEMENT OPPORTUNITY: Standardized, machine-readable documentation formats with automated 
+   quality checks could enable compliance monitoring for procurement and regulation.
 
 POLICY IMPLICATIONS:
 
-- Mandating structured documentation with minimum coverage thresholds is technically feasible
+- Mandating structured documentation with minimum coverage AND quality thresholds is technically feasible
 - Equity metrics should be elevated to mandatory disclosure requirements
+- Promotional language detection can distinguish marketing claims from verifiable specifications
 - Current voluntary approaches are insufficient for governance needs
         """.strip()
         
@@ -328,6 +467,21 @@ POLICY IMPLICATIONS:
             for cat_id, info in gap_sum['most_problematic_categories']:
                 f.write(f"  - {info['category_name']}: {info['count']} gaps across documents\n")
             
+            # Quality analysis (NEW)
+            quality = results["analyses"]["quality_analysis"]
+            f.write(f"\nQUALITY ANALYSIS (PR Speak Detection):\n")
+            f.write(f"- Artifact mean quality score: {quality['framework_vs_artifact_quality']['artifact_mean_quality']}\n")
+            f.write(f"- Framework mean quality score: {quality['framework_vs_artifact_quality']['framework_mean_quality']}\n")
+            f.write(f"- Quality gap: {quality['framework_vs_artifact_quality']['quality_gap']}\n\n")
+            
+            f.write(f"Most promotional documents:\n")
+            for doc_id, score in quality['key_findings']['most_promotional_docs']:
+                f.write(f"  - {doc_id}: promotional score {score:.3f}\n")
+            
+            f.write(f"\nMost substantive documents:\n")
+            for doc_id, score in quality['key_findings']['most_substantive_docs']:
+                f.write(f"  - {doc_id}: substantive score {score:.3f}\n")
+            
             f.write("\n" + "="*70 + "\n")
             f.write("See JSON files for detailed evidence and traceability\n")
             f.write("="*70 + "\n")
@@ -340,12 +494,13 @@ def main():
     analyzer = ComprehensiveAnalyzer()
     results = analyzer.run_full_analysis()
     
-    print("\n✓ Analysis complete!")
-    print(f"✓ Check {analyzer.output_dir}/ for detailed results")
+    print("\nâœ“ Analysis complete!")
+    print(f"âœ“ Check {analyzer.output_dir}/ for detailed results")
     print("\nKey outputs:")
     print("  - ANALYSIS_SUMMARY.txt (readable summary)")
     print("  - policy_recommendations.json (for memo)")
     print("  - equity_focused_analysis.json (for rubric)")
+    print("  - quality_analysis.json (PR speak detection - NEW)")
     print("  - framework_vs_artifact_comparison.json (for originality)")
 
 
